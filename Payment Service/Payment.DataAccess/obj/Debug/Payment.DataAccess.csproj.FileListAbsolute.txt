@@ -1,0 +1,91 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\obj\Debug\Payment.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\obj\Debug\Payment.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\CommonServiceLocator.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\NPoco.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Abstractions.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Configuration.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Container.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Interception.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\CommonServiceLocator.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Configuration.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Container.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Interception.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\obj\Debug\Payment.DataAccess.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\obj\Debug\Payment.DataAccess.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.Dtos.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.Dtos.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.DataAccess\bin\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\CommonServiceLocator.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\NPoco.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.Dtos.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Abstractions.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Configuration.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Container.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Interception.Configuration.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Interception.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.Dtos.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\CommonServiceLocator.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Configuration.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Container.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Interception.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.Interception.Configuration.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\obj\Debug\Payment.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\obj\Debug\Payment.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\obj\Debug\Payment.DataAccess.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess\obj\Debug\Payment.DataAccess.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\CommonServiceLocator.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\NPoco.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Dtos.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Abstractions.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Configuration.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Container.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.Configuration.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Dtos.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\CommonServiceLocator.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Abstractions.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Configuration.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Container.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.Configuration.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.csprojResolveAssemblyReference.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.csproj.CoreCompileInputs.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.pdb

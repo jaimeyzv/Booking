@@ -1,0 +1,47 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Infrastructure.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Infrastructure.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.DataAccess.Dtos.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\NPoco.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.DataAccess.Dtos.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\obj\Debug\Payment.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\obj\Debug\Payment.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\obj\Debug\Payment.Infrastructure.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Infrastructure\obj\Debug\Payment.Infrastructure.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Api.Models.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Extensions.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Primitives.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Api.Models.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csprojResolveAssemblyReference.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csproj.CoreCompileInputs.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.pdb

@@ -1,0 +1,5 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\bin\Debug\Stamping.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\bin\Debug\Stamping.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Stamping.Api.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Stamping.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Stamping.Api.Models.pdb

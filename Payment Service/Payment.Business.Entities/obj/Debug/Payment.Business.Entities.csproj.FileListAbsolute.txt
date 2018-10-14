@@ -1,0 +1,16 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Payment.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csprojResolveAssemblyReference.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csproj.CoreCompileInputs.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.pdb

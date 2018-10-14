@@ -1,0 +1,8 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Stamping.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Stamping.Business.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Stamping.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Stamping.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Stamping.Business.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Stamping.Business.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Stamping.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Stamping.Business.Interfaces.pdb

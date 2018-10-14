@@ -1,0 +1,5 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Common\bin\Debug\Stamping.Common.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Common\bin\Debug\Stamping.Common.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Common\obj\Debug\Stamping.Common.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Common\obj\Debug\Stamping.Common.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Common\obj\Debug\Stamping.Common.pdb

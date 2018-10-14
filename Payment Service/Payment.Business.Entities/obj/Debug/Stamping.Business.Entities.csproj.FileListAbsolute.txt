@@ -1,0 +1,5 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\bin\Debug\Stamping.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\bin\Debug\Stamping.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Stamping.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Stamping.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.BusinessEntities\obj\Debug\Stamping.Business.Entities.pdb

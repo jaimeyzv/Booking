@@ -1,0 +1,17 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\bin\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\bin\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Api.ViewModels\obj\Debug\Payment.Api.Models.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csprojResolveAssemblyReference.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb

@@ -1,0 +1,24 @@
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Stamping.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\bin\Debug\Payment.Business.Entities.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\bin\Debug\Payment.Business.Entities.pdb
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.dll
+C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\bin\Debug\Payment.Business.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\bin\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\bin\Debug\Payment.Business.Entities.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csprojResolveAssemblyReference.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.csproj.CoreCompileInputs.cache
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Interfaces\obj\Debug\Payment.Business.Interfaces.pdb
