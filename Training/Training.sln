@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rodrigo Salazar", "Rodrigo Salazar", "{97A3E299-F0E3-42E2-9574-F1B0C53537A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimasService", "ClimasService\ClimasService.csproj", "{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperaturasService", "TemperaturasService\TemperaturasService.csproj", "{D746BB20-104B-4053-B22C-69D3BCA85203}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D746BB20-104B-4053-B22C-69D3BCA85203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D746BB20-104B-4053-B22C-69D3BCA85203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D746BB20-104B-4053-B22C-69D3BCA85203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D746BB20-104B-4053-B22C-69D3BCA85203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70} = {97A3E299-F0E3-42E2-9574-F1B0C53537A9}
+		{D746BB20-104B-4053-B22C-69D3BCA85203} = {97A3E299-F0E3-42E2-9574-F1B0C53537A9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68732327-6D99-442B-9BC4-1E8CD089567A}
+	EndGlobalSection
+EndGlobal
