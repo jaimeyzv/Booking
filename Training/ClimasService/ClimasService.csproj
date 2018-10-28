@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C435AEBC-BAA6-45AB-846E-29F7EA9C2C70}</ProjectGuid>
+    <ProjectGuid>{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -61,43 +61,43 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClimasService.svc" />
-    <Content Include="Connected Services\CACALOCA\ClimasService.CACALOCA.CompositeType.datasource">
+    <Content Include="ClimaService.svc" />
+    <Content Include="Connected Services\TempWS\ClimasService.TempWS.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\CACALOCA\TemperaturaService.disco" />
-    <None Include="Connected Services\CACALOCA\configuration91.svcinfo" />
-    <None Include="Connected Services\CACALOCA\configuration.svcinfo" />
-    <None Include="Connected Services\CACALOCA\Reference.svcmap">
+    <None Include="Connected Services\TempWS\TemperaturaService.disco" />
+    <None Include="Connected Services\TempWS\configuration91.svcinfo" />
+    <None Include="Connected Services\TempWS\configuration.svcinfo" />
+    <None Include="Connected Services\TempWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Web.config" />
-    <None Include="Connected Services\CACALOCA\TemperaturasService.wsdl" />
+    <None Include="Connected Services\TempWS\TemperaturasService.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClimasService.svc.cs">
-      <DependentUpon>ClimasService.svc</DependentUpon>
+    <Compile Include="ClimaService.svc.cs">
+      <DependentUpon>ClimaService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CACALOCA\Reference.cs">
+    <Compile Include="Connected Services\TempWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="IClimasService.cs" />
+    <Compile Include="IClimaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CACALOCA\TemperaturaService.xsd">
+    <None Include="Connected Services\TempWS\TemperaturaService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CACALOCA\TemperaturaService1.xsd">
+    <None Include="Connected Services\TempWS\TemperaturaService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CACALOCA\TemperaturaService2.xsd">
+    <None Include="Connected Services\TempWS\TemperaturaService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -111,7 +111,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\CACALOCA\" />
+    <WCFMetadataStorage Include="Connected Services\TempWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -126,7 +126,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63872</DevelopmentServerPort>
+          <DevelopmentServerPort>64269</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:63872/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

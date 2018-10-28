@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClimasService.CACALOCA {
+namespace ClimasService.TempWS {
     using System.Runtime.Serialization;
     using System;
     
@@ -75,7 +75,7 @@ namespace ClimasService.CACALOCA {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CACALOCA.ITemperaturaService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TempWS.ITemperaturaService")]
     public interface ITemperaturaService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITemperaturaService/GetData", ReplyAction="http://tempuri.org/ITemperaturaService/GetDataResponse")]
@@ -85,10 +85,10 @@ namespace ClimasService.CACALOCA {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITemperaturaService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITemperaturaService/GetDataUsingDataContractResponse")]
-        ClimasService.CACALOCA.CompositeType GetDataUsingDataContract(ClimasService.CACALOCA.CompositeType composite);
+        ClimasService.TempWS.CompositeType GetDataUsingDataContract(ClimasService.TempWS.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITemperaturaService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/ITemperaturaService/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<ClimasService.CACALOCA.CompositeType> GetDataUsingDataContractAsync(ClimasService.CACALOCA.CompositeType composite);
+        System.Threading.Tasks.Task<ClimasService.TempWS.CompositeType> GetDataUsingDataContractAsync(ClimasService.TempWS.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITemperaturaService/ObtenerTemperatura", ReplyAction="http://tempuri.org/ITemperaturaService/ObtenerTemperaturaResponse")]
         int ObtenerTemperatura();
@@ -98,12 +98,12 @@ namespace ClimasService.CACALOCA {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITemperaturaServiceChannel : ClimasService.CACALOCA.ITemperaturaService, System.ServiceModel.IClientChannel {
+    public interface ITemperaturaServiceChannel : ClimasService.TempWS.ITemperaturaService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TemperaturaServiceClient : System.ServiceModel.ClientBase<ClimasService.CACALOCA.ITemperaturaService>, ClimasService.CACALOCA.ITemperaturaService {
+    public partial class TemperaturaServiceClient : System.ServiceModel.ClientBase<ClimasService.TempWS.ITemperaturaService>, ClimasService.TempWS.ITemperaturaService {
         
         public TemperaturaServiceClient() {
         }
@@ -132,11 +132,11 @@ namespace ClimasService.CACALOCA {
             return base.Channel.GetDataAsync(value);
         }
         
-        public ClimasService.CACALOCA.CompositeType GetDataUsingDataContract(ClimasService.CACALOCA.CompositeType composite) {
+        public ClimasService.TempWS.CompositeType GetDataUsingDataContract(ClimasService.TempWS.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<ClimasService.CACALOCA.CompositeType> GetDataUsingDataContractAsync(ClimasService.CACALOCA.CompositeType composite) {
+        public System.Threading.Tasks.Task<ClimasService.TempWS.CompositeType> GetDataUsingDataContractAsync(ClimasService.TempWS.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
