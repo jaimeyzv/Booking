@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78070307-3f9e-4682-9f71-f9592057d25f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:64727/LatitudeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LatitudeService.wsdl" MetadataType="Wsdl" ID="a89f6b2a-a00c-4262-977b-8de55afa4858" SourceId="1" SourceUrl="http://localhost:64727/LatitudeService.svc?wsdl" />
+    <MetadataFile FileName="LatitudeService.xsd" MetadataType="Schema" ID="4fbf7836-2756-4e4b-bd52-a1ad2cefe9da" SourceId="1" SourceUrl="http://localhost:64727/LatitudeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LatitudeService2.xsd" MetadataType="Schema" ID="af98c6a2-2a2b-456c-a091-23a156c5d0c3" SourceId="1" SourceUrl="http://localhost:64727/LatitudeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LatitudeService.disco" MetadataType="Disco" ID="e0f68c57-cd6e-45e7-826f-11ac0a08bfda" SourceId="1" SourceUrl="http://localhost:64727/LatitudeService.svc?disco" />
+    <MetadataFile FileName="LatitudeService1.xsd" MetadataType="Schema" ID="274dcf81-f51f-4d14-b26f-f80f2538d74e" SourceId="1" SourceUrl="http://localhost:64727/LatitudeService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

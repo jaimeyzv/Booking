@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}</ProjectGuid>
+    <ProjectGuid>{CA241E0D-51C2-44A2-8358-B8216F88E345}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClimasService</RootNamespace>
-    <AssemblyName>ClimasService</AssemblyName>
+    <RootNamespace>LatitudesService</RootNamespace>
+    <AssemblyName>LatitudesService</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -61,83 +61,26 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ClimaService.svc" />
-    <Content Include="Connected Services\LatWS\ClimasService.LatWS.LatitudeServiceCoordenadas.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\LatWS\LatitudeService.disco" />
-    <None Include="Connected Services\LatWS\configuration91.svcinfo" />
-    <None Include="Connected Services\LatWS\configuration.svcinfo" />
-    <None Include="Connected Services\LatWS\LatitudeService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LatWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Connected Services\TempWS\ClimasService.TempWS.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\LatWS\LatitudeService.wsdl" />
-    <None Include="Connected Services\LatWS\LatitudeService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\LatWS\LatitudeService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TempWS\TemperaturaService.disco" />
-    <None Include="Connected Services\TempWS\configuration91.svcinfo" />
-    <None Include="Connected Services\TempWS\configuration.svcinfo" />
-    <None Include="Connected Services\TempWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <Content Include="LatitudeService.svc" />
     <Content Include="Web.config" />
-    <None Include="Connected Services\TempWS\TemperaturasService.wsdl" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClimaService.svc.cs">
-      <DependentUpon>ClimaService.svc</DependentUpon>
+    <Compile Include="ILatitudeService.cs" />
+    <Compile Include="LatitudeService.svc.cs">
+      <DependentUpon>LatitudeService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\LatWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\TempWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="IClimaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\TempWS\TemperaturaService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TempWS\TemperaturaService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\TempWS\TemperaturaService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\LatWS\" />
-    <WCFMetadataStorage Include="Connected Services\TempWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -152,9 +95,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64269</DevelopmentServerPort>
+          <DevelopmentServerPort>64727</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63872/</IISUrl>
+          <IISUrl>http://localhost:64727/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

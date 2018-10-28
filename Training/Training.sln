@@ -9,8 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperaturasService", "Temp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimasService", "ClimasService\ClimasService.csproj", "{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}"
 	ProjectSection(ProjectDependencies) = postProject
+		{CA241E0D-51C2-44A2-8358-B8216F88E345} = {CA241E0D-51C2-44A2-8358-B8216F88E345}
 		{D746BB20-104B-4053-B22C-69D3BCA85203} = {D746BB20-104B-4053-B22C-69D3BCA85203}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatitudesService", "LatitudesService\LatitudesService.csproj", "{CA241E0D-51C2-44A2-8358-B8216F88E345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +29,10 @@ Global
 		{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7F0136-8B2A-4A74-AE21-BCA9593F555E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA241E0D-51C2-44A2-8358-B8216F88E345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA241E0D-51C2-44A2-8358-B8216F88E345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA241E0D-51C2-44A2-8358-B8216F88E345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA241E0D-51C2-44A2-8358-B8216F88E345}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D746BB20-104B-4053-B22C-69D3BCA85203} = {97A3E299-F0E3-42E2-9574-F1B0C53537A9}
 		{2B7F0136-8B2A-4A74-AE21-BCA9593F555E} = {97A3E299-F0E3-42E2-9574-F1B0C53537A9}
+		{CA241E0D-51C2-44A2-8358-B8216F88E345} = {97A3E299-F0E3-42E2-9574-F1B0C53537A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68732327-6D99-442B-9BC4-1E8CD089567A}

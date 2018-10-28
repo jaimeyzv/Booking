@@ -11,10 +11,6 @@ namespace ClimasService
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ClimaService.svc o ClimaService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ClimaService : IClimaService
     {
-        public void DoWork()
-        {
-        }
-
         public string ConsultarClima(int zip)
         {
             String ciudad;
@@ -33,13 +29,26 @@ namespace ClimasService
                     ciudad = "Moquegua";
                     break;
             }
-            return string.Format("La temperatura en " + ciudad + " es de " + obtenerTemperatura() + " grados");
+
+            var objeto = obtenerCoordenada();
+            return string.Format("La temperatura en " + ciudad + " es de " + obtenerTemperatura() + " grados " +
+                "con Long: " + objeto.GetValue(0) + " y Lat: " + objeto.GetValue(1));
         }
 
         public int obtenerTemperatura()
         {
             TempWS.TemperaturaServiceClient proxy = new TempWS.TemperaturaServiceClient();
             return proxy.ObtenerTemperatura();
+        }
+
+        public object[] obtenerCoordenada()
+        {
+            LatWS.LatitudeServiceClient proxy = new LatWS.LatitudeServiceClient();
+            var obj = proxy.obtenerCoordenadas();
+            object[] objReturn = new object[2];
+            objReturn.SetValue(obj.coordenadaX, 0);
+            objReturn.SetValue(obj.coordenadaY, 1);
+            return objReturn;
         }
     }
 }

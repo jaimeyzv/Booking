@@ -12,9 +12,6 @@ namespace ClimasService
     public interface IClimaService
     {
         [OperationContract]
-        void DoWork();
-
-        [OperationContract]
         string ConsultarClima(int value);
     }
 }
