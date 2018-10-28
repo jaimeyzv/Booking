@@ -6,15 +6,14 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace TemperaturasService
+namespace WSClima
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
-    public interface IService1
+    public interface IClimasService
     {
 
         [OperationContract]
-        string GetData(int value);
+        string ConsultarClima(int value);
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);

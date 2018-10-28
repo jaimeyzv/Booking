@@ -61,21 +61,57 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClimasService.svc" />
+    <Content Include="Connected Services\CACALOCA\ClimasService.CACALOCA.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\CACALOCA\TemperaturaService.disco" />
+    <None Include="Connected Services\CACALOCA\configuration91.svcinfo" />
+    <None Include="Connected Services\CACALOCA\configuration.svcinfo" />
+    <None Include="Connected Services\CACALOCA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
+    <None Include="Connected Services\CACALOCA\TemperaturasService.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClimasService.svc.cs">
+      <DependentUpon>ClimasService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CACALOCA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="IClimasService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\CACALOCA\TemperaturaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CACALOCA\TemperaturaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CACALOCA\TemperaturaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CACALOCA\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
