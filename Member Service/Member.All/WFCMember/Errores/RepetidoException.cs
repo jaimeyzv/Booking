@@ -3,6 +3,7 @@
 namespace WCFMember.Errores
 {
     [DataContract]
+    [KnownType(typeof(RepetidoException))]
     public class RepetidoException
     {
         [DataMember]

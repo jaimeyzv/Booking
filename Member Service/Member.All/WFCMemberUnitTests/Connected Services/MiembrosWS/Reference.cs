@@ -220,6 +220,7 @@ namespace WCFMemberTests.MiembrosWS {
     public interface IMiembrosService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ObtenerMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ObtenerMiembroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/ObtenerMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
         WCFMemberTests.MiembrosWS.Miembro ObtenerMiembro(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ObtenerMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ObtenerMiembroResponse")]
@@ -233,12 +234,14 @@ namespace WCFMemberTests.MiembrosWS {
         System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> CrearMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ModificarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ModificarMiembroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/ModificarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
         WCFMemberTests.MiembrosWS.Miembro ModificarMiembro(WCFMemberTests.MiembrosWS.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ModificarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ModificarMiembroResponse")]
         System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> ModificarMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/EliminarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/EliminarMiembroResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/EliminarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
         void EliminarMiembro(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/EliminarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/EliminarMiembroResponse")]
