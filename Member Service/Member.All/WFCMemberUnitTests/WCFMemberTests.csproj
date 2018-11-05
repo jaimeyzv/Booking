@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Connected Services\MiembrosWS\UnitTest1.cs" />
     <Compile Include="Connected Services\MiembrosWS\UnitTest2.cs" />
+    <Compile Include="Connected Services\MiembrosWS\UnitTest3.cs" />
     <Compile Include="MiembrosServiceIntTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
