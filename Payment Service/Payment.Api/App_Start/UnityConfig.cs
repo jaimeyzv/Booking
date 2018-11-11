@@ -8,13 +8,7 @@ namespace Payment.Api
     {
         public static void RegisterComponents()
         {
-			var container = new BootStrapper();
-            
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            
-            // e.g. container.RegisterType<ITestService, TestService>();
-            
+            var container = new BootStrapper();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container.RegisterComponents());
         }
     }

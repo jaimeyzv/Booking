@@ -10,7 +10,7 @@ namespace Payment.Infrastructure.Mappers
         {
             return new TransactionModel()
             {
-                TransactionId = entity.TransactionId,
+                TransactionCode = entity.TransactionCode,
                 TransactionDate = entity.TransactionDate
             };
         }

@@ -19,7 +19,12 @@ namespace Payment.DataAccess.Repositories
 
         public CardTypeDto GetById(int id)
         {
-            throw new System.NotImplementedException();
+            var query = @"SELECT * FROM CardType WHERE CardTypeId = @0";
+
+            using (var db = dbFactory.GetConnection())
+            {
+                return db.SingleOrDefault<CardTypeDto>(query, id);
+            }
         }
     }
 }

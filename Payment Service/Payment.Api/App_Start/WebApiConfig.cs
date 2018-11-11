@@ -10,8 +10,7 @@ namespace Payment.Api
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            //se habilita cors para las peticiones
-            config.EnableCors();
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

@@ -14,7 +14,7 @@ namespace Payment.Infrastructure.Services
         }
         public string GetConnectionString()
         {
-            return _configurationManagerWrapper.GetAppSettings("StampingDB", string.Empty);
+            return _configurationManagerWrapper.GetAppSettings("PaymentDB", string.Empty);
         }
 
         public void SetConnectionString(string connectionString)

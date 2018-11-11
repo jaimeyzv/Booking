@@ -7,7 +7,8 @@ namespace Payment.DataAccess.Dtos.Dtos
     [PrimaryKey("TransactionId")]
     public class TransactionDto
     {
-        public string TransactionId { get; set; }
+        public int TransactionId { get; set; }
+        public string TransactionCode { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public decimal Cost { get; set; }

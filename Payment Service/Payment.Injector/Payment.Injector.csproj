@@ -71,5 +71,31 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payment.Business.Interfaces\Payment.Business.Interfaces.csproj">
+      <Project>{0F3BB225-17A6-4094-A206-2B92D45113E4}</Project>
+      <Name>Payment.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.Business\Payment.Business.csproj">
+      <Project>{D2E9F259-1DC1-46CC-99DD-77427B091CC3}</Project>
+      <Name>Payment.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.DataAccess.Interfaces\Payment.DataAccess.Interfaces.csproj">
+      <Project>{699482DE-9E88-4B1B-82D5-0D3DCB38A244}</Project>
+      <Name>Payment.DataAccess.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.DataAccess\Payment.DataAccess.csproj">
+      <Project>{CA0CBD67-9313-4B64-B034-8A852A799EE6}</Project>
+      <Name>Payment.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.Infrastructure.Interfaces\Payment.Infrastructure.Interfaces.csproj">
+      <Project>{BBAD3352-C83F-4B12-885F-665ACCBBB87C}</Project>
+      <Name>Payment.Infrastructure.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.Infrastructure\Payment.Infrastructure.csproj">
+      <Project>{4E614839-48C2-43E5-A1FA-806FE8C83EC7}</Project>
+      <Name>Payment.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

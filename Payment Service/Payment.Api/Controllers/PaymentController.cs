@@ -26,8 +26,8 @@ namespace Payment.Api.Controllers
         }
 
         [HttpPost]
-        [Route("~/api/payment/")]
-        public HttpResponseMessage Pay(PurchaseModel model)
+        [Route("~/api/payment/pay")]
+        public HttpResponseMessage Pay([FromBody]PurchaseModel model)
         {
             try
             {

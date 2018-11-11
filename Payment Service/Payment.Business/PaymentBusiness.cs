@@ -19,6 +19,7 @@ namespace Payment.Business
             ITransactionRepository transactionRepository)
         {
             this.cardRepository = cardRepository;
+            this.cardTypeRepository = cardTypeRepository;
             this.balanceRepository = balanceRepository;
             this.transactionRepository = transactionRepository;
         }
@@ -29,10 +30,10 @@ namespace Payment.Business
             if (!IsValidCreditCard(purchase, card)) throw new Exception();
             var balance = balanceRepository.GetByCreditCardId(card.CardId);
             if (!HasBalance(balance, card.CardId, purchase.Cost)) throw new Exception();
-            var transactionId = SaveTransaction(purchase, card, balance);
+            var transactionCode = SaveTransaction(purchase, card, balance);
             SaveBalance(balance.Balance, purchase.Cost, card.CardId);
 
-            return new TransactionEntity() {TransactionId = transactionId, TransactionDate = DateTime.Now };
+            return new TransactionEntity() {TransactionCode = transactionCode, TransactionDate = DateTime.Now };
         }
 
         private bool IsValidCreditCard(PurchaseEntity entity, CardDto card)
@@ -44,7 +45,6 @@ namespace Payment.Business
             return  entity.CardType == cardType.Code &&
                     entity.CardExpireDate.ToString("MM") == card.ExpireDate.ToString("MM") &&
                     entity.CardExpireDate.ToString("yyyy") == card.ExpireDate.ToString("yyyy") &&
-                    entity.CardExpireDate <= DateTime.Today &&
                     entity.CardCvv == card.Cvv;
         }
 
@@ -56,8 +56,8 @@ namespace Payment.Business
 
         private string SaveTransaction(PurchaseEntity purchase, CardDto card, BalanceDto balance)
         {
-            var today = DateTime.Today;
-            var transactionId = card.Number + today.ToString("dd-MM-yyyy-HH-mm-ss");
+            var today = DateTime.Now;
+            var transactionCode = card.Number + today.ToString("dd-MM-yyyy-HH-mm-ss");
             var transaction = new TransactionDto()
             {
                 Description = purchase.Description,
@@ -66,12 +66,12 @@ namespace Payment.Business
                 CardId = card.CardId,
                 InitialBalance = balance.Balance,
                 FinalBalance = balance.Balance - purchase.Cost,
-                TransactionId = transactionId
+                TransactionCode = transactionCode
             };
 
             transactionRepository.Insert(transaction);
 
-            return transactionId;
+            return transactionCode;
         }
 
         private void SaveBalance(decimal balance, decimal cost, int cardId)
