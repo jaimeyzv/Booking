@@ -74,6 +74,8 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Dtos.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.DataAccess.Interfaces.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Infrastructure.Interfaces.pdb
@@ -85,6 +87,8 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.Interception.Configuration.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.RegistrationByConvention.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Unity.ServiceLocation.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Business.Entities.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\bin\Debug\Payment.Api.Models.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess\obj\Debug\Payment.DataAccess.dll

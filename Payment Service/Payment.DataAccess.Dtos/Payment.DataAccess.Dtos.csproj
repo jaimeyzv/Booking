@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\BalanceDto.cs" />
     <Compile Include="Dtos\CardDto.cs" />
     <Compile Include="Dtos\CardTypeDto.cs" />
+    <Compile Include="Dtos\TransactionDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

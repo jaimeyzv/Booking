@@ -4,5 +4,6 @@ namespace Payment.DataAccess.Interfaces.IRepositories
 {
     public interface ICardRepository : IBaseRepository<CardDto>
     {
+        CardDto GetByCardNumber(string cardNumber);
     }
 }

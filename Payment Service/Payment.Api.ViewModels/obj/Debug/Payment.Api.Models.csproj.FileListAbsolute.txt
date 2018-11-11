@@ -11,7 +11,6 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\obj\Debug\Paym
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.pdb
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb

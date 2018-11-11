@@ -198,31 +198,31 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api\obj\Debug\Payment.Api.csp
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api\obj\Debug\Payment.Api.csproj.CoreCompileInputs.cache
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api\obj\Debug\Payment.Api.dll
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Api\obj\Debug\Payment.Api.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.Collections.Immutable.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.Reflection.Metadata.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\VBCSCompiler.exe
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\csc.exe
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\csc.exe.config
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\csc.rsp
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\csi.exe
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\csi.rsp
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\Microsoft.VisualBasic.Core.targets
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.AppContext.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.Collections.Immutable.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.Diagnostics.StackTrace.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.IO.FileSystem.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\System.Reflection.Metadata.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\vbc.exe
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\vbc.exe.config
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\vbc.rsp
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\VBCSCompiler.exe
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\roslyn\VBCSCompiler.exe.config
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Api.dll.config
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Api.dll
@@ -232,6 +232,7 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Microsoft.Web.Infrastructure.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Newtonsoft.Json.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.Entities.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.Interfaces.dll
@@ -259,8 +260,9 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Unity.WebApi.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\WebGrease.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.DataAccess.Interfaces.dll
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\NPoco.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.DataAccess.Dtos.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\NPoco.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Api.Models.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.Entities.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.Interfaces.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api\bin\Payment.Business.pdb

@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IDbFactory.cs" />
+    <Compile Include="IRepositories\IBalanceRepository.cs" />
     <Compile Include="IRepositories\IBaseRepository.cs" />
     <Compile Include="IRepositories\ICardRepository.cs" />
     <Compile Include="IRepositories\ICardTypeRepository.cs" />
+    <Compile Include="IRepositories\ITransactionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

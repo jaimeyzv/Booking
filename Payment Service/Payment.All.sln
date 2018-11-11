@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Injection", "5 - Inject
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Common", "6 - Common", "{75310315-E600-4B7A-9329-64F7679BA003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Api", "Payment.Api\Payment.Api.csproj", "{DB5D494C-3CF2-487C-8BF7-14DB27BD4198}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Api.Models", "Payment.Api.ViewModels\Payment.Api.Models.csproj", "{DC76224C-9F62-40FE-9075-550A4EBFB546}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.DataAccess", "Payment.DataAccess\Payment.DataAccess.csproj", "{CA0CBD67-9313-4B64-B034-8A852A799EE6}"
@@ -45,10 +43,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB5D494C-3CF2-487C-8BF7-14DB27BD4198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB5D494C-3CF2-487C-8BF7-14DB27BD4198}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB5D494C-3CF2-487C-8BF7-14DB27BD4198}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB5D494C-3CF2-487C-8BF7-14DB27BD4198}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC76224C-9F62-40FE-9075-550A4EBFB546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC76224C-9F62-40FE-9075-550A4EBFB546}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC76224C-9F62-40FE-9075-550A4EBFB546}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -98,7 +92,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DB5D494C-3CF2-487C-8BF7-14DB27BD4198} = {C4387BC0-1B65-4EE9-95B1-E11A4E1CF4BB}
 		{DC76224C-9F62-40FE-9075-550A4EBFB546} = {C4387BC0-1B65-4EE9-95B1-E11A4E1CF4BB}
 		{CA0CBD67-9313-4B64-B034-8A852A799EE6} = {FA746FE5-0EFA-4FC6-BA75-35C33A1B0249}
 		{726E00CB-E6A5-4600-9AA0-B6ABB6D18045} = {FA746FE5-0EFA-4FC6-BA75-35C33A1B0249}

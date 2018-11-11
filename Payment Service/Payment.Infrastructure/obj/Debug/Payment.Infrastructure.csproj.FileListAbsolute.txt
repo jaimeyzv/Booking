@@ -34,12 +34,14 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure\obj\Debug\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Api.Models.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Business.Entities.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Extensions.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\System.Net.Http.Primitives.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Newtonsoft.Json.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Api.Models.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Business.Entities.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\bin\Debug\Payment.Infrastructure.Interfaces.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure\obj\Debug\Payment.Infrastructure.csproj.CoreCompileInputs.cache

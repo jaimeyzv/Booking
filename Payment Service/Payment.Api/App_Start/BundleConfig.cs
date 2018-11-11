@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Stamping.Api
+namespace Payment.Api
 {
     public class BundleConfig
     {

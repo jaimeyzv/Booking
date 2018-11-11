@@ -183,7 +183,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,6 +212,10 @@
     <Folder Include="Views\ActivityByUser\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Payment.Api.ViewModels\Payment.Api.Models.csproj">
+      <Project>{DC76224C-9F62-40FE-9075-550A4EBFB546}</Project>
+      <Name>Payment.Api.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Payment.Business.Entities\Payment.Business.Entities.csproj">
       <Project>{8b89abd8-1fc5-4975-8fd5-b72e0c2c2b04}</Project>
       <Name>Payment.Business.Entities</Name>

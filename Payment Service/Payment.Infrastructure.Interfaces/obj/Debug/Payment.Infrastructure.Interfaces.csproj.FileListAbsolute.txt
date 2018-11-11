@@ -18,6 +18,10 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure.Interfaces\obj
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Infrastructure.Interfaces.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Infrastructure.Interfaces.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Api.Models.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Api.Models.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Business.Entities.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.dll

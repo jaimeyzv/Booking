@@ -46,5 +46,15 @@
     <Compile Include="Wrappers\IApiResponseWrapper.cs" />
     <Compile Include="Wrappers\IConfigurationManagerWrapper.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payment.Api.ViewModels\Payment.Api.Models.csproj">
+      <Project>{DC76224C-9F62-40FE-9075-550A4EBFB546}</Project>
+      <Name>Payment.Api.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.Business.Entities\Payment.Business.Entities.csproj">
+      <Project>{8B89ABD8-1FC5-4975-8FD5-B72E0C2C2B04}</Project>
+      <Name>Payment.Business.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

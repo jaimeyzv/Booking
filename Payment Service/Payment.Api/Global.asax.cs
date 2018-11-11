@@ -1,7 +1,6 @@
-﻿using Payment.Api;
-using System.Web.Http;
+﻿using System.Web.Http;
 
-namespace Stamping.Api
+namespace Payment.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

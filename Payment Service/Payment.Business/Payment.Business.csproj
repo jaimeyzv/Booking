@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardBusiness.cs" />
+    <Compile Include="PaymentBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +52,10 @@
     <ProjectReference Include="..\Payment.Business.Interfaces\Payment.Business.Interfaces.csproj">
       <Project>{0f3bb225-17a6-4094-a206-2b92d45113e4}</Project>
       <Name>Payment.Business.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Payment.DataAccess.Dtos\Payment.DataAccess.Dtos.csproj">
+      <Project>{726E00CB-E6A5-4600-9AA0-B6ABB6D18045}</Project>
+      <Name>Payment.DataAccess.Dtos</Name>
     </ProjectReference>
     <ProjectReference Include="..\Payment.DataAccess.Interfaces\Payment.DataAccess.Interfaces.csproj">
       <Project>{699482de-9e88-4b1b-82d5-0d3dcb38a244}</Project>

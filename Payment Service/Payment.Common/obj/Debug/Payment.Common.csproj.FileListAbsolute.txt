@@ -10,7 +10,6 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Common\obj\Debug\Payment.Comm
 C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.Common\obj\Debug\Payment.Common.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\bin\Debug\Payment.Common.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\bin\Debug\Payment.Common.pdb
-D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\obj\Debug\Payment.Common.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\obj\Debug\Payment.Common.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\obj\Debug\Payment.Common.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Common\obj\Debug\Payment.Common.pdb

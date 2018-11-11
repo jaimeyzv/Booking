@@ -65,6 +65,10 @@
       <Project>{dc76224c-9f62-40fe-9075-550a4ebfb546}</Project>
       <Name>Payment.Api.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Payment.Business.Entities\Payment.Business.Entities.csproj">
+      <Project>{8B89ABD8-1FC5-4975-8FD5-B72E0C2C2B04}</Project>
+      <Name>Payment.Business.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Payment.Infrastructure.Interfaces\Payment.Infrastructure.Interfaces.csproj">
       <Project>{bbad3352-c83f-4b12-885f-665accbbb87c}</Project>
       <Name>Payment.Infrastructure.Interfaces</Name>
