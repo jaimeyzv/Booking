@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    @*<link rel="icon" href="../../../../favicon.ico">*@
+    <title>@ViewBag.Title - Booking</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body class="background-cover">
+    <div class="d-flex flex-column flex-md-row align-items-center custom-opacity p-3 px-md-4 mb-3">
+        <h5 class="my-0 mr-md-auto font-weight-bold text-white"><a class="font-weight-bold text-white" href="@Url.Action("Index", "Home", null)">Booking</a></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-white" href="#">Test</a>
+        </nav>
+        <a class="p-2 font-weight-bold" style="color:green" data-target="#SignUpModal" data-toggle="modal" href="#">Sign up</a>
+        <a class="p-2 font-weight-bold" style="color:orange" data-target="#LogInModal" data-toggle="modal" href="#">Log In</a>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
