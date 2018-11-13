@@ -18,6 +18,10 @@ namespace WCFMember.Dominio
         [DataMember]
         public int Edad { get; set; }
         [DataMember]
+        public string Correo { get; set; }
+        [DataMember]
+        public string Password { get; set; }
+        [DataMember]
         public bool Activo { get; set; }
     }
 }

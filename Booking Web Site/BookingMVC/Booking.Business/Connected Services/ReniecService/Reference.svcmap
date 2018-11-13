@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58e951ab-95fd-40a5-be9c-dc54f89e88eb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:83/ReniecService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReniecService.xsd" MetadataType="Schema" ID="ce1468ca-aa12-475d-9fef-867e08f0f4b9" SourceId="1" SourceUrl="http://localhost:83/ReniecService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReniecService1.xsd" MetadataType="Schema" ID="352001b6-0619-40b1-9244-755f7fce4dd9" SourceId="1" SourceUrl="http://localhost:83/ReniecService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReniecService2.xsd" MetadataType="Schema" ID="e355f569-56ca-4b84-a2bd-ae4081764c4a" SourceId="1" SourceUrl="http://localhost:83/ReniecService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ReniecService.wsdl" MetadataType="Wsdl" ID="45ee968d-870f-46c1-a8ca-9f14f340473b" SourceId="1" SourceUrl="http://localhost:83/ReniecService.svc?wsdl" />
+    <MetadataFile FileName="ReniecService.disco" MetadataType="Disco" ID="013be1b5-5075-4179-907e-9b867a3b8840" SourceId="1" SourceUrl="http://localhost:83/ReniecService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

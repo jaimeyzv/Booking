@@ -1,5 +1,6 @@
-﻿using BookingMVC.Models;
+﻿using BookingModels;
 using System.Web.Mvc;
+using Booking.Business;
 
 namespace BookingMVC.Controllers
 {
@@ -10,8 +11,10 @@ namespace BookingMVC.Controllers
             return View();
         }
 
-        public ActionResult Registrar(RegistroModel model)
+        public ActionResult Registrar(Registro model)
         {
+            var RegistroBusiness = new RegistroBusiness();
+            RegistroBusiness.RegistrarMiembro(model);
             return View();
         }
     }

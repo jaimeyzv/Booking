@@ -1,6 +1,6 @@
-﻿namespace BookingMVC.Models
+﻿namespace BookingModels
 {
-    public class RegistroModel
+    public class Registro
     {
         public string Nombres { get; set; }
         public string ApellidoPaterno { get; set; }

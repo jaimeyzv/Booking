@@ -1,0 +1,14 @@
+Problema: MemberServices no actualizaba DataMember y el string del inser.
+Solución: Eliminé las carpetas Bin y Obj
+
+Problema: Login failed for user 'IIS APPPOOL\MemberService'.
+Solución: https://www.codeproject.com/Questions/558566/LoginplusfailedplusforplususerplusIISplusAPPPOOL
+		-	go to iis -> application pools -> find your application pool used in application -> click it and then click 'Advance Settings' in Actions panel. Find 'Identity' property and change it to localsystem.
+			Please mark as solution if it solve your problem.
+
+Problema: 	System.Data.SqlClient.SqlException: Cannot open database "Miembros" requested by the login. The login failed. Login failed for user 'WORKGROUP\JAIME-PC$'.
+Solución: 	This account is not allowed to connect to SQL Server - either create a login on SQL Server for that account, or then specify another valid SQL Server account in your connection string.
+			Create an account in SQL SERVER: https://pe.godaddy.com/help/crear-un-usuario-administrador-para-microsoft-sql-server-19032
+			User account in connectionstring
+
+			

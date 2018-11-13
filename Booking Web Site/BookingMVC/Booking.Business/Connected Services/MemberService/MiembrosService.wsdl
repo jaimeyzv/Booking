@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MiembrosService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:82/MiembrosService.svc?xsd=xsd2" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:82/MiembrosService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores" />
+      <xsd:import schemaLocation="http://localhost:82/MiembrosService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:82/MiembrosService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCFMember.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMiembrosService_ObtenerMiembro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMiembro" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ObtenerMiembro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMiembroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ObtenerMiembro_RepetidoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFMember.Errores" name="detail" element="q1:RepetidoException" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_CrearMiembro_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMiembro" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_CrearMiembro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearMiembroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_CrearMiembro_RepetidoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WCFMember.Errores" name="detail" element="q2:RepetidoException" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ModificarMiembro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarMiembro" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ModificarMiembro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarMiembroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ModificarMiembro_RepetidoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WCFMember.Errores" name="detail" element="q3:RepetidoException" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_EliminarMiembro_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMiembro" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_EliminarMiembro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarMiembroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_EliminarMiembro_RepetidoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WCFMember.Errores" name="detail" element="q4:RepetidoException" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ListarMiembros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMiembros" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_ListarMiembros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarMiembrosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMiembrosService">
+    <wsdl:operation name="ObtenerMiembro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/ObtenerMiembro" message="tns:IMiembrosService_ObtenerMiembro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/ObtenerMiembroResponse" message="tns:IMiembrosService_ObtenerMiembro_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiembrosService/ObtenerMiembroRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IMiembrosService_ObtenerMiembro_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearMiembro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/CrearMiembro" message="tns:IMiembrosService_CrearMiembro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/CrearMiembroResponse" message="tns:IMiembrosService_CrearMiembro_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiembrosService/CrearMiembroRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IMiembrosService_CrearMiembro_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarMiembro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/ModificarMiembro" message="tns:IMiembrosService_ModificarMiembro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/ModificarMiembroResponse" message="tns:IMiembrosService_ModificarMiembro_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiembrosService/ModificarMiembroRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IMiembrosService_ModificarMiembro_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMiembro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembro" message="tns:IMiembrosService_EliminarMiembro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembroResponse" message="tns:IMiembrosService_EliminarMiembro_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembroRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IMiembrosService_EliminarMiembro_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarMiembros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/ListarMiembros" message="tns:IMiembrosService_ListarMiembros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/ListarMiembrosResponse" message="tns:IMiembrosService_ListarMiembros_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMiembrosService" type="tns:IMiembrosService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerMiembro">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/ObtenerMiembro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RepetidoExceptionFault">
+        <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CrearMiembro">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/CrearMiembro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RepetidoExceptionFault">
+        <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarMiembro">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/ModificarMiembro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RepetidoExceptionFault">
+        <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarMiembro">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/EliminarMiembro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RepetidoExceptionFault">
+        <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ListarMiembros">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/ListarMiembros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MiembrosService">
+    <wsdl:port name="BasicHttpBinding_IMiembrosService" binding="tns:BasicHttpBinding_IMiembrosService">
+      <soap:address location="http://localhost:82/MiembrosService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

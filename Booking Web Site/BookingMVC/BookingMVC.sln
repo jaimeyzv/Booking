@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMVC", "BookingMVC\BookingMVC.csproj", "{086FD607-E9D2-42C4-A3E0-CD1A08D60F0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Business", "Booking.Business\Booking.Business.csproj", "{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingModels", "BookingModels\BookingModels.csproj", "{A0E476C5-4B70-40F3-BD08-12350864FEED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{086FD607-E9D2-42C4-A3E0-CD1A08D60F0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{086FD607-E9D2-42C4-A3E0-CD1A08D60F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{086FD607-E9D2-42C4-A3E0-CD1A08D60F0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E476C5-4B70-40F3-BD08-12350864FEED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E476C5-4B70-40F3-BD08-12350864FEED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E476C5-4B70-40F3-BD08-12350864FEED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E476C5-4B70-40F3-BD08-12350864FEED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

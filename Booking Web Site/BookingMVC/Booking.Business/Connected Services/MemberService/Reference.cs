@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WCFMemberTests.MiembrosWS {
+namespace Booking.Business.MemberService {
     using System.Runtime.Serialization;
     using System;
     
@@ -248,51 +248,51 @@ namespace WCFMemberTests.MiembrosWS {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MiembrosWS.IMiembrosService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MemberService.IMiembrosService")]
     public interface IMiembrosService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ObtenerMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ObtenerMiembroResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/ObtenerMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
-        WCFMemberTests.MiembrosWS.Miembro ObtenerMiembro(string dni);
+        [System.ServiceModel.FaultContractAttribute(typeof(Booking.Business.MemberService.RepetidoException), Action="http://tempuri.org/IMiembrosService/ObtenerMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
+        Booking.Business.MemberService.Miembro ObtenerMiembro(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ObtenerMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ObtenerMiembroResponse")]
-        System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> ObtenerMiembroAsync(string dni);
+        System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> ObtenerMiembroAsync(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/CrearMiembro", ReplyAction="http://tempuri.org/IMiembrosService/CrearMiembroResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/CrearMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
-        WCFMemberTests.MiembrosWS.Miembro CrearMiembro(WCFMemberTests.MiembrosWS.Miembro miembro);
+        [System.ServiceModel.FaultContractAttribute(typeof(Booking.Business.MemberService.RepetidoException), Action="http://tempuri.org/IMiembrosService/CrearMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
+        Booking.Business.MemberService.Miembro CrearMiembro(Booking.Business.MemberService.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/CrearMiembro", ReplyAction="http://tempuri.org/IMiembrosService/CrearMiembroResponse")]
-        System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> CrearMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro);
+        System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> CrearMiembroAsync(Booking.Business.MemberService.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ModificarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ModificarMiembroResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/ModificarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
-        WCFMemberTests.MiembrosWS.Miembro ModificarMiembro(WCFMemberTests.MiembrosWS.Miembro miembro);
+        [System.ServiceModel.FaultContractAttribute(typeof(Booking.Business.MemberService.RepetidoException), Action="http://tempuri.org/IMiembrosService/ModificarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
+        Booking.Business.MemberService.Miembro ModificarMiembro(Booking.Business.MemberService.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ModificarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/ModificarMiembroResponse")]
-        System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> ModificarMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro);
+        System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> ModificarMiembroAsync(Booking.Business.MemberService.Miembro miembro);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/EliminarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/EliminarMiembroResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WCFMemberTests.MiembrosWS.RepetidoException), Action="http://tempuri.org/IMiembrosService/EliminarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Booking.Business.MemberService.RepetidoException), Action="http://tempuri.org/IMiembrosService/EliminarMiembroRepetidoExceptionFault", Name="RepetidoException", Namespace="http://schemas.datacontract.org/2004/07/WCFMember.Errores")]
         void EliminarMiembro(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/EliminarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/EliminarMiembroResponse")]
         System.Threading.Tasks.Task EliminarMiembroAsync(string dni);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ListarMiembros", ReplyAction="http://tempuri.org/IMiembrosService/ListarMiembrosResponse")]
-        WCFMemberTests.MiembrosWS.Miembro[] ListarMiembros();
+        Booking.Business.MemberService.Miembro[] ListarMiembros();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ListarMiembros", ReplyAction="http://tempuri.org/IMiembrosService/ListarMiembrosResponse")]
-        System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro[]> ListarMiembrosAsync();
+        System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro[]> ListarMiembrosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IMiembrosServiceChannel : WCFMemberTests.MiembrosWS.IMiembrosService, System.ServiceModel.IClientChannel {
+    public interface IMiembrosServiceChannel : Booking.Business.MemberService.IMiembrosService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class MiembrosServiceClient : System.ServiceModel.ClientBase<WCFMemberTests.MiembrosWS.IMiembrosService>, WCFMemberTests.MiembrosWS.IMiembrosService {
+    public partial class MiembrosServiceClient : System.ServiceModel.ClientBase<Booking.Business.MemberService.IMiembrosService>, Booking.Business.MemberService.IMiembrosService {
         
         public MiembrosServiceClient() {
         }
@@ -313,27 +313,27 @@ namespace WCFMemberTests.MiembrosWS {
                 base(binding, remoteAddress) {
         }
         
-        public WCFMemberTests.MiembrosWS.Miembro ObtenerMiembro(string dni) {
+        public Booking.Business.MemberService.Miembro ObtenerMiembro(string dni) {
             return base.Channel.ObtenerMiembro(dni);
         }
         
-        public System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> ObtenerMiembroAsync(string dni) {
+        public System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> ObtenerMiembroAsync(string dni) {
             return base.Channel.ObtenerMiembroAsync(dni);
         }
         
-        public WCFMemberTests.MiembrosWS.Miembro CrearMiembro(WCFMemberTests.MiembrosWS.Miembro miembro) {
+        public Booking.Business.MemberService.Miembro CrearMiembro(Booking.Business.MemberService.Miembro miembro) {
             return base.Channel.CrearMiembro(miembro);
         }
         
-        public System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> CrearMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro) {
+        public System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> CrearMiembroAsync(Booking.Business.MemberService.Miembro miembro) {
             return base.Channel.CrearMiembroAsync(miembro);
         }
         
-        public WCFMemberTests.MiembrosWS.Miembro ModificarMiembro(WCFMemberTests.MiembrosWS.Miembro miembro) {
+        public Booking.Business.MemberService.Miembro ModificarMiembro(Booking.Business.MemberService.Miembro miembro) {
             return base.Channel.ModificarMiembro(miembro);
         }
         
-        public System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro> ModificarMiembroAsync(WCFMemberTests.MiembrosWS.Miembro miembro) {
+        public System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> ModificarMiembroAsync(Booking.Business.MemberService.Miembro miembro) {
             return base.Channel.ModificarMiembroAsync(miembro);
         }
         
@@ -345,11 +345,11 @@ namespace WCFMemberTests.MiembrosWS {
             return base.Channel.EliminarMiembroAsync(dni);
         }
         
-        public WCFMemberTests.MiembrosWS.Miembro[] ListarMiembros() {
+        public Booking.Business.MemberService.Miembro[] ListarMiembros() {
             return base.Channel.ListarMiembros();
         }
         
-        public System.Threading.Tasks.Task<WCFMemberTests.MiembrosWS.Miembro[]> ListarMiembrosAsync() {
+        public System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro[]> ListarMiembrosAsync() {
             return base.Channel.ListarMiembrosAsync();
         }
     }
