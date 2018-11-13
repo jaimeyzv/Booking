@@ -10,6 +10,19 @@ namespace RoomService
     public interface IHabitacionesService
     {
         [OperationContract]
-        void DoWork();
+        Habitacion ObtenerHabitacion(int numero);
+
+        [OperationContract]
+        [FaultContract(typeof(RepetidoException))]
+        Habitacion CrearHabitacion(Habitacion habitacion);
+
+        [OperationContract]
+        Habitacion ModificarHabitacion(Habitacion habitacion);
+
+        [OperationContract]
+        void EliminarHabitacion(int numero);
+
+        [OperationContract]
+        List<Habitacion> ListarHabitaciones();
     }
 }
