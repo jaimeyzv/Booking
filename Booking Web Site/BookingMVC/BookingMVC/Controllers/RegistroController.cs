@@ -28,6 +28,8 @@ namespace BookingMVC.Controllers
             }
             
             RegistroBusiness.RegistrarMiembro(model);
+            TempData["OkMessage"] = "Mimebro registrado satisfactoriamente.";
+
             return View(model);
         }
     }

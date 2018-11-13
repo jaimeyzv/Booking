@@ -94,6 +94,13 @@
             </div>
         }
 
+        @if (TempData["OkMessage"] != null)
+        {
+            <div class="validation-summary-errors" data-valmsg-summary="true">
+                <span>@TempData["OkMessage"]</span>
+            </div>
+        }
+
         <div>
             @Html.ActionLink("Back to List", "../Home/Index")
         </div>
