@@ -33,7 +33,7 @@ namespace WFCMember
                     {
                         Codigo = "101",
                         Descripcion = "El miembro ya existe"
-                    }, new FaultReason("Error al crear miembro."));
+                    }, new FaultReason("Error al crear miembro. Dni enviado: " + miembro.Dni));
 
             return dao.Crear(miembro);
         }
