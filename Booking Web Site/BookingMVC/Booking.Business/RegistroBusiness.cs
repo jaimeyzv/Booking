@@ -11,14 +11,6 @@ namespace Booking.Business
         {
             try
             {
-                var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
-                using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
-                {
-                    reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
-                    if (!reniecService.EsDniValido(registro.Dni))
-                        return false;
-                }
-
                 var miembrosServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:82/MiembrosService.svc");
                 using (var miembrosService = new MiembrosServiceClient(new System.ServiceModel.BasicHttpBinding(), miembrosServiceRemoteAddress))
                 {
@@ -40,6 +32,26 @@ namespace Booking.Business
                 return true;
             }
             catch (Exception ex) { return false; }
+        }
+
+        public bool ExisteDni(string dni)
+        {
+            var miembrosServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:82/MiembrosService.svc");
+            using (var miembrosService = new MiembrosServiceClient(new System.ServiceModel.BasicHttpBinding(), miembrosServiceRemoteAddress))
+            {
+                miembrosService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                return miembrosService.ObtenerMiembro(dni) != null;
+            }
+        }
+
+        public bool EsDniValido(string dni)
+        {
+            var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
+            using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
+            {
+                reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                return reniecService.EsDniValido(dni);
+            }
         }
     }
 }

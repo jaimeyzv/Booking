@@ -59,7 +59,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MemberService\Booking.Business.MemberService.Miembro.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

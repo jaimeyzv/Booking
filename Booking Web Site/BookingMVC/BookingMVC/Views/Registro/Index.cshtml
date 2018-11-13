@@ -15,7 +15,7 @@
 </head>
 <body class="background-cover">
     <div class="container"  style="background-color: silver !important;">
-        @using (Html.BeginForm("Registrar", "Registro"))
+        @using (Html.BeginForm("Index", "Registro", FormMethod.Post))
         {
             @Html.AntiForgeryToken()
 
@@ -84,6 +84,13 @@
                         <input type="submit" value="Create" class="btn btn-default" />
                     </div>
                 </div>
+            </div>
+        }
+
+        @if (TempData["ErrorMessage_ExisteDni"] != null)
+        {
+            <div class="validation-summary-errors" data-valmsg-summary="true">
+                <span>@TempData["ErrorMessage_ExisteDni"]</span>
             </div>
         }
 
