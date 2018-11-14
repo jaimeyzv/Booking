@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutenticacionBusiness.cs" />
     <Compile Include="Connected Services\MemberService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

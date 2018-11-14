@@ -22,7 +22,7 @@ namespace Booking.Business
                         Dni = registro.Dni,
                         Edad = registro.Edad,
                         Correo = registro.Correo,
-                        Password = registro.contrasena
+                        Password = registro.Contrasena
                     };
 
                     miembrosService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
