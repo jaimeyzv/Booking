@@ -22,6 +22,8 @@ namespace WCFMemberTests
                 ApellidoPaterno = "Vento",
                 ApellidoMaterno = "Sevilla",
                 Edad = 30,
+                Correo = "jose@gmail.com",
+                Password = "123456",
                 Activo = true
             });
 
@@ -46,13 +48,15 @@ namespace WCFMemberTests
                     Nombres = "Juan Jose",
                     ApellidoPaterno = "Vento",
                     ApellidoMaterno = "Sevilla",
+                    Correo = "jose@gmail.com",
+                    Password = "123456",
                     Edad = 30,
                     Activo = true
                 });
             }
             catch (FaultException<MiembrosWS.RepetidoException> error)
             {
-                Assert.AreEqual("Error al crear miembro.", error.Reason.ToString());
+                Assert.AreEqual("Error al crear miembro. Dni enviado: 47470738", error.Reason.ToString());
                 Assert.AreEqual("101", error.Detail.Codigo);
                 Assert.AreEqual("El miembro ya existe", error.Detail.Descripcion);
             }
@@ -67,6 +71,8 @@ namespace WCFMemberTests
                 Nombres = "Anthony",
                 ApellidoPaterno = "Astupiña",
                 ApellidoMaterno = "Rosillo",
+                Correo = "Anthony@gmail.com",
+                Password = "123456",
                 Edad = 29,
                 Activo = false
             };
@@ -95,6 +101,8 @@ namespace WCFMemberTests
                     Nombres = "Anthony",
                     ApellidoPaterno = "Astupiña",
                     ApellidoMaterno = "Rosillo",
+                    Correo = "Anthony@gmail.com",
+                    Password = "123456",
                     Edad = 29,
                     Activo = false
                 });
@@ -141,7 +149,8 @@ namespace WCFMemberTests
         [TestMethod]
         public void ObtenerMiembro_CuandoDniDelMiembroEsValido_RetornaElMiembroBuscado()
         {
-            var dni = "200ABC03";
+            Random random = new Random();
+            var dni = random.Next(10000000, 99999999).ToString();
             var miembroEsperado = CrearMiembroParaPruebas(dni);
             MiembrosWS.MiembrosServiceClient proxy = new MiembrosWS.MiembrosServiceClient();
 
@@ -242,6 +251,8 @@ namespace WCFMemberTests
                 Nombres = "Pablo",
                 ApellidoPaterno = "Veliz",
                 ApellidoMaterno = "Veliz",
+                Correo = "Pablo@gmail.com",
+                Password = "123456",
                 Edad = 31,
                 Activo = false
             });

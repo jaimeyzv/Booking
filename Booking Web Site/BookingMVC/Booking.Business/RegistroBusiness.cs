@@ -46,12 +46,16 @@ namespace Booking.Business
 
         public bool EsDniValido(string dni)
         {
-            var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
-            using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
+            try
             {
-                reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
-                return reniecService.EsDniValido(dni);
+                var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
+                using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
+                {
+                    reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                    return reniecService.EsDniValido(dni);
+                }
             }
+            catch (Exception ex){ return false; }
         }
     }
 }
