@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfHotel", "WcfHotel\WcfHotel.csproj", "{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfHotelTest", "WcfHotelTest\WcfHotelTest.csproj", "{40733A02-FCEC-4757-A6AB-80268566EE9B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C} = {2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FB1A1B5-7A4A-4A84-BBB9-0DE0514E038C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40733A02-FCEC-4757-A6AB-80268566EE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40733A02-FCEC-4757-A6AB-80268566EE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40733A02-FCEC-4757-A6AB-80268566EE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40733A02-FCEC-4757-A6AB-80268566EE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99F1ABF8-B5D1-4E0D-A13D-FDA1A02456A7}
+	EndGlobalSection
+EndGlobal
