@@ -40,7 +40,6 @@ namespace WCFMember.Persistencia
                             return null;
                         }
                     }
-                    
                 }
             }
         }
@@ -174,7 +173,6 @@ namespace WCFMember.Persistencia
                             });
                         }
                     }
-
                 }
             }
 

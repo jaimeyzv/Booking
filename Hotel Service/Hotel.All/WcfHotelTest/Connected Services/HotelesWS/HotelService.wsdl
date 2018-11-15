@@ -17,11 +17,11 @@
   <wsdl:message name="IHotelService_CrearHotel_RepetidoExceptionFault_FaultMessage">
     <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WcfHotel.Errores" name="detail" element="q1:RepetidoException" />
   </wsdl:message>
-  <wsdl:message name="IHotelService_ConsultarHotel_InputMessage">
-    <wsdl:part name="parameters" element="tns:ConsultarHotel" />
+  <wsdl:message name="IHotelService_ObtenerHotelPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHotelPorCodigo" />
   </wsdl:message>
-  <wsdl:message name="IHotelService_ConsultarHotel_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ConsultarHotelResponse" />
+  <wsdl:message name="IHotelService_ObtenerHotelPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHotelPorCodigoResponse" />
   </wsdl:message>
   <wsdl:message name="IHotelService_ModificarHotel_InputMessage">
     <wsdl:part name="parameters" element="tns:ModificarHotel" />
@@ -47,9 +47,9 @@
       <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/CrearHotelResponse" message="tns:IHotelService_CrearHotel_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IHotelService/CrearHotelRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IHotelService_CrearHotel_RepetidoExceptionFault_FaultMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ConsultarHotel">
-      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/ConsultarHotel" message="tns:IHotelService_ConsultarHotel_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/ConsultarHotelResponse" message="tns:IHotelService_ConsultarHotel_OutputMessage" />
+    <wsdl:operation name="ObtenerHotelPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/ObtenerHotelPorCodigo" message="tns:IHotelService_ObtenerHotelPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHotelService/ObtenerHotelPorCodigoResponse" message="tns:IHotelService_ObtenerHotelPorCodigo_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ModificarHotel">
       <wsdl:input wsaw:Action="http://tempuri.org/IHotelService/ModificarHotel" message="tns:IHotelService_ModificarHotel_InputMessage" />
@@ -78,8 +78,8 @@
         <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="ConsultarHotel">
-      <soap:operation soapAction="http://tempuri.org/IHotelService/ConsultarHotel" style="document" />
+    <wsdl:operation name="ObtenerHotelPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/IHotelService/ObtenerHotelPorCodigo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

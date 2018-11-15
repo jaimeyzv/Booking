@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WcfHotelTest</RootNamespace>
     <AssemblyName>WcfHotelTest</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -20,6 +20,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,30 +53,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\HotelWS\Reference.cs">
+    <Compile Include="Connected Services\HotelesWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="HotelTest.cs" />
+    <Compile Include="HotelesServiceIntTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\HotelWS\HotelService.wsdl" />
-    <None Include="Connected Services\HotelWS\HotelService.xsd">
+    <None Include="Connected Services\HotelesWS\HotelService.wsdl" />
+    <None Include="Connected Services\HotelesWS\HotelService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\HotelWS\HotelService1.xsd">
+    <None Include="Connected Services\HotelesWS\HotelService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\HotelWS\HotelService2.xsd">
+    <None Include="Connected Services\HotelesWS\HotelService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\HotelWS\HotelService3.xsd">
+    <None Include="Connected Services\HotelesWS\HotelService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\HotelWS\WcfHotelTest.HotelWS.Hotel.datasource">
+    <None Include="Connected Services\HotelesWS\WcfHotelTest.HotelesWS.Hotels.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -84,19 +85,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\HotelWS\" />
+    <WCFMetadataStorage Include="Connected Services\HotelesWS\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\HotelWS\HotelService.disco" />
+    <None Include="Connected Services\HotelesWS\HotelService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\HotelWS\configuration91.svcinfo" />
+    <None Include="Connected Services\HotelesWS\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\HotelWS\configuration.svcinfo" />
+    <None Include="Connected Services\HotelesWS\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\HotelWS\Reference.svcmap">
+    <None Include="Connected Services\HotelesWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

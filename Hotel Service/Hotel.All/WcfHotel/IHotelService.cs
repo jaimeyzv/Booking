@@ -5,27 +5,24 @@ using WcfHotel.Errores;
 
 namespace WcfHotel
 {
-    // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IHotelService" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
     public interface IHotelService
     {
 
         [OperationContract]
         [FaultContract(typeof(RepetidoException))]
-        Hotel CrearHotel(Hotel hotel);
+        Hotels CrearHotel(Hotels hotel);
 
         [OperationContract]
-        Hotel ConsultarHotel(string nombre);
+        Hotels ObtenerHotelPorCodigo(string codigo);
 
         [OperationContract]
-        Hotel ModificarHotel(Hotel hotel);
+        Hotels ModificarHotel(Hotels hotel);
 
         [OperationContract]
-        void EliminarHotel(int idHotel);
+        int EliminarHotel(string codigo);
 
         [OperationContract]
-        List<Hotel> ListarHoteles();
-
-
+        List<Hotels> ListarHoteles();
     }
 }

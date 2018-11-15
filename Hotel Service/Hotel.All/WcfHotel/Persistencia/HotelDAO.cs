@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using WcfHotel.Dominio;
 
 namespace WcfHotel.Persistencia
@@ -10,49 +7,51 @@ namespace WcfHotel.Persistencia
     public class HotelDAO
     {
 
-        private string connectionString = "Data Source=.;Initial Catalog=Hoteles;Integrated security=true";
+        //private string connectionString = "Data Source=.;Initial Catalog=Hoteles;Integrated security=true";
+        private string connectionString = "Server=JAIME-PC;Database=Hoteles;User ID=JaimePC;pwd=face15PIER";
 
-
-        public Hotel Consultar(string nombre)
+        public Hotels ObtenerPorCodigo(string codigo)
         {
-            Hotel hotelEncontrado = null;
-            string sql = "select * from Hotel where Nombre = @Nombre";
+            string sql = "select * from Hoteles where Codigo = @Codigo";
+
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
 
                 using (SqlCommand command = new SqlCommand(sql, conexion))
                 {
-                    command.Parameters.Add(new SqlParameter("@Nombre", nombre));
-                    using (SqlDataReader resultado = command.ExecuteReader())
+                    command.Parameters.Add(new SqlParameter("@Codigo", codigo));
+
+                    using (var reader = command.ExecuteReader())
                     {
-                        if (resultado.Read())
+                        if (reader.Read())
                         {
-                            hotelEncontrado = new Hotel()
+                            return new Hotels()
                             {
-                                IdHotel = (int)resultado["IdHotel"],
-                                Nombre = (string)resultado["Nombre"],
-                                Direccion = (string)resultado["Direccion"],
-                                Telefono = (string)resultado["Telefono"]
+                                HotelId = (int)reader["HotelId"],
+                                Codigo = reader["Codigo"].ToString(),
+                                Nombre = reader["Nombre"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Direccion = reader["Direccion"].ToString(),
+                                Telefono = reader["Telefono"].ToString(),
+                                Estrellas = (int)reader["Estrellas"],
+                                Activo = (bool)reader["Activo"]
                             };
+                        }
+                        else
+                        {
+                            return null;
                         }
                     }
                 }
             }
-
-            return hotelEncontrado;
         }
-
-
-
-
-        public Hotel Crear(Hotel hotel)
+        
+        public Hotels Crear(Hotels hotel)
         {
+            Hotels hotelCreado = null;
 
-
-            Hotel hotelCreado = null;
-
-            string sql = "insert into Hotel (Nombre, Direccion, Telefono) values (@Nombre, @Direccion, @Telefono)";
+            string sql = "insert into Hoteles values (@Codigo, @Nombre, @Descripcion, @Direccion, @Telefono, @Estrellas, @Activo)";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -60,43 +59,47 @@ namespace WcfHotel.Persistencia
 
                 using (SqlCommand command = new SqlCommand(sql, conexion))
                 {
+                    command.Parameters.Add(new SqlParameter("@Codigo", hotel.Codigo));
                     command.Parameters.Add(new SqlParameter("@Nombre", hotel.Nombre));
+                    command.Parameters.Add(new SqlParameter("@Descripcion", hotel.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Direccion", hotel.Direccion));
                     command.Parameters.Add(new SqlParameter("@Telefono", hotel.Telefono));
+                    command.Parameters.Add(new SqlParameter("@Estrellas", hotel.Estrellas));
+                    command.Parameters.Add(new SqlParameter("@Activo", 1));
                     command.ExecuteNonQuery();
                 }
             }
 
-            hotelCreado = Consultar(hotel.Nombre);
+            hotelCreado = ObtenerPorCodigo(hotel.Codigo);
             return hotelCreado;
         }
 
-        public Hotel Modificar(Hotel hotel)
+        public Hotels Modificar(Hotels hotel)
         {
-            Hotel hotelModificado = null;
-            string sql = "UPDATE Hotel SET Nombre = @Nombre, Direccion = @Direccion, Telefono = @Telefono WHERE  IdHotel= @IdHotel";
-            using (SqlConnection conexion = new SqlConnection(connectionString))
+            string query = "UPDATE Hoteles SET Nombre = @Nombre, Descripcion = @Descripcion, Direccion = @Direccion, Telefono = @Telefono, Estrellas = @Estrellas, Activo = @Activo WHERE  Codigo= @Codigo";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                conexion.Open();
+                connection.Open();
 
-                using (SqlCommand command = new SqlCommand(sql, conexion))
+                using (var command = new SqlCommand(query, connection))
                 {
-
+                    command.Parameters.Add(new SqlParameter("@Codigo", hotel.Codigo));
                     command.Parameters.Add(new SqlParameter("@Nombre", hotel.Nombre));
+                    command.Parameters.Add(new SqlParameter("@Descripcion", hotel.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Direccion", hotel.Direccion));
                     command.Parameters.Add(new SqlParameter("@Telefono", hotel.Telefono));
-                    command.Parameters.Add(new SqlParameter("@IdHotel", hotel.IdHotel));
+                    command.Parameters.Add(new SqlParameter("@Estrellas", hotel.Estrellas));
+                    command.Parameters.Add(new SqlParameter("@Activo", 1));
                     command.ExecuteNonQuery();
                 }
             }
 
-            hotelModificado = Consultar(hotel.Nombre);
-            return hotelModificado;
+            return ObtenerPorCodigo(hotel.Codigo);
         }
 
-        public void Eliminar(int idhotel)
+        public int Eliminar(string codigo)
         {
-            string sql = "DELETE FROM Hotel WHERE IdHotel= @IdHotel";
+            string sql = "DELETE FROM Hoteles WHERE Codigo= @Codigo";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -104,43 +107,44 @@ namespace WcfHotel.Persistencia
 
                 using (SqlCommand command = new SqlCommand(sql, conexion))
                 {
-                    command.Parameters.Add(new SqlParameter("@IdHotel", idhotel));
-                    command.ExecuteNonQuery();
+                    command.Parameters.Add(new SqlParameter("@Codigo", codigo));
+                    return command.ExecuteNonQuery();
                 }
             }
         }
 
-        public List<Hotel> Listar()
+        public List<Hotels> Listar()
         {
-            List<Hotel> hotelesEncontrados = new List<Hotel>();
-            Hotel hotelEncontrado = null;
-            string sql = "SELECT * FROM Hotel";
+            var hoteles = new List<Hotels>();
+            string sql = "SELECT * FROM Hoteles";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
                 using (SqlCommand command = new SqlCommand(sql, conexion))
                 {
-                    using (SqlDataReader resultado = command.ExecuteReader())
+                    using (var reader = command.ExecuteReader())
                     {
-                        while (resultado.Read())
+                        while (reader.Read())
                         {
-                            hotelEncontrado = new Hotel()
+                            hoteles.Add(new Hotels()
                             {
-                                IdHotel = (int)resultado["IdHotel"],
-                                Nombre = (string)resultado["Nombre"],
-                                Direccion = (string)resultado["Direccion"],
-                                Telefono = (string)resultado["Telefono"]
-                            };
-                            hotelesEncontrados.Add(hotelEncontrado);
+                                HotelId = (int)reader["HotelId"],
+                                Codigo = reader["Codigo"].ToString(),
+                                Nombre = reader["Nombre"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Direccion = reader["Direccion"].ToString(),
+                                Telefono = reader["Telefono"].ToString(),
+                                Estrellas = (int)reader["Estrellas"],
+                                Activo = (bool)reader["Activo"]
+                            });
                         }
                     }
                 }
 
             }
-            return hotelesEncontrados;
+
+            return hoteles;
         }
-
-
     }
 }

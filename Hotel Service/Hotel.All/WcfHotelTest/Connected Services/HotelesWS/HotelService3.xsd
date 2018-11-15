@@ -4,55 +4,57 @@
   <xs:element name="CrearHotel">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="hotel" nillable="true" type="q1:Hotel" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="hotel" nillable="true" type="q1:Hotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CrearHotelResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="CrearHotelResult" nillable="true" type="q2:Hotel" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="CrearHotelResult" nillable="true" type="q2:Hotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ConsultarHotel">
+  <xs:element name="ObtenerHotelPorCodigo">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="ConsultarHotelResponse">
+  <xs:element name="ObtenerHotelPorCodigoResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ConsultarHotelResult" nillable="true" type="q3:Hotel" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ObtenerHotelPorCodigoResult" nillable="true" type="q3:Hotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ModificarHotel">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="hotel" nillable="true" type="q4:Hotel" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="hotel" nillable="true" type="q4:Hotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ModificarHotelResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ModificarHotelResult" nillable="true" type="q5:Hotel" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ModificarHotelResult" nillable="true" type="q5:Hotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EliminarHotel">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="idHotel" type="xs:int" />
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="EliminarHotelResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarHotelResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ListarHoteles">
@@ -63,7 +65,7 @@
   <xs:element name="ListarHotelesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ListarHotelesResult" nillable="true" type="q6:ArrayOfHotel" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfHotel.Dominio" minOccurs="0" name="ListarHotelesResult" nillable="true" type="q6:ArrayOfHotels" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
