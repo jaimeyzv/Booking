@@ -1,23 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using RoomService.Dominio;
+using System.Collections.Generic;
 using System.Data.SqlClient;
-using RoomService.Dominio;
 
 namespace RoomService.Persistencia
 {
     public class HabitacionDAO
     {
-        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Booking;Integrated Security=True";
+        //private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Booking;Integrated Security=True";
+        private string connectionString = "Server=JAIME-PC;Database=Habitaciones;User ID=JaimePC;pwd=face15PIER";
 
-        public Habitacion Obtener(int numero)
+        public Habitacion Obtener(int habitacionId)
         {
-            var query = "select * from habitacion where numero = @numero";
+            var query = "select * from Habitaciones where HabitacionId = @HabitacionId";
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
                 using (var command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add(new SqlParameter("@numero", numero));
+                    command.Parameters.Add(new SqlParameter("@HabitacionId", habitacionId));
 
                     using (var reader = command.ExecuteReader())
                     {
@@ -25,11 +26,12 @@ namespace RoomService.Persistencia
                         {
                             return new Habitacion()
                             {
-                                id = (int)reader["id"],
-                                numero = (int)reader["numero"],
-                                camas = (int)reader["camas"],
-                                descripcion = reader["descripcion"].ToString(),
-                                disponibilidad = (bool)reader["disponibilidad"]
+                                HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Numero = (int)reader["Numero"],
+                                CantidadCamas = (int)reader["CantidadCamas"],
+                                Disponible = (bool)reader["Disponible"]
                             };
                         }
                         else
@@ -39,47 +41,88 @@ namespace RoomService.Persistencia
             }
 
         }
+
+        public Habitacion ObtenerPorHotelYNumeroHabitacion(string codigoHotel, int numeroHabitacion)
+        {
+            var query = "select * from Habitaciones where (CodigoHotel = @CodigoHotel and  Numero = @Numero)";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@CodigoHotel", codigoHotel));
+                    command.Parameters.Add(new SqlParameter("@Numero", numeroHabitacion));
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Habitacion()
+                            {
+                                HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Numero = (int)reader["Numero"],
+                                CantidadCamas = (int)reader["CantidadCamas"],
+                                Disponible = (bool)reader["Disponible"]
+                            };
+                        }
+                        else
+                        { return null; }
+                    }
+                }
+            }
+
+        }
+
         public Habitacion Crear(Habitacion habitacion)
         {
-            var query = "insert into Habitacion values (@numero, @camas, @descripcion, @disponibilidad)";
+            var query = "insert into Habitaciones values (@CodigoHotel, @Descripcion, @Numero, @CantidadCamas, @Disponible); SELECT CAST(scope_identity() AS int)";
+            var habitacionId = 0;
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
                 using (var command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add(new SqlParameter("@numero", habitacion.numero));
-                    command.Parameters.Add(new SqlParameter("@camas", habitacion.camas));
-                    command.Parameters.Add(new SqlParameter("@descripcion", habitacion.descripcion));
-                    command.Parameters.Add(new SqlParameter("@disponibilidad", habitacion.disponibilidad));
-                    command.ExecuteNonQuery();
+                    command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
+                    command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
+                    command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
+                    command.Parameters.Add(new SqlParameter("@CantidadCamas", habitacion.CantidadCamas));
+                    command.Parameters.Add(new SqlParameter("@Disponible", 1));
+                    habitacionId = (int)command.ExecuteScalar();
                 }
             }
 
-            return Obtener(habitacion.numero);
+            return Obtener(habitacionId);
         }
+
         public Habitacion Modificar(Habitacion habitacion)
         {
-            var query = "UPDATE Habitacion SET Camas = @camas, Descripcion = @descripcion, Disponibilidad = @disponibilidad WHERE Numero = @numero";
+            var query = "UPDATE Habitaciones SET CodigoHotel = @CodigoHotel, Descripcion = @Descripcion, Numero = @Numero, CantidadCamas = @CantidadCamas, Disponible = @Disponible WHERE HabitacionId = @HabitacionId";
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
                 using (var command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add(new SqlParameter("@numero", habitacion.numero));
-                    command.Parameters.Add(new SqlParameter("@camas", habitacion.camas));
-                    command.Parameters.Add(new SqlParameter("@descripcion", habitacion.descripcion));
-                    command.Parameters.Add(new SqlParameter("@disponibilidad", habitacion.disponibilidad));
+                    command.Parameters.Add(new SqlParameter("@HabitacionId", habitacion.HabitacionId));
+                    command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
+                    command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
+                    command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
+                    command.Parameters.Add(new SqlParameter("@CantidadCamas", habitacion.CantidadCamas));
+                    command.Parameters.Add(new SqlParameter("@Disponible", habitacion.Disponible));
                     command.ExecuteNonQuery();
                 }
             }
 
-            return Obtener(habitacion.numero);
+            return Obtener(habitacion.HabitacionId);
         }
-        public void Eliminar(int numero)
+
+        public int Eliminar(int habitacionId)
         {
-            var query = "DELETE FROM Habitacion WHERE Numero = @numero";
+            var query = "DELETE FROM Habitaciones WHERE HabitacionId = @HabitacionId";
 
             using (var connection = new SqlConnection(connectionString))
             {
@@ -87,15 +130,16 @@ namespace RoomService.Persistencia
 
                 using (var command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.Add(new SqlParameter("@numero", numero));
-                    command.ExecuteNonQuery();
+                    command.Parameters.Add(new SqlParameter("@HabitacionId", habitacionId));
+                    return command.ExecuteNonQuery();
                 }
             }
         }
+
         public List<Habitacion> Listar()
         {
             var habitaciones = new List<Habitacion>();
-            var query = "SELECT * FROM Habitacion";
+            var query = "SELECT * FROM Habitaciones";
 
             using (var connection = new SqlConnection(connectionString))
             {
@@ -108,11 +152,12 @@ namespace RoomService.Persistencia
                         {
                             habitaciones.Add(new Habitacion()
                             {
-                                id = (int)reader["id"],
-                                numero = (int)reader["numero"],
-                                camas = (int)reader["camas"],
-                                descripcion = reader["descripcion"].ToString(),
-                                disponibilidad = (bool)reader["disponibilidad"]
+                                HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Numero = (int)reader["Numero"],
+                                CantidadCamas = (int)reader["CantidadCamas"],
+                                Disponible = (bool)reader["Disponible"]
                             });
                         }
                     }
