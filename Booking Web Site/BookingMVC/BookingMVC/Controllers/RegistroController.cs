@@ -16,7 +16,7 @@ namespace BookingMVC.Controllers
         {
             var RegistroBusiness = new RegistroBusiness();
 
-            if (RegistroBusiness.EsDniValido(model.Dni))
+            if (!RegistroBusiness.EsDniValido(model.Dni))
             {
                 TempData["ErrorMessage_ExisteDni"] = "Dni ingresado no es válido.";
                 return Index();

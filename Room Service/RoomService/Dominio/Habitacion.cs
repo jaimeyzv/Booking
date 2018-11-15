@@ -6,14 +6,16 @@ namespace RoomService.Dominio
     public class Habitacion
     {
         [DataMember]
-        public int id { get; set; }
+        public int HabitacionId { get; set; }
         [DataMember]
-        public int numero { get; set; }
+        public string CodigoHotel { get; set; }
         [DataMember]
-        public int camas { get; set; }
+        public string Descripcion { get; set; }
         [DataMember]
-        public string descripcion { get; set; }
+        public int Numero { get; set; }
         [DataMember]
-        public bool disponibilidad { get; set; }
+        public int CantidadCamas { get; set; }
+        [DataMember]
+        public bool Disponible { get; set; }
     }
 }

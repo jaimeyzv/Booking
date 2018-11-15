@@ -22,7 +22,7 @@ namespace Booking.Business
                         Dni = registro.Dni,
                         Edad = registro.Edad,
                         Correo = registro.Correo,
-                        Password = registro.contrasena
+                        Password = registro.Contrasena
                     };
 
                     miembrosService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
@@ -46,12 +46,16 @@ namespace Booking.Business
 
         public bool EsDniValido(string dni)
         {
-            var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
-            using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
+            try
             {
-                reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
-                return reniecService.EsDniValido(dni);
+                var reniecServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:83/ReniecService.svc");
+                using (var reniecService = new ReniecServiceClient(new System.ServiceModel.BasicHttpBinding(), reniecServiceRemoteAddress))
+                {
+                    reniecService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                    return reniecService.EsDniValido(dni);
+                }
             }
+            catch (Exception ex){ return false; }
         }
     }
 }

@@ -74,5 +74,10 @@ namespace WFCMember
         {
             return dao.Listar();
         }
+
+        public Miembro IniciarSesion(string dni, string contrasena)
+        {
+            return dao.ObtenerPorDniYContrasena(dni, contrasena);
+        }
     }
 }

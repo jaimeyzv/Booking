@@ -44,6 +44,12 @@
   <wsdl:message name="IMiembrosService_EliminarMiembro_RepetidoExceptionFault_FaultMessage">
     <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WCFMember.Errores" name="detail" element="q4:RepetidoException" />
   </wsdl:message>
+  <wsdl:message name="IMiembrosService_IniciarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IMiembrosService_IniciarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
   <wsdl:message name="IMiembrosService_ListarMiembros_InputMessage">
     <wsdl:part name="parameters" element="tns:ListarMiembros" />
   </wsdl:message>
@@ -70,6 +76,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembro" message="tns:IMiembrosService_EliminarMiembro_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembroResponse" message="tns:IMiembrosService_EliminarMiembro_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IMiembrosService/EliminarMiembroRepetidoExceptionFault" name="RepetidoExceptionFault" message="tns:IMiembrosService_EliminarMiembro_RepetidoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/IniciarSesion" message="tns:IMiembrosService_IniciarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMiembrosService/IniciarSesionResponse" message="tns:IMiembrosService_IniciarSesion_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ListarMiembros">
       <wsdl:input wsaw:Action="http://tempuri.org/IMiembrosService/ListarMiembros" message="tns:IMiembrosService_ListarMiembros_InputMessage" />
@@ -125,6 +135,15 @@
       <wsdl:fault name="RepetidoExceptionFault">
         <soap:fault use="literal" name="RepetidoExceptionFault" namespace="" />
       </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <soap:operation soapAction="http://tempuri.org/IMiembrosService/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="ListarMiembros">
       <soap:operation soapAction="http://tempuri.org/IMiembrosService/ListarMiembros" style="document" />

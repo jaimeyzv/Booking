@@ -45,6 +45,44 @@ namespace WCFMember.Persistencia
             }
         }
 
+        public Miembro ObtenerPorDniYContrasena(string dni, string contrasena)
+        {
+            var query = "select * from Miembro where (dni = @dni and Contrasena = @Contrasena)";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@dni", dni));
+                    command.Parameters.Add(new SqlParameter("@Contrasena", contrasena));
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Miembro()
+                            {
+                                MiembroId = (int)reader["MiembroId"],
+                                Nombres = reader["Nombres"].ToString(),
+                                ApellidoPaterno = reader["Ape_Paterno"].ToString(),
+                                ApellidoMaterno = reader["Ape_Materno"].ToString(),
+                                Dni = reader["Dni"].ToString(),
+                                Edad = (int)reader["Edad"],
+                                Correo = reader["Correo"].ToString(),
+                                Activo = (bool)reader["Activo"]
+                            };
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+
+                }
+            }
+        }
+
         public Miembro Crear(Miembro miembro)
         {
             var query = "insert into Miembro (Nombres, Ape_Paterno, Ape_Materno, Dni, Edad, Correo, Contrasena, Activo) values (@Nombres, @Ape_Paterno, @Ape_Materno, @Dni, @Edad, @Correo, @Contrasena, @Activo)";

@@ -279,6 +279,12 @@ namespace Booking.Business.MemberService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/EliminarMiembro", ReplyAction="http://tempuri.org/IMiembrosService/EliminarMiembroResponse")]
         System.Threading.Tasks.Task EliminarMiembroAsync(string dni);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/IniciarSesion", ReplyAction="http://tempuri.org/IMiembrosService/IniciarSesionResponse")]
+        Booking.Business.MemberService.Miembro IniciarSesion(string dni, string contrasena);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/IniciarSesion", ReplyAction="http://tempuri.org/IMiembrosService/IniciarSesionResponse")]
+        System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> IniciarSesionAsync(string dni, string contrasena);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMiembrosService/ListarMiembros", ReplyAction="http://tempuri.org/IMiembrosService/ListarMiembrosResponse")]
         Booking.Business.MemberService.Miembro[] ListarMiembros();
         
@@ -343,6 +349,14 @@ namespace Booking.Business.MemberService {
         
         public System.Threading.Tasks.Task EliminarMiembroAsync(string dni) {
             return base.Channel.EliminarMiembroAsync(dni);
+        }
+        
+        public Booking.Business.MemberService.Miembro IniciarSesion(string dni, string contrasena) {
+            return base.Channel.IniciarSesion(dni, contrasena);
+        }
+        
+        public System.Threading.Tasks.Task<Booking.Business.MemberService.Miembro> IniciarSesionAsync(string dni, string contrasena) {
+            return base.Channel.IniciarSesionAsync(dni, contrasena);
         }
         
         public Booking.Business.MemberService.Miembro[] ListarMiembros() {

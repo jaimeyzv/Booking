@@ -24,4 +24,5 @@ insert into Miembro values ('Jaime Yampiere', 'Zamora', 'Vasquez', '47470738', 2
 insert into Miembro values ('Luis Johao', 'Rosas', 'Rosillo', '01012547', 28, 'johao.dev@outlook.com', '654321', 1);
 select * from Miembro
 
+--delete from Miembro where dni in ('10254254','02145214','00001111','01010101')
 

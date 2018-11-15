@@ -55,6 +55,21 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="IniciarSesion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dni" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrasena" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarSesionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFMember.Dominio" minOccurs="0" name="IniciarSesionResult" nillable="true" type="q6:Miembro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ListarMiembros">
     <xs:complexType>
       <xs:sequence />
@@ -63,7 +78,7 @@
   <xs:element name="ListarMiembrosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFMember.Dominio" minOccurs="0" name="ListarMiembrosResult" nillable="true" type="q6:ArrayOfMiembro" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFMember.Dominio" minOccurs="0" name="ListarMiembrosResult" nillable="true" type="q7:ArrayOfMiembro" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -29,6 +29,9 @@ namespace WFCMember
         void EliminarMiembro(string dni);
 
         [OperationContract]
+        Miembro IniciarSesion(string dni, string contrasena);
+
+        [OperationContract]
         List<Miembro> ListarMiembros();
     }
 }
