@@ -21,3 +21,5 @@ insert into Habitaciones values ('HT00000001', 'Habitación matrimonial', 101, 2,
 insert into Habitaciones values ('HT00000001', 'Habitación con cama de agua', 102, 2, 1);
 insert into Habitaciones values ('HT00000001', 'Habitación con frio bar', 103, 2, 1);
 insert into Habitaciones values ('HT00000001', 'Habitación para persona sola', 104, 1, 1);
+
+--select * from Habitaciones where (CodigoHotel = 'HT99999999' and  Numero = 201)
