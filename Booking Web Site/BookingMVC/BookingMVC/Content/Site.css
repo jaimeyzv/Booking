@@ -23,10 +23,6 @@ body > .container {
     background-attachment: fixed;
 }
 
-.card-deck .card {
-    min-width: 220px;
-}
-
 .custom-opacity {
     background: rgba(255, 255, 255, 0.3);
 }

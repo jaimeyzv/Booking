@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
 {
-    public class ReservaController : Controller
+    public class RoomController : Controller
     {
-        // GET: Reserva
+        // GET: Room
         public ActionResult Index()
         {
             return View();
