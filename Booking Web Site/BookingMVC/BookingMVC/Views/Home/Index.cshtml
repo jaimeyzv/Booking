@@ -15,7 +15,7 @@
                 <li>Email support</li>
                 <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary" data-target="#PayModal" data-toggle="modal">Pay</button>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary" data-target="#PayModal" data-toggle="modal">Ver Oferta</button>
         </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -30,7 +30,7 @@
                 <li>Priority email support</li>
                 <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary" data-target="#PayModal" data-toggle="modal">Pay</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary" data-target="#PayModal" data-toggle="modal">Ver Oferta</button>
         </div>
     </div>
     <div class="card mb-4 shadow-sm">
@@ -45,7 +45,7 @@
                 <li>Phone and email support</li>
                 <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary" data-target="#PayModal" data-toggle="modal">Pay</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary" data-target="#PayModal" data-toggle="modal">Ver Oferta</button>
         </div>
     </div>
 </div>
@@ -63,7 +63,7 @@
                 @Html.Partial("../User/LogIn")
             </div>
             <div class="modal-footer">
-                
+
                 <button type="button" class="btn btn-primary">Ingresar</button>
             </div>
         </div>
@@ -83,7 +83,7 @@
                 @Html.Partial("../User/SignUp")
             </div>
             <div class="modal-footer">
-                
+
                 <button type="button" class="btn btn-primary">Registrarse</button>
             </div>
         </div>
@@ -94,18 +94,17 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Pay</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Oferta</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                @Html.Partial("../Payment/Pay")
+            @using (Ajax.BeginForm("Index","Reserva", null, new AjaxOptions() { HttpMethod = "Post", UpdateTargetId = "form-content", InsertionMode = InsertionMode.Replace }, null))
+            {
+            <div id="form-content">
+                @Html.Partial("../Reserva/Index")
             </div>
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-primary">Pagar</button>
-            </div>
+            }
         </div>
     </div>
 </div>
