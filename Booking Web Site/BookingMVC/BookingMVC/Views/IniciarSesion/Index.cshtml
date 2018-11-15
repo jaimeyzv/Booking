@@ -1,27 +1,21 @@
 ﻿@model BookingModels.Login
 
 @{
-    Layout = null;
+    ViewBag.Title = "Iniciar Sesión";
 }
 
-<!DOCTYPE html>
+<div class="card mb-2">
+    <h5 class="card-header">Iniciar Sesión</h5>
+</div>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title - Booking</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-</head>
-<body class="background-cover">
-    <div class="container" style="background-color: silver !important;">
+<div class="card">
+    <div class="card-body">
         @using (Html.BeginForm())
         {
             @Html.AntiForgeryToken()
 
             <div class="form-horizontal">
-                <h4>Iniciar Sesión</h4>
-                <hr />
+
                 @Html.ValidationSummary(true)
                 <div class="form-group">
                     @Html.LabelFor(model => model.Dni, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -41,7 +35,7 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Iniciar Sesión" class="btn btn-default" />
+                        <input type="submit" value="Ingresar" class="btn btn-outline-success" />
                     </div>
                 </div>
             </div>
@@ -53,11 +47,5 @@
                 <span>@TempData["ErrorMessage_Login"]</span>
             </div>
         }
-
-        <div>
-            @Html.ActionLink("Back to List", "Index")
-        </div>
     </div>
-</body>
-</html>
-
+</div>
