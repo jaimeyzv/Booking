@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilityService", "MobilityService\MobilityService.csproj", "{7FBB8702-C895-4B75-9CED-C4A91677212F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilityServiceTests", "MobilityServiceTests\MobilityServiceTests.csproj", "{81DDE699-4F54-4015-A52C-CA357B7E5AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FBB8702-C895-4B75-9CED-C4A91677212F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FBB8702-C895-4B75-9CED-C4A91677212F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FBB8702-C895-4B75-9CED-C4A91677212F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FBB8702-C895-4B75-9CED-C4A91677212F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDE699-4F54-4015-A52C-CA357B7E5AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDE699-4F54-4015-A52C-CA357B7E5AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDE699-4F54-4015-A52C-CA357B7E5AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDE699-4F54-4015-A52C-CA357B7E5AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {415F2E3B-C902-4F51-8F51-D4B120AF4448}
+	EndGlobalSection
+EndGlobal
