@@ -13,12 +13,13 @@ create table Hoteles
 	Direccion	varchar(100),
 	Telefono	varchar(10),
 	Estrellas	int,
+	Precio		decimal(18,4),
 	Activo		bit
 
 	primary key(HotelId)
 )
 go
 
-insert into Hoteles values ('HT00000001', 'Hilton', 'Mejor hotel de lima', 'AV. Por ahí no más.', '013381834', 5, 1);
+insert into Hoteles values ('HT00000001', 'Hilton', 'Mejor hotel de lima', 'AV. Por ahí no más.', '013381834', 5, 250.99, 1);
 
 select * from Hoteles;
