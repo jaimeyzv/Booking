@@ -167,5 +167,39 @@ namespace RoomService.Persistencia
 
             return habitaciones;
         }
+
+        public List<Habitacion> ListarPorHotel(string codigoHotel)
+        {
+            var habitaciones = new List<Habitacion>();
+            var query = "SELECT * FROM Habitaciones WHERE CodigoHotel = @CodigoHotel";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@CodigoHotel", codigoHotel));
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            habitaciones.Add(new Habitacion()
+                            {
+                                HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Numero = (int)reader["Numero"],
+                                CantidadCamas = (int)reader["CantidadCamas"],
+                                Disponible = (bool)reader["Disponible"]
+                            });
+                        }
+                    }
+
+                }
+            }
+
+            return habitaciones;
+        }
     }
 }

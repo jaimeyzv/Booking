@@ -26,5 +26,8 @@ namespace RoomService
 
         [OperationContract]
         List<Habitacion> ListarHabitaciones();
+
+        [OperationContract]
+        List<Habitacion> ListarHabitacionesPorHotel(string codigoHotel);
     }
 }

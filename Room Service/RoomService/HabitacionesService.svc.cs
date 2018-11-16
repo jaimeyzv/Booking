@@ -82,5 +82,10 @@ namespace RoomService
         {
             return dao.Listar();
         }
+
+        public List<Habitacion> ListarHabitacionesPorHotel(string codigoHotel)
+        {
+            return dao.ListarPorHotel(codigoHotel);
+        }
     }
 }
