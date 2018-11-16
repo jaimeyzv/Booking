@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Reserva.cs" />
+    <Compile Include="Errores\RepetidoException.cs" />
     <Compile Include="IReservaService.cs" />
     <Compile Include="Persistencia\ReservaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Errores\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

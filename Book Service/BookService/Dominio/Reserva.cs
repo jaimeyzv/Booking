@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Web;
 
 namespace BookService.Dominio
 {
@@ -10,27 +7,28 @@ namespace BookService.Dominio
     public class Reserva
     {
         [DataMember]
-        public int IdReserva { get; set; }
-
+        public int ReservaId { get; set; }
         [DataMember]
-        public int NuHabitacion { get; set; }
-
+        public string Codigo { get; set; }
         [DataMember]
-        public int NuPasajeros { get; set; }
-
+        public string DniMiembro { get; set; }
         [DataMember]
-        public string TipoHabitacion { get; set; }
-
+        public string CodigoHotel { get; set; }
         [DataMember]
-        public decimal PrecioHabitacion { get; set; }
-
+        public string CodigoHabitacion { get; set; }
         [DataMember]
-        public DateTime FechaReservaIn { get; set; }
-
+        public int NumeroHabitacion { get; set; }
         [DataMember]
-        public DateTime FechaReservaOut { get; set; }
-
+        public decimal PrecioHotel { get; set; }
+        [DataMember]
+        public int CantidadPersonas { get; set; }
+        [DataMember]
+        public DateTime FechaCheckIn { get; set; }
+        [DataMember]
+        public DateTime FechaCheckOut { get; set; }
         [DataMember]
         public DateTime FechaRegistro { get; set; }
+        [DataMember]
+        public string Estado { get; set; }
     }
 }
