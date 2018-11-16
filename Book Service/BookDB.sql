@@ -23,4 +23,4 @@ create table Reserva
 )
 go
 
-
+select * from Reserva;
