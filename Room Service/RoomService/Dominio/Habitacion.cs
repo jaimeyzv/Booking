@@ -8,6 +8,8 @@ namespace RoomService.Dominio
         [DataMember]
         public int HabitacionId { get; set; }
         [DataMember]
+        public string CodigoHabitacion { get; set; }
+        [DataMember]
         public string CodigoHotel { get; set; }
         [DataMember]
         public string Descripcion { get; set; }

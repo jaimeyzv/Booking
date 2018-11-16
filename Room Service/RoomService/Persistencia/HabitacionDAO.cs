@@ -27,6 +27,7 @@ namespace RoomService.Persistencia
                             return new Habitacion()
                             {
                                 HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Numero = (int)reader["Numero"],
@@ -61,6 +62,7 @@ namespace RoomService.Persistencia
                             return new Habitacion()
                             {
                                 HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Numero = (int)reader["Numero"],
@@ -78,7 +80,7 @@ namespace RoomService.Persistencia
 
         public Habitacion Crear(Habitacion habitacion)
         {
-            var query = "insert into Habitaciones values (@CodigoHotel, @Descripcion, @Numero, @CantidadCamas, @Disponible); SELECT CAST(scope_identity() AS int)";
+            var query = "insert into Habitaciones values (@CodigoHabitacion, @CodigoHotel, @Descripcion, @Numero, @CantidadCamas, @Disponible); SELECT CAST(scope_identity() AS int)";
             var habitacionId = 0;
             using (var connection = new SqlConnection(connectionString))
             {
@@ -86,6 +88,7 @@ namespace RoomService.Persistencia
 
                 using (var command = new SqlCommand(query, connection))
                 {
+                    command.Parameters.Add(new SqlParameter("@CodigoHabitacion", habitacion.CodigoHabitacion));
                     command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
                     command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
@@ -100,7 +103,7 @@ namespace RoomService.Persistencia
 
         public Habitacion Modificar(Habitacion habitacion)
         {
-            var query = "UPDATE Habitaciones SET CodigoHotel = @CodigoHotel, Descripcion = @Descripcion, Numero = @Numero, CantidadCamas = @CantidadCamas, Disponible = @Disponible WHERE HabitacionId = @HabitacionId";
+            var query = "UPDATE Habitaciones SET CodigoHabitacion = @CodigoHabitacion, CodigoHotel = @CodigoHotel, Descripcion = @Descripcion, Numero = @Numero, CantidadCamas = @CantidadCamas, Disponible = @Disponible WHERE HabitacionId = @HabitacionId";
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -108,6 +111,7 @@ namespace RoomService.Persistencia
                 using (var command = new SqlCommand(query, connection))
                 {
                     command.Parameters.Add(new SqlParameter("@HabitacionId", habitacion.HabitacionId));
+                    command.Parameters.Add(new SqlParameter("@CodigoHabitacion", habitacion.CodigoHabitacion));
                     command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
                     command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
@@ -153,6 +157,7 @@ namespace RoomService.Persistencia
                             habitaciones.Add(new Habitacion()
                             {
                                 HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Numero = (int)reader["Numero"],
@@ -187,6 +192,7 @@ namespace RoomService.Persistencia
                             habitaciones.Add(new Habitacion()
                             {
                                 HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Numero = (int)reader["Numero"],
