@@ -48,6 +48,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\RoomService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="RegistroBusiness.cs" />
     <Compile Include="Connected Services\ReniecService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -92,10 +97,27 @@
     <None Include="Connected Services\ReniecService\ReniecService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\RoomService\Booking.Business.RoomService.Habitacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RoomService\HabitacionesService.wsdl" />
+    <None Include="Connected Services\RoomService\HabitacionesService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomService\HabitacionesService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomService\HabitacionesService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomService\HabitacionesService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MemberService\" />
     <WCFMetadataStorage Include="Connected Services\ReniecService\" />
+    <WCFMetadataStorage Include="Connected Services\RoomService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ReniecService\ReniecService.disco" />
@@ -129,6 +151,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\MemberService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomService\HabitacionesService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
