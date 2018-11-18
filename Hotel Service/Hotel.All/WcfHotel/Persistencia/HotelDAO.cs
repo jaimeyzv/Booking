@@ -87,7 +87,7 @@ namespace WcfHotel.Persistencia
                     command.Parameters.Add(new SqlParameter("@Telefono", hotel.Telefono));
                     command.Parameters.Add(new SqlParameter("@CodigoImagen", hotel.CodigoImagen));
                     command.Parameters.Add(new SqlParameter("@Estrellas", hotel.Estrellas));
-                    command.Parameters.Add(new SqlParameter("@Activo", 1));
+                    command.Parameters.Add(new SqlParameter("@Activo", hotel.Activo));
                     command.ExecuteNonQuery();
                 }
             }
