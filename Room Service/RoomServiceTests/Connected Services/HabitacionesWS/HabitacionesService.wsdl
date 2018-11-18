@@ -47,6 +47,12 @@
   <wsdl:message name="IHabitacionesService_ListarHabitaciones_OutputMessage">
     <wsdl:part name="parameters" element="tns:ListarHabitacionesResponse" />
   </wsdl:message>
+  <wsdl:message name="IHabitacionesService_ListarHabitacionesPorHotel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorHotel" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionesService_ListarHabitacionesPorHotel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarHabitacionesPorHotelResponse" />
+  </wsdl:message>
   <wsdl:portType name="IHabitacionesService">
     <wsdl:operation name="ObtenerHabitacion">
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacion" message="tns:IHabitacionesService_ObtenerHabitacion_InputMessage" />
@@ -72,6 +78,10 @@
     <wsdl:operation name="ListarHabitaciones">
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ListarHabitaciones" message="tns:IHabitacionesService_ListarHabitaciones_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionesService/ListarHabitacionesResponse" message="tns:IHabitacionesService_ListarHabitaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorHotel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotel" message="tns:IHabitacionesService_ListarHabitacionesPorHotel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotelResponse" message="tns:IHabitacionesService_ListarHabitacionesPorHotel_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IHabitacionesService" type="tns:IHabitacionesService">
@@ -126,6 +136,15 @@
     </wsdl:operation>
     <wsdl:operation name="ListarHabitaciones">
       <soap:operation soapAction="http://tempuri.org/IHabitacionesService/ListarHabitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarHabitacionesPorHotel">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

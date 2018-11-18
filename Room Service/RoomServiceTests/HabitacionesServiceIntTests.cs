@@ -13,16 +13,22 @@ namespace RoomServiceTests
 
             var nuevaHabitacion = proxy.CrearHabitacion(new HabitacionesWS.Habitacion
             {
-                CodigoHotel = "HT99999999",
+                CodigoHabitacion = "HT00999999",
+                CodigoHotel = "HBT0009999",
                 Descripcion = "Habitación matrimonial",
-                Numero = 201,
+                Precio = 111,
+                Numero = 101,
                 CantidadCamas = 1,
+                Codigoimagen = "HT00999999.jpg"
             });
-
-            Assert.AreEqual("HT99999999", nuevaHabitacion.CodigoHotel);
+            
+            Assert.AreEqual("HT00999999", nuevaHabitacion.CodigoHabitacion);
+            Assert.AreEqual("HBT0009999", nuevaHabitacion.CodigoHotel);
             Assert.AreEqual("Habitación matrimonial", nuevaHabitacion.Descripcion);
-            Assert.AreEqual(201, nuevaHabitacion.Numero);
+            Assert.AreEqual(111, nuevaHabitacion.Precio);
+            Assert.AreEqual(101, nuevaHabitacion.Numero);
             Assert.AreEqual(1, nuevaHabitacion.CantidadCamas);
+            Assert.AreEqual("HT00999999.jpg", nuevaHabitacion.Codigoimagen);
 
             EliminarHabitacionParaPruebas(nuevaHabitacion.HabitacionId);
         }
@@ -39,10 +45,13 @@ namespace RoomServiceTests
             {
                 proxy.CrearHabitacion(new HabitacionesWS.Habitacion
                 {
+                    CodigoHabitacion = "HT00999999",
                     CodigoHotel = codigoHotel,
                     Descripcion = "Habitación matrimonial",
+                    Precio = 111,
                     Numero = numeroHabitacion,
                     CantidadCamas = 1,
+                    Codigoimagen = "HT00999999.jpg"
                 });
             }
             catch (FaultException<HabitacionesWS.RepetidoException> error)
@@ -67,10 +76,13 @@ namespace RoomServiceTests
             HabitacionesWS.HabitacionesServiceClient proxy = new HabitacionesWS.HabitacionesServiceClient();
             return proxy.CrearHabitacion(new HabitacionesWS.Habitacion
             {
+                CodigoHabitacion = "HT00999999",
                 CodigoHotel = codigoHotel,
                 Descripcion = "Habitación matrimonial",
+                Precio = 111,
                 Numero = numeroHabitacion,
-                CantidadCamas = 2,
+                CantidadCamas = 1,
+                Codigoimagen = "HT00999999.jpg"
             });
         }
 

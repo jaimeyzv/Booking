@@ -30,9 +30,12 @@ namespace RoomService.Persistencia
                                 CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
+                                Precio = (decimal)reader["Precio"],
                                 Numero = (int)reader["Numero"],
                                 CantidadCamas = (int)reader["CantidadCamas"],
-                                Disponible = (bool)reader["Disponible"]
+                                Codigoimagen = reader["Codigoimagen"].ToString(),
+                                Disponible = (bool)reader["Disponible"],
+                                Activo = (bool)reader["Activo"]
                             };
                         }
                         else
@@ -65,9 +68,12 @@ namespace RoomService.Persistencia
                                 CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
+                                Precio = (decimal)reader["Precio"],
                                 Numero = (int)reader["Numero"],
                                 CantidadCamas = (int)reader["CantidadCamas"],
-                                Disponible = (bool)reader["Disponible"]
+                                Codigoimagen = reader["Codigoimagen"].ToString(),
+                                Disponible = (bool)reader["Disponible"],
+                                Activo = (bool)reader["Activo"]
                             };
                         }
                         else
@@ -80,7 +86,7 @@ namespace RoomService.Persistencia
 
         public Habitacion Crear(Habitacion habitacion)
         {
-            var query = "insert into Habitaciones values (@CodigoHabitacion, @CodigoHotel, @Descripcion, @Numero, @CantidadCamas, @Disponible); SELECT CAST(scope_identity() AS int)";
+            var query = "insert into Habitaciones values (@CodigoHabitacion, @CodigoHotel, @Descripcion, @Precio, @Numero, @CantidadCamas, @Codigoimagen, @Disponible, @Activo); SELECT CAST(scope_identity() AS int)";
             var habitacionId = 0;
             using (var connection = new SqlConnection(connectionString))
             {
@@ -91,9 +97,12 @@ namespace RoomService.Persistencia
                     command.Parameters.Add(new SqlParameter("@CodigoHabitacion", habitacion.CodigoHabitacion));
                     command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
                     command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
+                    command.Parameters.Add(new SqlParameter("@Precio", habitacion.Precio));
                     command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
                     command.Parameters.Add(new SqlParameter("@CantidadCamas", habitacion.CantidadCamas));
+                    command.Parameters.Add(new SqlParameter("@Codigoimagen", habitacion.Codigoimagen));
                     command.Parameters.Add(new SqlParameter("@Disponible", 1));
+                    command.Parameters.Add(new SqlParameter("@Activo", 1));
                     habitacionId = (int)command.ExecuteScalar();
                 }
             }
@@ -103,7 +112,7 @@ namespace RoomService.Persistencia
 
         public Habitacion Modificar(Habitacion habitacion)
         {
-            var query = "UPDATE Habitaciones SET CodigoHabitacion = @CodigoHabitacion, CodigoHotel = @CodigoHotel, Descripcion = @Descripcion, Numero = @Numero, CantidadCamas = @CantidadCamas, Disponible = @Disponible WHERE HabitacionId = @HabitacionId";
+            var query = "UPDATE Habitaciones SET CodigoHabitacion = @CodigoHabitacion, CodigoHotel = @CodigoHotel, Descripcion = @Descripcion, Precio = @Precio, Numero = @Numero, CantidadCamas = @CantidadCamas, Codigoimagen = @Codigoimagen, Disponible = @Disponible, Activo = @Activo WHERE HabitacionId = @HabitacionId";
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -114,9 +123,12 @@ namespace RoomService.Persistencia
                     command.Parameters.Add(new SqlParameter("@CodigoHabitacion", habitacion.CodigoHabitacion));
                     command.Parameters.Add(new SqlParameter("@CodigoHotel", habitacion.CodigoHotel));
                     command.Parameters.Add(new SqlParameter("@Descripcion", habitacion.Descripcion));
+                    command.Parameters.Add(new SqlParameter("@Precio", habitacion.Precio));
                     command.Parameters.Add(new SqlParameter("@Numero", habitacion.Numero));
                     command.Parameters.Add(new SqlParameter("@CantidadCamas", habitacion.CantidadCamas));
+                    command.Parameters.Add(new SqlParameter("@Codigoimagen", habitacion.Codigoimagen));
                     command.Parameters.Add(new SqlParameter("@Disponible", habitacion.Disponible));
+                    command.Parameters.Add(new SqlParameter("@Activo", habitacion.Activo));
                     command.ExecuteNonQuery();
                 }
             }
@@ -160,9 +172,12 @@ namespace RoomService.Persistencia
                                 CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
+                                Precio = (decimal)reader["Precio"],
                                 Numero = (int)reader["Numero"],
                                 CantidadCamas = (int)reader["CantidadCamas"],
-                                Disponible = (bool)reader["Disponible"]
+                                Codigoimagen = reader["Codigoimagen"].ToString(),
+                                Disponible = (bool)reader["Disponible"],
+                                Activo = (bool)reader["Activo"]
                             });
                         }
                     }
@@ -195,13 +210,15 @@ namespace RoomService.Persistencia
                                 CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
                                 CodigoHotel = reader["CodigoHotel"].ToString(),
                                 Descripcion = reader["Descripcion"].ToString(),
+                                Precio = (decimal)reader["Precio"],
                                 Numero = (int)reader["Numero"],
                                 CantidadCamas = (int)reader["CantidadCamas"],
-                                Disponible = (bool)reader["Disponible"]
+                                Codigoimagen = reader["Codigoimagen"].ToString(),
+                                Disponible = (bool)reader["Disponible"],
+                                Activo = (bool)reader["Activo"]
                             });
                         }
                     }
-
                 }
             }
 

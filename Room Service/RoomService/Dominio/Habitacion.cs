@@ -14,10 +14,16 @@ namespace RoomService.Dominio
         [DataMember]
         public string Descripcion { get; set; }
         [DataMember]
+        public decimal Precio { get; set; }
+        [DataMember]
         public int Numero { get; set; }
         [DataMember]
         public int CantidadCamas { get; set; }
         [DataMember]
+        public string Codigoimagen { get; set; }
+        [DataMember]
         public bool Disponible { get; set; }
+        [DataMember]
+        public bool Activo { get; set; }
     }
 }
