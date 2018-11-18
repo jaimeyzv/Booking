@@ -29,6 +29,9 @@ namespace WcfHotelTest.HotelesWS {
         private string CodigoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoImagenField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescripcionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -78,6 +81,19 @@ namespace WcfHotelTest.HotelesWS {
                 if ((object.ReferenceEquals(this.CodigoField, value) != true)) {
                     this.CodigoField = value;
                     this.RaisePropertyChanged("Codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodigoImagen {
+            get {
+                return this.CodigoImagenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoImagenField, value) != true)) {
+                    this.CodigoImagenField = value;
+                    this.RaisePropertyChanged("CodigoImagen");
                 }
             }
         }

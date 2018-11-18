@@ -19,9 +19,9 @@ namespace WcfHotel.Dominio
         [DataMember]
         public string Telefono { get; set; }
         [DataMember]
-        public int Estrellas { get; set; }
+        public string CodigoImagen { get; set; }
         [DataMember]
-        public decimal Precio { get; set; }
+        public int Estrellas { get; set; }
         [DataMember]
         public bool Activo { get; set; }
     }

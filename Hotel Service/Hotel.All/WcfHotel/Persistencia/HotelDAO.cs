@@ -17,11 +17,9 @@ namespace WcfHotel.Persistencia
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-
                 using (SqlCommand command = new SqlCommand(sql, conexion))
                 {
                     command.Parameters.Add(new SqlParameter("@Codigo", codigo));
-
                     using (var reader = command.ExecuteReader())
                     {
                         if (reader.Read())
@@ -34,15 +32,12 @@ namespace WcfHotel.Persistencia
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Direccion = reader["Direccion"].ToString(),
                                 Telefono = reader["Telefono"].ToString(),
+                                CodigoImagen = reader["CodigoImagen"].ToString(),
                                 Estrellas = (int)reader["Estrellas"],
-                                Precio = (decimal)reader["Precio"],
                                 Activo = (bool)reader["Activo"]
                             };
                         }
-                        else
-                        {
-                            return null;
-                        }
+                        else{ return null; }
                     }
                 }
             }
@@ -52,7 +47,7 @@ namespace WcfHotel.Persistencia
         {
             Hotels hotelCreado = null;
 
-            string sql = "insert into Hoteles values (@Codigo, @Nombre, @Descripcion, @Direccion, @Telefono, @Estrellas, @Precio, @Activo)";
+            string sql = "insert into Hoteles values (@Codigo, @Nombre, @Descripcion, @Direccion, @Telefono, @CodigoImagen, @Estrellas, @Activo)";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
@@ -65,8 +60,8 @@ namespace WcfHotel.Persistencia
                     command.Parameters.Add(new SqlParameter("@Descripcion", hotel.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Direccion", hotel.Direccion));
                     command.Parameters.Add(new SqlParameter("@Telefono", hotel.Telefono));
+                    command.Parameters.Add(new SqlParameter("@CodigoImagen", hotel.CodigoImagen));
                     command.Parameters.Add(new SqlParameter("@Estrellas", hotel.Estrellas));
-                    command.Parameters.Add(new SqlParameter("@Precio", hotel.Precio));
                     command.Parameters.Add(new SqlParameter("@Activo", 1));
                     command.ExecuteNonQuery();
                 }
@@ -78,7 +73,7 @@ namespace WcfHotel.Persistencia
 
         public Hotels Modificar(Hotels hotel)
         {
-            string query = "UPDATE Hoteles SET Nombre = @Nombre, Descripcion = @Descripcion, Direccion = @Direccion, Telefono = @Telefono, Estrellas = @Estrellas, Precio = @Precio, Activo = @Activo WHERE  Codigo= @Codigo";
+            string query = "UPDATE Hoteles SET Nombre = @Nombre, Descripcion = @Descripcion, Direccion = @Direccion, Telefono = @Telefono, CodigoImagen = @CodigoImagen, Estrellas = @Estrellas, Activo = @Activo WHERE  Codigo= @Codigo";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -90,8 +85,8 @@ namespace WcfHotel.Persistencia
                     command.Parameters.Add(new SqlParameter("@Descripcion", hotel.Descripcion));
                     command.Parameters.Add(new SqlParameter("@Direccion", hotel.Direccion));
                     command.Parameters.Add(new SqlParameter("@Telefono", hotel.Telefono));
+                    command.Parameters.Add(new SqlParameter("@CodigoImagen", hotel.CodigoImagen));
                     command.Parameters.Add(new SqlParameter("@Estrellas", hotel.Estrellas));
-                    command.Parameters.Add(new SqlParameter("@Precio", hotel.Precio));
                     command.Parameters.Add(new SqlParameter("@Activo", 1));
                     command.ExecuteNonQuery();
                 }
@@ -138,13 +133,13 @@ namespace WcfHotel.Persistencia
                                 Descripcion = reader["Descripcion"].ToString(),
                                 Direccion = reader["Direccion"].ToString(),
                                 Telefono = reader["Telefono"].ToString(),
+                                CodigoImagen = reader["CodigoImagen"].ToString(),
                                 Estrellas = (int)reader["Estrellas"],
                                 Activo = (bool)reader["Activo"]
                             });
                         }
                     }
                 }
-
             }
 
             return hoteles;

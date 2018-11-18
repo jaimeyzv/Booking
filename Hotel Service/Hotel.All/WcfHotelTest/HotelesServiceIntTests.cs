@@ -18,6 +18,7 @@ namespace WcfHotelTest
                 Descripcion = "Hotel más caleta de Lima",
                 Direccion = "Av. Uruguay 1330",
                 Telefono = "014241522",
+                CodigoImagen = "ImgTest01",
                 Estrellas = 3
             });
 
@@ -26,6 +27,7 @@ namespace WcfHotelTest
             Assert.AreEqual("Hotel más caleta de Lima", nuevaHotel.Descripcion);
             Assert.AreEqual("Av. Uruguay 1330", nuevaHotel.Direccion);
             Assert.AreEqual("014241522", nuevaHotel.Telefono);
+            Assert.AreEqual("ImgTest01", nuevaHotel.CodigoImagen);
             Assert.AreEqual(3, nuevaHotel.Estrellas);
 
             EliminarHotelParaPruebas(nuevaHotel.Codigo);
@@ -47,6 +49,7 @@ namespace WcfHotelTest
                     Descripcion = "Hotel más caleta de Lima",
                     Direccion = "Av. Uruguay 1330",
                     Telefono = "014241522",
+                    CodigoImagen = "ImgTest01",
                     Estrellas = 3
                 });
             }
@@ -76,6 +79,7 @@ namespace WcfHotelTest
                 Descripcion = "Hotel más caleta de Lima",
                 Direccion = "Av. Uruguay 1330",
                 Telefono = "014241522",
+                CodigoImagen = "ImgTest01",
                 Estrellas = 3
             });
         }
