@@ -3,32 +3,91 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@ViewBag.Title - Booking</title>
+    <title>@ViewBag.Title - Booking DSD</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="Content/custom/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="Content/custom/css/animate.css">
+    <link rel="stylesheet" href="Content/custom/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="Content/custom/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="Content/custom/css/magnific-popup.css">
+    <link rel="stylesheet" href="Content/custom/css/aos.css">
+    <link rel="stylesheet" href="Content/custom/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/custom/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="Content/custom/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="Content/custom/css/flaticon.css">
+    <link rel="stylesheet" href="Content/custom/css/icomoon.css">
+    <link rel="stylesheet" href="Content/custom/css/style.css">
 </head>
 
-<body class="background-cover">
-    <div class="d-flex flex-column flex-md-row align-items-center custom-opacity p-3 px-md-4 mb-3">
-        <h5 class="my-0 mr-md-auto font-weight-bold text-white"><a class="font-weight-bold text-white" href="@Url.Action("Index", "Home", null)">Booking</a></h5>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-white" href="@Url.Action("Index", "Hotel", null)">Hoteles</a>
-        </nav>
-        <a class="p-2 font-weight-bold" style="color:green" href="@Url.Action("Index", "Registro", null)">Regístrate</a>
-        <a class="p-2 font-weight-bold" style="color:orange"  href="@Url.Action("Index", "IniciarSesion", null)">Iniciar Sesión</a>
-    </div>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Booking DSD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-    <div class="container">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p style="color:white">Booking-2018</p>
-        </footer>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item @(ViewBag.Title == "Index" ? "active" : "")"><a href="@Url.Action("Index", "Home", null)" class="nav-link">Home</a></li>
+                    <li class="nav-item @(ViewBag.Title == "Hoteles" ? "active" : "")"><a href="@Url.Action("Index", "Hotel", null)" class="nav-link">Hoteles</a></li>
+                    <li class="nav-item @(ViewBag.Title == "Regístrate" ? "active" : "")"><a href="@Url.Action("Index", "Registro", null)" class="nav-link">Regístrate</a></li>
+                    <li class="nav-item @(ViewBag.Title == "Iniciar Sesión" ? "active" : "")"><a href="@Url.Action("Index", "IniciarSesion", null)" class="nav-link">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    </div>
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <h3 class="heading-section">Acerca de</h3>
+                    <p class="mb-5"></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="block-23">
+                        <h3 class="heading-section">Contacto</h3>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-12 text-left">
+                    <p>
+                        &copy; @DateTime.Now.Year - Booking DSD
+                    </p>
+                    <p>                   
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="Content/custom/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="Content/custom/js/popper.min.js"></script>
+    <script src="Content/custom/js/jquery.easing.1.3.js"></script>
+    <script src="Content/custom/js/jquery.waypoints.min.js"></script>
+    <script src="Content/custom/js/jquery.stellar.min.js"></script>
+    <script src="Content/custom/js/owl.carousel.min.js"></script>
+    <script src="Content/custom/js/jquery.magnific-popup.min.js"></script>
+    <script src="Content/custom/js/bootstrap-datepicker.js"></script>
+    <script src="Content/custom/js/aos.js"></script>
+    <script src="Content/custom/js/jquery.animateNumber.min.js"></script>
+    <script src="Content/custom/js/main.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -4,97 +4,122 @@
     ViewBag.Title = "Regístrate";
 }
 
-<div class="card mb-2">
-    <h5 class="card-header">Regístrate</h5>
-</div>
-
-<div class="card">
-    <div class="card-body">
-        @using (Html.BeginForm("Index", "Registro", FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="form-horizontal">
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.ApellidoPaterno, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.ApellidoPaterno, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.ApellidoPaterno, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.ApellidoMaterno, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.ApellidoMaterno, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.ApellidoMaterno, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Dni, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Dni, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Dni, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Edad, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Edad, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Edad, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Registrarse" class="btn btn-outline-success" />
-                    </div>
-                </div>
+<div class="block-30 block-30-sm item" style="background-image: url('Content/custom/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-10">
+                <span class="subheading-sm">Contacto</span>
+                <h2 class="heading">Regístrate</h2>
             </div>
-        }
-
-        @if (TempData["ErrorMessage_ExisteDni"] != null)
-        {
-            <div class="validation-summary-errors" data-valmsg-summary="true">
-                <span>@TempData["ErrorMessage_ExisteDni"]</span>
-            </div>
-        }
-
-        @if (TempData["OkMessage"] != null)
-        {
-            <div class="validation-summary-errors" data-valmsg-summary="true">
-                <span>@TempData["OkMessage"]</span>
-            </div>
-        }
+        </div>
     </div>
 </div>
 
+<div class="site-section">
+    <div class="container">
+        <div class="row block-9">
+            <div class="col-md-6 pr-md-5">
+                @using (Html.BeginForm("Index", "Registro", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
 
-    
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ApellidoPaterno, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ApellidoPaterno, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ApellidoPaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ApellidoMaterno, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ApellidoMaterno, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ApellidoMaterno, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Dni, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Dni, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Dni, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Edad, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Edad, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Edad, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Registrarse" class="btn btn-primary btn-block" />
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                @if (TempData["ErrorMessage_ExisteDni"] != null)
+                {
+                    <div class="validation-summary-errors" data-valmsg-summary="true">
+                        <span>@TempData["ErrorMessage_ExisteDni"]</span>
+                    </div>
+                }
+
+                @if (TempData["OkMessage"] != null)
+                {
+                    <div class="validation-summary-errors" data-valmsg-summary="true">
+                        <span>@TempData["OkMessage"]</span>
+                    </div>
+                }
+                @*<form action="#">
+            <div class="form-group">
+                <input type="text" class="form-control px-3 py-3" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control px-3 py-3" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control px-3 py-3" placeholder="Subject">
+            </div>
+            <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control px-3 py-3" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            </div>
+        </form>*@
+            </div>
+        </div>
+    </div>
+</div>

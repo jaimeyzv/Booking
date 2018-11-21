@@ -4,48 +4,62 @@
     ViewBag.Title = "Iniciar Sesión";
 }
 
-<div class="card mb-2">
-    <h5 class="card-header">Iniciar Sesión</h5>
+<div class="block-30 block-30-sm item" style="background-image: url('Content/custom/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-10">
+                <span class="subheading-sm">Contacto</span>
+                <h2 class="heading">Iniciar Sesión</h2>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="card">
-    <div class="card-body">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
+<div class="site-section">
+    <div class="container">
+        <div class="row block-9">
+            <div class="col-md-6 pr-md-5">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
+                    <div class="form-horizontal">
 
-                @Html.ValidationSummary(true)
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Dni, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Dni, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Dni, "", new { @class = "text-danger" })
+                        @Html.ValidationSummary(true)
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Dni, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Dni, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Dni, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Ingresar" class="btn btn-primary btn-block" />
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Contrasena, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Contrasena, "", new { @class = "text-danger" })
+                @if (TempData["ErrorMessage_Login"] != null)
+                {
+                    <div class="validation-summary-errors" data-valmsg-summary="true">
+                        <span>@TempData["ErrorMessage_Login"]</span>
                     </div>
-                </div>
+                }
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Ingresar" class="btn btn-outline-success" />
-                    </div>
-                </div>
             </div>
-        }
 
-        @if (TempData["ErrorMessage_Login"] != null)
-        {
-            <div class="validation-summary-errors" data-valmsg-summary="true">
-                <span>@TempData["ErrorMessage_Login"]</span>
-            </div>
-        }
+            <div class="col-md-6" id="map"></div>
+        </div>
     </div>
 </div>
