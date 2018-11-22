@@ -219,6 +219,7 @@
     <Content Include="Content\custom\js\jquery.animateNumber.min.js" />
     <Content Include="Content\custom\js\jquery.easing.1.3.js" />
     <Content Include="Content\custom\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\custom\js\jquery.stellar.min.js" />
     <Content Include="Content\custom\js\jquery.timepicker.min.js" />
     <Content Include="Content\custom\js\jquery.waypoints.min.js" />
     <Content Include="Content\custom\js\main.js" />
