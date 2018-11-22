@@ -23,10 +23,19 @@ namespace Hotel.Business.RoomService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActivoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CantidadCamasField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoHabitacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CodigoHotelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoimagenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string DescripcionField;
@@ -40,6 +49,9 @@ namespace Hotel.Business.RoomService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int NumeroField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PrecioField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -47,6 +59,19 @@ namespace Hotel.Business.RoomService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Activo {
+            get {
+                return this.ActivoField;
+            }
+            set {
+                if ((this.ActivoField.Equals(value) != true)) {
+                    this.ActivoField = value;
+                    this.RaisePropertyChanged("Activo");
+                }
             }
         }
         
@@ -64,6 +89,19 @@ namespace Hotel.Business.RoomService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodigoHabitacion {
+            get {
+                return this.CodigoHabitacionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoHabitacionField, value) != true)) {
+                    this.CodigoHabitacionField = value;
+                    this.RaisePropertyChanged("CodigoHabitacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string CodigoHotel {
             get {
                 return this.CodigoHotelField;
@@ -72,6 +110,19 @@ namespace Hotel.Business.RoomService {
                 if ((object.ReferenceEquals(this.CodigoHotelField, value) != true)) {
                     this.CodigoHotelField = value;
                     this.RaisePropertyChanged("CodigoHotel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Codigoimagen {
+            get {
+                return this.CodigoimagenField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoimagenField, value) != true)) {
+                    this.CodigoimagenField = value;
+                    this.RaisePropertyChanged("Codigoimagen");
                 }
             }
         }
@@ -124,6 +175,19 @@ namespace Hotel.Business.RoomService {
                 if ((this.NumeroField.Equals(value) != true)) {
                     this.NumeroField = value;
                     this.RaisePropertyChanged("Numero");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Precio {
+            get {
+                return this.PrecioField;
+            }
+            set {
+                if ((this.PrecioField.Equals(value) != true)) {
+                    this.PrecioField = value;
+                    this.RaisePropertyChanged("Precio");
                 }
             }
         }
@@ -239,6 +303,12 @@ namespace Hotel.Business.RoomService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ListarHabitaciones", ReplyAction="http://tempuri.org/IHabitacionesService/ListarHabitacionesResponse")]
         System.Threading.Tasks.Task<Hotel.Business.RoomService.Habitacion[]> ListarHabitacionesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotel", ReplyAction="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotelResponse")]
+        Hotel.Business.RoomService.Habitacion[] ListarHabitacionesPorHotel(string codigoHotel);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotel", ReplyAction="http://tempuri.org/IHabitacionesService/ListarHabitacionesPorHotelResponse")]
+        System.Threading.Tasks.Task<Hotel.Business.RoomService.Habitacion[]> ListarHabitacionesPorHotelAsync(string codigoHotel);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -314,6 +384,14 @@ namespace Hotel.Business.RoomService {
         
         public System.Threading.Tasks.Task<Hotel.Business.RoomService.Habitacion[]> ListarHabitacionesAsync() {
             return base.Channel.ListarHabitacionesAsync();
+        }
+        
+        public Hotel.Business.RoomService.Habitacion[] ListarHabitacionesPorHotel(string codigoHotel) {
+            return base.Channel.ListarHabitacionesPorHotel(codigoHotel);
+        }
+        
+        public System.Threading.Tasks.Task<Hotel.Business.RoomService.Habitacion[]> ListarHabitacionesPorHotelAsync(string codigoHotel) {
+            return base.Channel.ListarHabitacionesPorHotelAsync(codigoHotel);
         }
     }
 }
