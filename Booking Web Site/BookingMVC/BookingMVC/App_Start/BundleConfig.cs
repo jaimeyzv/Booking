@@ -25,6 +25,10 @@ namespace BookingMVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/custom_scripts")
+    .IncludeDirectory("~/Content/custom/js", "*.js", true));
+            bundles.Add(new StyleBundle("~/bundles/custom_styles")
+    .IncludeDirectory("~/Content/custom/css", "*.css", true));
         }
     }
 }
