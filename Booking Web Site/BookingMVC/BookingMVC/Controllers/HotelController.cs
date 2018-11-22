@@ -8,7 +8,6 @@ namespace BookingMVC.Controllers
 {
     public class HotelController : Controller
     {
-        // GET: Hotel
         public ActionResult Index()
         {
             return View();
