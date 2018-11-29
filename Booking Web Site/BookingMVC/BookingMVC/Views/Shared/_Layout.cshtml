@@ -32,6 +32,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item @(ViewBag.Title == "Index" ? "active" : "")"><a href="@Url.Action("Index", "Home", null)" class="nav-link">Home</a></li>
                     <li class="nav-item @(ViewBag.Title == "Hoteles" ? "active" : "")"><a href="@Url.Action("Index", "Hotel", null)" class="nav-link">Hoteles</a></li>
+                    <li class="nav-item @(ViewBag.Title == "Habitaciones" ? "active" : "")"><a href="@Url.Action("Index", "Habitacion", null)" class="nav-link">Habitaciones</a></li>
                     <li class="nav-item @(ViewBag.Title == "Regístrate" ? "active" : "")"><a href="@Url.Action("Index", "Registro", null)" class="nav-link">Regístrate</a></li>
                     <li class="nav-item @(ViewBag.Title == "Iniciar Sesión" ? "active" : "")"><a href="@Url.Action("Index", "IniciarSesion", null)" class="nav-link">Iniciar Sesión</a></li>
                 </ul>

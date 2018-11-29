@@ -9,14 +9,14 @@ namespace BookingMVC.Controllers
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        //[Route("Habitaciones")]
-        public ActionResult Habitaciones()
-        {
             var habitaciones = habitacionesBusiness.ListarHabitaciones();
             return View(habitaciones);
         }
+
+        public ActionResult Detalle(int id)
+        {
+            var habitacion = habitacionesBusiness.ObtenerHabitacion(id);
+            return View(habitacion);
+        }      
     }
 }

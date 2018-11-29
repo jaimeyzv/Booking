@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Room";
+﻿@model IEnumerable<Booking.Business.RoomService.Habitacion>
+
+@{
+    ViewBag.Title = "Habitaciones";
 }
 
 <div class="block-30 block-30-sm item" style="background-image: url('Content/custom/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
@@ -7,58 +9,89 @@
         <div class="row align-items-center">
             <div class="col-md-10">
                 <span class="subheading-sm">Habitaciones</span>
-                <h2 class="heading">Habitación Seleccionada</h2>
+                <h2 class="heading">Guía de Habitaciones</h2>
             </div>
         </div>
     </div>
 </div>
 
-<div class="site-section bg-light">
+<div class="site-section block-13 bg-light">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-md-12 mb-5">
-
-                <div class="block-3 d-md-flex">
-                    <div class="image" style="background-image: url('Content/custom/images/img_1.jpg'); "></div>
-                    <div class="text">
-
-                        <h2 class="heading">Bachelor Room</h2>
-                        <div class="price"><sup>$</sup><span class="number">150</span><sub>/per night</sub></div>
-                        <ul class="specs mb-5">
-                            <li><strong>Adults:</strong> 1</li>
-                            <li><strong>Categories:</strong> Single</li>
-                            <li><strong>Facilities:</strong> Closet with hangers, HD flat-screen TV, Telephone</li>
-                            <li><strong>Size:</strong> 20m<sup>2</sup></li>
-                            <li><strong>Bed Type:</strong> One bed</li>
-                        </ul>
-
-                        <p><button type="button" class="btn btn-primary py-3 px-5" data-target="#ReservaModal" data-toggle="modal">Reservar</button></p>
-                        
-                    </div>
+            <div class="col-md-12">
+                <div class="block-32">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                                <label for="destino">Destino</label>
+                                <div class="field-icon-wrap">
+                                    <div class="icon"><span class="icon-airplanemode_inactive"></span></div>
+                                    <input type="text" id="Destino" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                                <label for="checkin">Llegada</label>
+                                <div class="field-icon-wrap">
+                                    <div class="icon"><span class="icon-calendar"></span></div>
+                                    <input type="text" id="checkin_date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                                <label for="checkin">Salida</label>
+                                <div class="field-icon-wrap">
+                                    <div class="icon"><span class="icon-calendar"></span></div>
+                                    <input type="text" id="checkout_date" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="row">
+                                    <div class="">
+                                        <label for="checkin">Huéspedes</label>
+                                        <div class="field-icon-wrap">
+                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                            <select name="" id="" class="form-control">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 align-self-end">
+                                <a href="@Url.Action("Index", "Hotel", null)" class="btn btn-primary btn-block">Buscar</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-
             </div>
         </div>
-    </div>
-</div>
 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nonloop-block-13 owl-carousel">
 
-<div class="modal fade" id="ReservaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Reserva</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reserva/Pago
-            </div>
-            <div class="modal-footer">
-
-                <button type="button" class="btn btn-primary">Pagar</button>
+                    @foreach (var habitacion in Model)
+                    {
+                        <div class="item">
+                            <div class="block-34">
+                                <div class="image">
+                                    <a href="#"><img src="http://localhost:84/Images/@habitacion.Codigoimagen" alt="Image placeholder" width="100" height="200"></a>
+                                </div>
+                                <div class="text">
+                                    <div class="price"><sup>S/</sup><span class="number">@string.Format("{0:#,0.00}", habitacion.Precio)</span><sub>/ Por día</sub></div>
+                                    <ul class="specs">
+                                        <li><strong>Número Cuarto:</strong> @habitacion.Numero</li>
+                                        <li><strong>Cantidad Camas:</strong> @habitacion.CantidadCamas</li>
+                                        <li><strong>Descripción:</strong> @habitacion.Descripcion</li>
+                                    </ul>
+                                    <a href="@Url.Action("Detalle", "Habitacion", new { id = habitacion.HabitacionId})" class="btn btn-primary btn-block">Reservar</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
