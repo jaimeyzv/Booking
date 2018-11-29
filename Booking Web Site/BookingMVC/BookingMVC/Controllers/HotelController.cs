@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BookingMVC.Filter;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
 {
+    [AuthUserFilter]
     public class HotelController : Controller
     {
         public ActionResult Index()

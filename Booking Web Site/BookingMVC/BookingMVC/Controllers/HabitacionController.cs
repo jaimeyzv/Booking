@@ -1,8 +1,10 @@
 ﻿using Booking.Business;
+using BookingMVC.Filter;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
 {
+    [AuthUserFilter]
     public class HabitacionController : Controller
     {
         HabitacionesBusiness habitacionesBusiness = new HabitacionesBusiness();

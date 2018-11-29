@@ -1,9 +1,11 @@
-﻿using BookingModels;
+﻿using Booking.Business;
+using BookingModels;
+using BookingMVC.Filter;
 using System.Web.Mvc;
-using Booking.Business;
 
 namespace BookingMVC.Controllers
 {
+    [AuthUserFilter]
     public class RegistroController : Controller
     {
         public ActionResult Index()
