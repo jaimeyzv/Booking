@@ -5,7 +5,6 @@ using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
 {
-    [AuthUserFilter]
     public class IniciarSesionController : Controller
     {
         public ActionResult Index()

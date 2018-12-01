@@ -5,7 +5,6 @@ using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
 {
-    [AuthUserFilter]
     public class RegistroController : Controller
     {
         public ActionResult Index()
