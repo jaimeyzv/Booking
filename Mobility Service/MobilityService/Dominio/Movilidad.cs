@@ -8,6 +8,8 @@ namespace MobilityService.Dominio
         [DataMember]
         public int id { get; set; }
         [DataMember]
+        public int codigo { get; set; }
+        [DataMember]
         public int tipoMovilidad { get; set; }
         [DataMember]
         public int numeroPasajeros { get; set; }
