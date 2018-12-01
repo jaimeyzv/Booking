@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilityService", "MobilityService\MobilityService.csproj", "{7FBB8702-C895-4B75-9CED-C4A91677212F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobilityServiceTests", "MobilityServiceTests\MobilityServiceTests.csproj", "{81DDE699-4F54-4015-A52C-CA357B7E5AFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FBB8702-C895-4B75-9CED-C4A91677212F} = {7FBB8702-C895-4B75-9CED-C4A91677212F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
