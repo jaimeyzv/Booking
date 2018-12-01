@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.ServiceModel.Web;
 using MobilityService.Dominio;
@@ -14,9 +15,9 @@ namespace MobilityService
         public List<Movilidad> ListarMovilidades()
         { return dao.Listar(); }
 
-        public Movilidad ObtenerMovilidad(int codigo)
+        public Movilidad ObtenerMovilidad(string codigo)
         {
-            if(dao.Obtener(codigo) == null)
+            if (dao.Obtener(Convert.ToInt32(codigo)) == null)
             {
                 throw new WebFaultException<NoExisteException>(
                     new NoExisteException()
@@ -26,7 +27,7 @@ namespace MobilityService
                     }, HttpStatusCode.Conflict);
             }
 
-            return dao.Obtener(codigo);
+            return dao.Obtener(Convert.ToInt32(codigo));
         }
 
         public Movilidad CrearMovilidad(Movilidad movilidad)
@@ -57,9 +58,9 @@ namespace MobilityService
             return dao.Modificar(movilidad);
         }
 
-        public int EliminarMovilidad(int codigo)
+        public int EliminarMovilidad(string codigo)
         {
-            if (dao.Obtener(codigo) == null)
+            if (dao.Obtener(Convert.ToInt32(codigo)) == null)
             {
                 throw new WebFaultException<NoExisteException>(
                      new NoExisteException()
@@ -68,7 +69,7 @@ namespace MobilityService
                          Descripcion = "No existe movilidad con el código ingresado: " + codigo
                      }, HttpStatusCode.Conflict);
             }
-            return dao.Eliminar(codigo);
+            return dao.Eliminar(Convert.ToInt32(codigo));
         }
     }
 }

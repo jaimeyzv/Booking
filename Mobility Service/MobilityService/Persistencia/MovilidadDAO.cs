@@ -41,6 +41,39 @@ namespace MobilityService.Persistencia
             }
         }
 
+        public Movilidad ObtenerPorCodigoYTipoMovilidad(int codigo, int tipoMovilidad)
+        {
+            var query = "select * from Movilidad where (codigo = @codigo and tipoMovilidad = @tipoMovilidad)";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@codigo", codigo));
+                    command.Parameters.Add(new SqlParameter("@tipoMovilidad", tipoMovilidad));
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Movilidad()
+                            {
+                                id = (int)reader["id"],
+                                codigo = (int)reader["codigo"],
+                                tipoMovilidad = (int)reader["tipoMovilidad"],
+                                numeroPasajeros = (int)reader["numeroPasajeros"],
+                                costoPorTramo = (decimal)reader["costoPorTramo"],
+                                descripcion = reader["descripcion"].ToString(),
+                                disponibilidad = (bool)reader["disponibilidad"]
+                            };
+                        }
+                        else { return null; }
+                    }
+                }
+            }
+        }
+
         public Movilidad Crear(Movilidad movilidad)
         {
             var query = "insert into Movilidad (codigo, tipoMovilidad, numeroPasajeros, costoPorTramo, descripcion, disponibilidad) values (@codigo, @tipoMovilidad, @numeroPasajeros, @costoPorTramo, @descripcion, @disponibilidad)";

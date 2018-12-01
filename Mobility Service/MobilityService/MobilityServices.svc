@@ -1,1 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="MobilityService.MobilityServices" CodeBehind="MobilityServices.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="MobilityService.MobilityServices" 
+    CodeBehind="MobilityServices.svc.cs" 
+    Factory ="System.ServiceModel.Activation.WebServiceHostFactory"%>

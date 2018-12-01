@@ -10,7 +10,7 @@ namespace MobilityService
     {
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "Movilidades/{codigo}", ResponseFormat = WebMessageFormat.Json)]
-        Movilidad ObtenerMovilidad(int codigo);
+        Movilidad ObtenerMovilidad(string codigo);
 
         [OperationContract]
         [WebInvoke(Method = "POST", UriTemplate = "Movilidades", ResponseFormat = WebMessageFormat.Json)]
@@ -22,7 +22,7 @@ namespace MobilityService
 
         [OperationContract]
         [WebInvoke(Method = "DELETE", UriTemplate = "Movilidades/{codigo}", ResponseFormat = WebMessageFormat.Json)]
-        int EliminarMovilidad(int codigo);
+        int EliminarMovilidad(string codigo);
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "Movilidades", ResponseFormat = WebMessageFormat.Json)]
