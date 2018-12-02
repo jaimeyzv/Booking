@@ -10,6 +10,7 @@ namespace BookingModels
         public string Dni { get; set; }
 
         [Required(ErrorMessage = "Debe ingresar una contraseña")]
+        [DataType(DataType.Password)]
         [StringLength(10, ErrorMessage = "Contraseña no debe ser menor de 6 caracteres", MinimumLength = 6)]
         [Display(Name = "Contraseña")]
         public string Contrasena { get; set; }
