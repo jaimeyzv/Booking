@@ -55,6 +55,10 @@
       <Project>{8B89ABD8-1FC5-4975-8FD5-B72E0C2C2B04}</Project>
       <Name>Payment.Business.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Payment.DataAccess.Dtos\Payment.DataAccess.Dtos.csproj">
+      <Project>{726E00CB-E6A5-4600-9AA0-B6ABB6D18045}</Project>
+      <Name>Payment.DataAccess.Dtos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

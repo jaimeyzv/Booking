@@ -1,5 +1,6 @@
 ﻿using Payment.Api.Models;
 using Payment.Business.Entities;
+using Payment.DataAccess.Dtos.Dtos;
 
 namespace Payment.Infrastructure.Interfaces.Mappers
 {
@@ -14,6 +15,13 @@ namespace Payment.Infrastructure.Interfaces.Mappers
         #region Transaction
 
         TransactionModel MapTransactionFromEntityToModel(TransactionEntity entity);
+
+        #endregion
+
+        #region Card
+
+        CardEntity MapCardDtoToCardEntity(CardDto dto);
+        CardModel MapCardEntityToCardModel(CardEntity entity);
 
         #endregion
     }

@@ -29,7 +29,10 @@ namespace Payment.Business
 
         public CardEntity GetByCardNumber(string cardNumber)
         {
-            throw new NotImplementedException();
+            var card = cardRepository.GetByCardNumber(cardNumber);
+            var cardEntity = mapper.MapCardDtoToCardEntity(card);
+
+            return cardEntity;
         }
 
         public CardEntity GetById(int id)

@@ -1,5 +1,6 @@
 ﻿using Payment.Api.Models;
 using Payment.Business.Entities;
+using Payment.DataAccess.Dtos.Dtos;
 using Payment.Infrastructure.Interfaces.Mappers;
 
 namespace Payment.Infrastructure.Mappers
@@ -24,6 +25,30 @@ namespace Payment.Infrastructure.Mappers
                 CardExpireDate = model.CardExpireDate,
                 Cost = model.Cost,
                 Description = model.Description
+            };
+        }
+
+        public CardEntity MapCardDtoToCardEntity(CardDto dto)
+        {
+            return new CardEntity()
+            {
+                CardId = dto.CardId,
+                Number = dto.Number,
+                ExpireDate = dto.ExpireDate,
+                Cvv = dto.Cvv,
+                CardTypeId = dto.CardTypeId
+            };
+        }
+
+        public CardModel MapCardEntityToCardModel(CardEntity entity)
+        {
+            return new CardModel()
+            {
+                CardId = entity.CardId,
+                Number = entity.Number,
+                ExpireDate = entity.ExpireDate,
+                Cvv = entity.Cvv,
+                CardTypeId = entity.CardTypeId
             };
         }
     }

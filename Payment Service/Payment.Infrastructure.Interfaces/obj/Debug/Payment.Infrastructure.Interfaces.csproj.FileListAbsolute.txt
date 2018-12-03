@@ -20,8 +20,11 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Infrastructure.Interfaces.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Business.Entities.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.DataAccess.Dtos.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\NPoco.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Api.Models.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.Business.Entities.pdb
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\bin\Debug\Payment.DataAccess.Dtos.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Infrastructure.Interfaces\obj\Debug\Payment.Infrastructure.Interfaces.dll

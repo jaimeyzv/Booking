@@ -69,6 +69,10 @@
       <Project>{8B89ABD8-1FC5-4975-8FD5-B72E0C2C2B04}</Project>
       <Name>Payment.Business.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Payment.DataAccess.Dtos\Payment.DataAccess.Dtos.csproj">
+      <Project>{726E00CB-E6A5-4600-9AA0-B6ABB6D18045}</Project>
+      <Name>Payment.DataAccess.Dtos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Payment.Infrastructure.Interfaces\Payment.Infrastructure.Interfaces.csproj">
       <Project>{bbad3352-c83f-4b12-885f-665accbbb87c}</Project>
       <Name>Payment.Infrastructure.Interfaces</Name>

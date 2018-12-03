@@ -48,6 +48,7 @@ namespace Payment.Injector
         private void RegisterBusiness(UnityContainer container)
         {
             container.RegisterType<IPaymentBusiness, PaymentBusiness>();
+            container.RegisterType<ICardBusiness, CardBusiness>();
         }
     }
 }
