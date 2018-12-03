@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
+﻿using System.ServiceModel;
 using System.ServiceModel.Web;
-using System.Text;
 
 namespace NotificacionProject
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "INotificacionService" in both code and config file together.
     [ServiceContract]
     public interface INotificacionService
     {
         [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "EnviarCorreo/{correo}", ResponseFormat = WebMessageFormat.Json)]
-        void EnviaCorreo(string correo);
+        [WebInvoke(Method = "POST", UriTemplate = "Correo/{correo}", ResponseFormat = WebMessageFormat.Json)]
+        void EnviaCorreo(string correo, string nombre);
     }
 }

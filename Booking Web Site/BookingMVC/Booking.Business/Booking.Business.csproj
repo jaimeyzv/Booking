@@ -43,7 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutenticacionBusiness.cs" />
+    <Compile Include="Connected Services\HotelService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\MemberService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\NotificatorService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -54,6 +64,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="HabitacionesBusiness.cs" />
+    <Compile Include="HotelesBusiness.cs" />
     <Compile Include="RegistroBusiness.cs" />
     <Compile Include="Connected Services\ReniecService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -67,6 +78,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelService\Booking.Business.HotelService.Hotels.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HotelService\HotelService.wsdl" />
+    <None Include="Connected Services\HotelService\HotelService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelService\HotelService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelService\HotelService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\HotelService\HotelService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MemberService\Booking.Business.MemberService.Miembro.datasource">
@@ -83,6 +110,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MemberService\MiembrosService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotificatorService\NotificacionService.wsdl" />
+    <None Include="Connected Services\NotificatorService\NotificacionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NotificatorService\NotificacionService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ReniecService\Booking.Business.ReniecService.Persona.datasource">
@@ -116,7 +150,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\HotelService\" />
     <WCFMetadataStorage Include="Connected Services\MemberService\" />
+    <WCFMetadataStorage Include="Connected Services\NotificatorService\" />
     <WCFMetadataStorage Include="Connected Services\ReniecService\" />
     <WCFMetadataStorage Include="Connected Services\RoomService\" />
   </ItemGroup>
@@ -167,6 +203,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\RoomService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificatorService\NotificacionService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificatorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificatorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NotificatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HotelService\HotelService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HotelService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HotelService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HotelService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

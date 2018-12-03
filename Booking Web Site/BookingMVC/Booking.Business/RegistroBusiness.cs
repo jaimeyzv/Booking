@@ -57,5 +57,15 @@ namespace Booking.Business
             }
             catch (Exception ex){ return false; }
         }
+
+        public void EnviarCorreoBienvenida(string correo, string nombre)
+        {
+            var notificatorServiceRemoteAddress = new System.ServiceModel.EndpointAddress("http://localhost:90/NotificacionService.svc");
+            using (var notificatorService = new NotificatorService.NotificacionServiceClient(new System.ServiceModel.BasicHttpBinding(), notificatorServiceRemoteAddress))
+            {
+                notificatorService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                notificatorService.EnviaCorreo(correo, nombre);
+            }
+        }
     }
 }

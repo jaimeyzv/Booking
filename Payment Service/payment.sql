@@ -1,3 +1,6 @@
+use master
+go
+
 create database Payment
 go
 
@@ -15,6 +18,7 @@ go
 
 CREATE TABLE [dbo].[Card](
 	[CardId]		[int] IDENTITY(1,1) NOT NULL,
+	[Name]			[varchar](20) NULL,
 	[Number]		[varchar](16) NULL,
 	[ExpireDate]	[datetime] NULL,
 	[Cvv]			[varchar](4) NULL,
@@ -51,15 +55,16 @@ go
 INSERT [dbo].[CardType] ([Code], [Description]) VALUES (N'CREDIT', N'Credit Card')
 INSERT [dbo].[CardType] ([Code], [Description]) VALUES (N'DEBIT', N'Debit Card')
 
-INSERT [dbo].[Card] ([Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'1234567890123456', CAST(N'2022-10-01T00:00:00.000' AS DateTime), N'0441', 1)
-INSERT [dbo].[Card] ([Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'9876543210987654', CAST(N'2023-11-01T00:00:00.000' AS DateTime), N'1012', 2)
-INSERT [dbo].[Card] ([Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'0202021458785855', CAST(N'2023-10-01T00:00:00.000' AS DateTime), N'1012', 1)
-INSERT [dbo].[Card] ([Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'7896541230852069', CAST(N'2018-10-01T00:00:00.000' AS DateTime), N'1414', 2)
+INSERT [dbo].[Card] ([Name], [Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'JAIME ZAMORA', N'1234567890123456', CAST(N'2022-10-01T00:00:00.000' AS DateTime), N'0441', 1)
+INSERT [dbo].[Card] ([Name], [Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'ERIC PEREZ', N'9876543210987654', CAST(N'2023-11-01T00:00:00.000' AS DateTime), N'1012', 2)
+INSERT [dbo].[Card] ([Name], [Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'MARIA CHAVEZ', N'0202021458785855', CAST(N'2023-10-01T00:00:00.000' AS DateTime), N'1012', 1)
+INSERT [dbo].[Card] ([Name], [Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES (N'RODRIGO SALAZAR', N'7896541230852069', CAST(N'2018-10-01T00:00:00.000' AS DateTime), N'1414', 2)
 
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(15000.000000 AS Decimal(18, 6)), 1)
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(10000.000000 AS Decimal(18, 6)), 2)
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(5000.000000 AS Decimal(18, 6)), 3)
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(3500.000000 AS Decimal(18, 6)), 4)
 
-SELECT * FROM Balance
+SELECT * FROM [dbo].[Card]
+SELECT * FROM [dbo].[Balance]
 SELECT * FROM [dbo].[Transaction]

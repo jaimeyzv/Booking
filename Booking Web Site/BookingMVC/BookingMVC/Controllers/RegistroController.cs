@@ -1,6 +1,5 @@
 ﻿using Booking.Business;
 using BookingModels;
-using BookingMVC.Filter;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
@@ -15,20 +14,27 @@ namespace BookingMVC.Controllers
         [HttpPost]
         public ActionResult Index(Registro model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             var RegistroBusiness = new RegistroBusiness();
+
+            if (RegistroBusiness.ExisteDni(model.Dni))
+            {
+                TempData["ErrorMessage_ExisteDni"] = "Dni ya se encuentra registrado.";
+                return Index();
+            }
 
             if (!RegistroBusiness.EsDniValido(model.Dni))
             {
                 TempData["ErrorMessage_ExisteDni"] = "Dni ingresado no es válido.";
                 return Index();
             }
-            if (RegistroBusiness.ExisteDni(model.Dni))
-            {
-                TempData["ErrorMessage_ExisteDni"] = "Dni ya se encuentra registrado.";
-                return Index();
-            }
             
             RegistroBusiness.RegistrarMiembro(model);
+            RegistroBusiness.EnviarCorreoBienvenida(model.Correo, model.Nombres);
             TempData["OkMessage"] = "Mimebro registrado satisfactoriamente.";
 
             return View(model);
