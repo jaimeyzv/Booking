@@ -8,6 +8,7 @@ namespace Payment.DataAccess.Dtos.Dtos
     public class CardDto
     {
         public int CardId { get; set; }
+        public string Name { get; set; }
         public string Number { get; set; }
         public DateTime ExpireDate { get; set; }
         public string Cvv { get; set; }
