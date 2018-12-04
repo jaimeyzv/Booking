@@ -49,6 +49,7 @@ namespace Payment.Injector
         {
             container.RegisterType<IPaymentBusiness, PaymentBusiness>();
             container.RegisterType<ICardBusiness, CardBusiness>();
+            container.RegisterType<IBalanceBusiness, BalanceBusiness>();
         }
     }
 }

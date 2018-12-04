@@ -419,6 +419,7 @@
     <Content Include="Views\Habitacion\Index.cshtml" />
     <Content Include="Views\Habitacion\Habitaciones.cshtml" />
     <Content Include="Views\Habitacion\Detalle.cshtml" />
+    <Content Include="Views\Habitacion\Pago.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

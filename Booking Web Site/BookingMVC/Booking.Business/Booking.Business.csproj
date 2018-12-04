@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="HabitacionesBusiness.cs" />
     <Compile Include="HotelesBusiness.cs" />
+    <Compile Include="PagoBusiness.cs" />
     <Compile Include="RegistroBusiness.cs" />
     <Compile Include="Connected Services\ReniecService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -78,6 +79,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TarjetaBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -189,6 +191,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Booking.DataAccess\Booking.DataAccess.csproj">
+      <Project>{82B47464-856D-4BC6-A627-73557A3439A4}</Project>
+      <Name>Booking.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BookingModels\BookingModels.csproj">
       <Project>{a0e476c5-4b70-40f3-bd08-12350864feed}</Project>
       <Name>BookingModels</Name>

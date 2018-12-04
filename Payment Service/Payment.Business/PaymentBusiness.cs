@@ -27,7 +27,7 @@ namespace Payment.Business
         public TransactionEntity Pay(PurchaseEntity purchase)
         {
             var card = cardRepository.GetByCardNumber(purchase.CardNumber);
-            if (!IsValidCreditCard(purchase, card)) throw new Exception();
+            //if (!IsValidCreditCard(purchase, card)) throw new Exception();
             var balance = balanceRepository.GetByCreditCardId(card.CardId);
             if (!HasBalance(balance, card.CardId, purchase.Cost)) throw new Exception();
             var transactionCode = SaveTransaction(purchase, card, balance);

@@ -17,6 +17,7 @@ namespace Payment.Business
             this.mapper = mapper;
 
         }
+
         public int Create(CardEntity entity)
         {
             throw new NotImplementedException();
@@ -30,7 +31,7 @@ namespace Payment.Business
         public CardEntity GetByCardNumber(string cardNumber)
         {
             var card = cardRepository.GetByCardNumber(cardNumber);
-            var cardEntity = mapper.MapCardDtoToCardEntity(card);
+            var cardEntity = mapper.MapFromCardDtoToCardEntity(card);
 
             return cardEntity;
         }

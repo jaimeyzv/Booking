@@ -19,7 +19,7 @@ namespace Booking.Business
             using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
             {
                 habitacionesService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
-                habitaciones = habitacionesService.ListarHabitaciones().ToList();
+                habitaciones = habitacionesService.ListarHabitaciones().ToList().Where(x => x.Activo).ToList();
             }
 
             //var colasServiceRemoteAddress = new EndpointAddress("http://localhost:40641/ColasService.svc");
@@ -64,6 +64,18 @@ namespace Booking.Business
             if (habilitado)
                 return habitacion;
             return null;
+        }
+
+        public void ReservarHabitacion(int id)
+        {
+            var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:84/HabitacionesService.svc");
+            using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
+            {
+                habitacionesService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                var habitacion = habitacionesService.ObtenerHabitacion(id);
+                habitacion.Activo = false;
+                habitacionesService.ModificarHabitacion(habitacion);
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Payment.Infrastructure.Mappers
 {
     public class Mapper : IMapper
     {
-        public TransactionModel MapTransactionFromEntityToModel(TransactionEntity entity)
+        public TransactionModel MapFromTransactionFromEntityToModel(TransactionEntity entity)
         {
             return new TransactionModel()
             {
@@ -16,7 +16,7 @@ namespace Payment.Infrastructure.Mappers
             };
         }
 
-        public PurchaseEntity MapPurchaseFromModelToEntity(PurchaseModel model)
+        public PurchaseEntity MapFromPurchaseFromModelToEntity(PurchaseModel model)
         {
             return new PurchaseEntity() {
                 CardNumber = model.CardNumber,
@@ -28,11 +28,12 @@ namespace Payment.Infrastructure.Mappers
             };
         }
 
-        public CardEntity MapCardDtoToCardEntity(CardDto dto)
+        public CardEntity MapFromCardDtoToCardEntity(CardDto dto)
         {
             return new CardEntity()
             {
                 CardId = dto.CardId,
+                Name = dto.Name,
                 Number = dto.Number,
                 ExpireDate = dto.ExpireDate,
                 Cvv = dto.Cvv,
@@ -40,15 +41,56 @@ namespace Payment.Infrastructure.Mappers
             };
         }
 
-        public CardModel MapCardEntityToCardModel(CardEntity entity)
+        public CardModel MapFromCardEntityToCardModel(CardEntity entity)
         {
             return new CardModel()
             {
                 CardId = entity.CardId,
+                Name = entity.Name,
                 Number = entity.Number,
                 ExpireDate = entity.ExpireDate,
                 Cvv = entity.Cvv,
                 CardTypeId = entity.CardTypeId
+            };
+        }
+
+        public BalanceEntity MapFromBalanceDtoToBalanceEntity(BalanceDto dto)
+        {
+            return new BalanceEntity()
+            {
+                BalanceId = dto.BalanceId,
+                Balance = dto.Balance,
+                CardId = dto.CardId
+            };
+        }
+
+        public BalanceModel MapFromBalanceEntityToBalanceModel(BalanceEntity entity)
+        {
+            return new BalanceModel()
+            {
+                BalanceId = entity.BalanceId,
+                Balance = entity.Balance,
+                CardId = entity.CardId
+            };
+        }
+
+        public BalanceDto MapFromBalanceEntityToBalanceDto(BalanceEntity entity)
+        {
+            return new BalanceDto()
+            {
+                BalanceId = entity.BalanceId,
+                Balance = entity.Balance,
+                CardId = entity.CardId
+            };
+        }
+
+        public BalanceEntity MapFromBalanceModelToBalanceEntity(BalanceModel model)
+        {
+            return new BalanceEntity()
+            {
+                BalanceId = model.BalanceId,
+                Balance = model.Balance,
+                CardId = model.CardId
             };
         }
     }

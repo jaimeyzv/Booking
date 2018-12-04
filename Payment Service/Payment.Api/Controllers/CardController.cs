@@ -1,4 +1,5 @@
-﻿using Payment.Business.Interfaces;
+﻿using Payment.Api.Models;
+using Payment.Business.Interfaces;
 using Payment.Infrastructure.Interfaces.Mappers;
 using Payment.Infrastructure.Interfaces.Wrappers;
 using System;
@@ -33,9 +34,11 @@ namespace Payment.Api.Controllers
                 if (ModelState.IsValid)
                 {
                     var entity = cardBusiness.GetByCardNumber(cardNumber);
-                    var model = mapper.MapCardEntityToCardModel(entity);
+                    var model = mapper.MapFromCardEntityToCardModel(entity);
 
-                    return apiResponseWrapper.Response(HttpStatusCode.OK, model);
+                    //return apiResponseWrapper.Response(HttpStatusCode.OK, model);
+
+                    return Request.CreateResponse<CardModel>(HttpStatusCode.OK, model);
                 }
 
                 return apiResponseWrapper.Response(HttpStatusCode.InternalServerError, null);

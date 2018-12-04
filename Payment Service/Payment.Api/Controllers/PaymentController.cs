@@ -33,7 +33,7 @@ namespace Payment.Api.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var purchaseEntity = mapper.MapPurchaseFromModelToEntity(model);
+                    var purchaseEntity = mapper.MapFromPurchaseFromModelToEntity(model);
                     var transaction = paymentBusiness.Pay(purchaseEntity);
 
                     return apiResponseWrapper.Response(HttpStatusCode.OK, transaction);

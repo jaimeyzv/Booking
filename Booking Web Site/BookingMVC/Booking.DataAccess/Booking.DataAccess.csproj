@@ -45,10 +45,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BalanceApi.cs" />
+    <Compile Include="CardApi.cs" />
+    <Compile Include="PaymentApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookingModels\BookingModels.csproj">
+      <Project>{a0e476c5-4b70-40f3-bd08-12350864feed}</Project>
+      <Name>BookingModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
