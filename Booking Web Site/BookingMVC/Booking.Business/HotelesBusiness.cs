@@ -13,6 +13,7 @@ namespace Booking.Business
         {
             var hoteles = new List<Hotels>();
             var hotelesIds = new List<string>();
+            //var hotelesServiceRemoteAddress = new EndpointAddress("http://localhost:53745/HotelService.svc");
             var hotelesServiceRemoteAddress = new EndpointAddress("http://localhost:85/HotelService.svc");
             using (var hotelService = new HotelServiceClient(new System.ServiceModel.BasicHttpBinding(), hotelesServiceRemoteAddress))
             {
@@ -20,6 +21,7 @@ namespace Booking.Business
                 hoteles = hotelService.ListarHoteles().ToList();
             }
 
+            //var colasServiceRemoteAddress = new EndpointAddress("http://localhost:40641/ColasService.svc");
             var colasServiceRemoteAddress = new EndpointAddress("http://localhost:92/ColasService.svc");
             using (var colasService = new ColasServiceClient(new System.ServiceModel.BasicHttpBinding(), colasServiceRemoteAddress))
             {

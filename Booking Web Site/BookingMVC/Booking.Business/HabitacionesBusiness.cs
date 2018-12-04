@@ -14,6 +14,7 @@ namespace Booking.Business
             var habitaciones = new List<Habitacion>();
             var habitacioneIds = new List<string>();
             var hotelIds = new List<string>();
+            //var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:61476/HabitacionesService.svc");
             var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:84/HabitacionesService.svc");
             using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
             {
@@ -21,6 +22,7 @@ namespace Booking.Business
                 habitaciones = habitacionesService.ListarHabitaciones().ToList();
             }
 
+            //var colasServiceRemoteAddress = new EndpointAddress("http://localhost:40641/ColasService.svc");
             var colasServiceRemoteAddress = new EndpointAddress("http://localhost:92/ColasService.svc");
             using (var colasService = new ColasServiceClient(new System.ServiceModel.BasicHttpBinding(), colasServiceRemoteAddress))
             {
@@ -38,6 +40,7 @@ namespace Booking.Business
         {
             var habitacion = new Habitacion();
             var habitacionesIds = new List<string>();
+            //var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:61476/HabitacionesService.svc");
             var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:84/HabitacionesService.svc");
             using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
             {
@@ -48,6 +51,7 @@ namespace Booking.Business
             if (habitacion == null)
                 return habitacion;
 
+            //var colasServiceRemoteAddress = new EndpointAddress("http://localhost:40641/ColasService.svc");
             var colasServiceRemoteAddress = new EndpointAddress("http://localhost:92/ColasService.svc");
             using (var colasService = new ColasServiceClient(new System.ServiceModel.BasicHttpBinding(), colasServiceRemoteAddress))
             {
