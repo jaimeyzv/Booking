@@ -1,6 +1,9 @@
 ﻿using Booking.Business;
+using Booking.Business.RoomService;
 using BookingModels;
 using BookingMVC.Filter;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
@@ -10,9 +13,16 @@ namespace BookingMVC.Controllers
     {
         HabitacionesBusiness habitacionesBusiness = new HabitacionesBusiness();
 
-        public ActionResult Index()
+        public ActionResult Index(string hotelCodigo)
         {
-            var habitaciones = habitacionesBusiness.ListarHabitaciones();
+            var habitaciones = new List<Habitacion>();
+            habitaciones = habitacionesBusiness.ListarHabitaciones();
+
+            if (string.IsNullOrWhiteSpace(hotelCodigo))
+                return View(habitaciones);
+            else
+                habitaciones = habitaciones.Where(x => x.CodigoHotel == hotelCodigo).ToList();
+
             return View(habitaciones);
         }
 

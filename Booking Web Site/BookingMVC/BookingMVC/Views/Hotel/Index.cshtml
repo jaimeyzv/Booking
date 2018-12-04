@@ -38,7 +38,7 @@
                                         <li><strong>Teléfono:</strong> @hotel.Telefono</li>
                                         <li><strong>Estrellas:</strong> @hotel.Estrellas</li>
                                     </ul>
-                                    <a href="@Url.Action("Index", "Room", null)" class="btn btn-primary btn-block">Ver Habitaciones</a>
+                                    <a href="@Url.Action("Index", "Habitacion", new { hotelCodigo = hotel.Codigo})" class="btn btn-primary btn-block">Ver Habitaciones</a>
                                 </div>
                             </div>
                         </div>
