@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:86/ReservaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BookService.Dominio" />
+  <xs:element name="RealizarReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="reserva" nillable="true" type="q1:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RealizarReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="RealizarReservaResult" nillable="true" type="q2:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="reserva" nillable="true" type="q3:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="ModificarReservaResult" nillable="true" type="q4:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarReserva">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reservaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarReservaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="CancelarReservaResult" nillable="true" type="q5:Reserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarReservasPorMiembro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dni" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarReservasPorMiembroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/BookService.Dominio" minOccurs="0" name="ListarReservasPorMiembroResult" nillable="true" type="q6:ArrayOfReserva" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

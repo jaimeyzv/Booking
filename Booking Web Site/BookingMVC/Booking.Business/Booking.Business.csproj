@@ -44,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutenticacionBusiness.cs" />
+    <Compile Include="Connected Services\BookService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\HotelService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,6 +91,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookService\Booking.Business.BookService.Reserva.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BookService\ReservaService.wsdl" />
+    <None Include="Connected Services\BookService\ReservaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookService\ReservaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookService\ReservaService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\HotelService\Booking.Business.HotelService.Hotels.datasource">
@@ -168,6 +186,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BookService\" />
     <WCFMetadataStorage Include="Connected Services\HotelService\" />
     <WCFMetadataStorage Include="Connected Services\MemberService\" />
     <WCFMetadataStorage Include="Connected Services\NotificatorService\" />
@@ -271,6 +290,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\QueueService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookService\ReservaService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BookService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
