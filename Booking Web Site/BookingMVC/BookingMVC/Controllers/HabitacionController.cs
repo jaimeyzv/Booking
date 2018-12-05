@@ -19,7 +19,7 @@ namespace BookingMVC.Controllers
         public ActionResult Index(string hotelCodigo)
         {
             var habitaciones = new List<Habitacion>();
-            habitaciones = habitacionesBusiness.ListarHabitaciones();
+            habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
 
             if (string.IsNullOrWhiteSpace(hotelCodigo))
                 return View(habitaciones);

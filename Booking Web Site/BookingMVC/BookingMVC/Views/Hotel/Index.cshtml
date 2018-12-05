@@ -22,7 +22,9 @@
             <div class="col-md-12">
                 <div class="nonloop-block-13 owl-carousel">
 
-                    @foreach (var hotel in Model)
+                @if (Model.Any())
+                {
+                    foreach (var hotel in Model)
                     {
                         <div class="item">
                             <div class="block-34">
@@ -38,11 +40,15 @@
                                         <li><strong>Teléfono:</strong> @hotel.Telefono</li>
                                         <li><strong>Estrellas:</strong> @hotel.Estrellas</li>
                                     </ul>
-                                    <a href="@Url.Action("Index", "Habitacion", new { hotelCodigo = hotel.Codigo})" class="btn btn-primary btn-block">Ver Habitaciones</a>
+                                    <a href="@Url.Action("Index", "Habitacion", new { hotelCodigo = hotel.Codigo })" class="btn btn-primary btn-block">Ver Habitaciones</a>
                                 </div>
                             </div>
                         </div>
                     }
+                }
+                else {
+                    <p>No hay hoteles disponibles.</p>
+                }
 
                 </div>
             </div>

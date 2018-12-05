@@ -20,7 +20,7 @@ namespace Booking.Business
             using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
             {
                 habitacionesService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
-                habitaciones = habitacionesService.ListarHabitaciones().ToList().Where(x => x.Activo).ToList();
+                habitaciones = habitacionesService.ListarHabitaciones().ToList().ToList();
             }
 
             //var colasServiceRemoteAddress = new EndpointAddress("http://localhost:40641/ColasService.svc");
@@ -33,7 +33,7 @@ namespace Booking.Business
             }
 
             var habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
-            habitacionesHabilitadas = habitaciones.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
+            habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
             return habitacionesHabilitadas;
         }
 

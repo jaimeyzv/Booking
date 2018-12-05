@@ -19,12 +19,12 @@ namespace Demo.IronSharpConsole
             IronMqRestClient ironMq = IronSharp.IronMQ.Client.New(new IronClientConfig { ProjectId = "5bf768af967e0f000910fed3", Token = "y7TU7c3D3IUXtwrcJJFH", Host = "mq-aws-eu-west-1-1.iron.io", ApiVersion = 3, Scheme = Uri.UriSchemeHttp });
 
             QueueClient queueHabitacion = ironMq.Queue("Habitacion");
-            var codigoHabitacion = "HBT0000001";
+            var codigoHabitacion = "HBT0000007";
             string messageId1 = queueHabitacion.Post(codigoHabitacion);
             Console.WriteLine("Mensaje enviado: {0}", codigoHabitacion);
 
             QueueClient queueHotel = ironMq.Queue("Hotel");
-            var codigoHotel = "HT00000003";
+            var codigoHotel = "HT00000002";
             string messageId2 = queueHotel.Post(codigoHotel);
             Console.WriteLine("Mensaje enviado: {0}", codigoHabitacion);
 

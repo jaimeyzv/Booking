@@ -22,25 +22,32 @@
             <div class="col-md-12">
                 <div class="nonloop-block-13 owl-carousel">
 
-                    @foreach (var habitacion in Model)
+                    @if (Model.Any())
                     {
-                        <div class="item">
-                            <div class="block-34">
-                                <div class="image">
-                                    <!--<a href="#"><img src="http://localhost:61740/Images/@habitacion.Codigoimagen" alt="Image placeholder" width="100" height="200"></a>-->
-                                    <a href="#"><img src="http://localhost:84/Images/@habitacion.Codigoimagen" alt="Image placeholder" width="100" height="200"></a>
-                                </div>
-                                <div class="text">
-                                    <div class="price"><sup>S/</sup><span class="number">@string.Format("{0:#,0.00}", habitacion.Precio)</span><sub>/ Por día</sub></div>
-                                    <ul class="specs">
-                                        <li><strong>Número Cuarto:</strong> @habitacion.Numero</li>
-                                        <li><strong>Cantidad Camas:</strong> @habitacion.CantidadCamas</li>
-                                        <li><strong>Descripción:</strong> @habitacion.Descripcion</li>
-                                    </ul>
-                                    <a href="@Url.Action("Detalle", "Habitacion", new { id = habitacion.HabitacionId})" class="btn btn-primary btn-block">Ver Detalle</a>
+                        foreach (var habitacion in Model)
+                        {
+                            <div class="item">
+                                <div class="block-34">
+                                    <div class="image">
+                                        <!--<a href="#"><img src="http://localhost:61740/Images/@habitacion.Codigoimagen" alt="Image placeholder" width="100" height="200"></a>-->
+                                        <a href="#"><img src="http://localhost:84/Images/@habitacion.Codigoimagen" alt="Image placeholder" width="100" height="200"></a>
+                                    </div>
+                                    <div class="text">
+                                        <div class="price"><sup>S/</sup><span class="number">@string.Format("{0:#,0.00}", habitacion.Precio)</span><sub>/ Por día</sub></div>
+                                        <ul class="specs">
+                                            <li><strong>Número Cuarto:</strong> @habitacion.Numero</li>
+                                            <li><strong>Cantidad Camas:</strong> @habitacion.CantidadCamas</li>
+                                            <li><strong>Descripción:</strong> @habitacion.Descripcion</li>
+                                        </ul>
+                                        <input type="hidden" value="@habitacion.CodigoHabitacion" />
+                                        <a href="@Url.Action("Detalle", "Habitacion", new { id = habitacion.HabitacionId })" class="btn btn-primary btn-block">Ver Detalle</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
+                    }
+                    else {
+                        <p>No hay habitaciones disponibles.</p>
                     }
                 </div>
             </div>
