@@ -263,7 +263,8 @@ $(document).ready(function($) {
 
   $('#checkin_date, #checkout_date').datepicker({
 	  'format': 'd MM, yyyy',
-	  'autoclose': true
+      'autoclose': true,
+      format: 'dd/mm/yyyy'
 	});
 
 

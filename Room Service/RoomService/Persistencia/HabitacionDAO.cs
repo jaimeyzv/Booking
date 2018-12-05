@@ -6,8 +6,8 @@ namespace RoomService.Persistencia
 {
     public class HabitacionDAO
     {
-        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Habitaciones;Integrated Security=True";
-        //private string connectionString = "Server=JAIME-PC;Database=Habitaciones;User ID=JaimePC;pwd=face15PIER";
+        //private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Habitaciones;Integrated Security=True";
+        private string connectionString = "Server=JAIME-PC;Database=Habitaciones;User ID=JaimePC;pwd=face15PIER";
 
         public Habitacion Obtener(int habitacionId)
         {
@@ -19,6 +19,44 @@ namespace RoomService.Persistencia
                 using (var command = new SqlCommand(query, connection))
                 {
                     command.Parameters.Add(new SqlParameter("@HabitacionId", habitacionId));
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Habitacion()
+                            {
+                                HabitacionId = (int)reader["HabitacionId"],
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                Descripcion = reader["Descripcion"].ToString(),
+                                Precio = (decimal)reader["Precio"],
+                                Numero = (int)reader["Numero"],
+                                CantidadCamas = (int)reader["CantidadCamas"],
+                                Codigoimagen = reader["Codigoimagen"].ToString(),
+                                Disponible = (bool)reader["Disponible"],
+                                Activo = (bool)reader["Activo"]
+                            };
+                        }
+                        else
+                        { return null; }
+                    }
+                }
+            }
+
+        }
+
+        public Habitacion ObtenerHabitacionPorCodigo(string codigo)
+        {
+            var query = "select * from Habitaciones where CodigoHabitacion = @codigo";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add(new SqlParameter("@codigo", codigo));
 
                     using (var reader = command.ExecuteReader())
                     {

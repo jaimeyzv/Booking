@@ -1,4 +1,5 @@
-﻿using Booking.Business.QueueService;
+﻿using Booking.Business.BookService;
+using Booking.Business.QueueService;
 using Booking.Business.RoomService;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace Booking.Business
             return null;
         }
 
-        public void ReservarHabitacion(int id)
+        public void ReservarHabitacion(int id, string dni, string codigoHotel, string codigoHabitacion, int numero, decimal precio,int cantidad, DateTime checkIn, DateTime checkOut)
         {
             var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:84/HabitacionesService.svc");
             using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
@@ -75,6 +76,26 @@ namespace Booking.Business
                 var habitacion = habitacionesService.ObtenerHabitacion(id);
                 habitacion.Activo = false;
                 habitacionesService.ModificarHabitacion(habitacion);
+            }
+
+            var reservasServiceRemoteAddress = new EndpointAddress("http://localhost:86/ReservaService.svc");
+            using (var reservasService = new ReservaServiceClient(new System.ServiceModel.BasicHttpBinding(), reservasServiceRemoteAddress))
+            {
+                reservasService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                var reserva = new Reserva();
+                reserva.Codigo = DateTime.Now.ToString("dd-MM-yyyy-HH-ss") + "-" + dni;
+                reserva.DniMiembro = dni;
+                reserva.CodigoHotel = codigoHotel;
+                reserva.CodigoHabitacion = codigoHabitacion;
+                reserva.NumeroHabitacion = numero;
+                reserva.PrecioHotel = precio;
+                reserva.CantidadPersonas = cantidad;
+                reserva.FechaCheckIn = checkIn;
+                reserva.FechaCheckOut = checkOut;
+                reserva.FechaRegistro = DateTime.Now;
+                reserva.Estado = "RESERVADO";
+
+                reservasService.RealizarReserva(reserva);
             }
         }
     }

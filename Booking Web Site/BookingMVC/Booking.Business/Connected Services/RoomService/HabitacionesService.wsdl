@@ -14,6 +14,12 @@
   <wsdl:message name="IHabitacionesService_ObtenerHabitacion_OutputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerHabitacionResponse" />
   </wsdl:message>
+  <wsdl:message name="IHabitacionesService_ObtenerHabitacionPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHabitacionPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="IHabitacionesService_ObtenerHabitacionPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHabitacionPorCodigoResponse" />
+  </wsdl:message>
   <wsdl:message name="IHabitacionesService_ObtenerPorHotelYNumeroHabitacion_InputMessage">
     <wsdl:part name="parameters" element="tns:ObtenerPorHotelYNumeroHabitacion" />
   </wsdl:message>
@@ -58,6 +64,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacion" message="tns:IHabitacionesService_ObtenerHabitacion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacionResponse" message="tns:IHabitacionesService_ObtenerHabitacion_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ObtenerHabitacionPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigo" message="tns:IHabitacionesService_ObtenerHabitacionPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigoResponse" message="tns:IHabitacionesService_ObtenerHabitacionPorCodigo_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="ObtenerPorHotelYNumeroHabitacion">
       <wsdl:input wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerPorHotelYNumeroHabitacion" message="tns:IHabitacionesService_ObtenerPorHotelYNumeroHabitacion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IHabitacionesService/ObtenerPorHotelYNumeroHabitacionResponse" message="tns:IHabitacionesService_ObtenerPorHotelYNumeroHabitacion_OutputMessage" />
@@ -88,6 +98,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ObtenerHabitacion">
       <soap:operation soapAction="http://tempuri.org/IHabitacionesService/ObtenerHabitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHabitacionPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

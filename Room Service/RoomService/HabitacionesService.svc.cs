@@ -24,6 +24,20 @@ namespace RoomService
             return dao.Obtener(habitacionId);
         }
 
+        public Habitacion ObtenerHabitacionPorCodigo(string codigo)
+        {
+            if (string.IsNullOrWhiteSpace(codigo))
+            {
+                throw new FaultException<RepetidoException>(
+                    new RepetidoException()
+                    {
+                        Codigo = "105",
+                        Descripcion = "Codigo ingresado no es válido."
+                    }, new FaultReason("Error al obtener Habitación."));
+            }
+            return dao.ObtenerHabitacionPorCodigo(codigo);
+        }
+
         public Habitacion ObtenerPorHotelYNumeroHabitacion(string codigoHotel, int numeroHabitacion)
         {
             if (string.IsNullOrWhiteSpace(codigoHotel) || numeroHabitacion <= 0)

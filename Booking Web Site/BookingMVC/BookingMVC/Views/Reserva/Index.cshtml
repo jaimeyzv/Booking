@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Booking.Business.BookService.Reserva>
+﻿@model BookingMVC.Models.ReservaHistorial
 
 @{
     ViewBag.Title = "Reservas";
@@ -36,14 +36,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @if(Model.Any())
+                        @if(Model.Reservas.Any())
                         {
-                            foreach (var item in Model)
+                            foreach (var item in Model.Reservas)
                             {
+                                var hotel = Model.Hoteles.Where(x => x.Codigo == item.CodigoHotel).First();
+                                var habitacion = Model.Habitaciones.Where(x => x.CodigoHabitacion == item.CodigoHabitacion).First();
+
                                 <tr>
                                     <th scope="row">@item.Codigo</th>
-                                    <td>@item.CodigoHotel</td>
-                                    <td>@item.CodigoHabitacion</td>
+                                    <td>@hotel.Nombre</td>
+                                    <td>@habitacion.Descripcion</td>
                                     <td>@String.Format("{0:dd/MM/yyyy}", item.FechaCheckIn)</td>
                                     <td>@String.Format("{0:dd/MM/yyyy}", item.FechaCheckOut)</td>
                                     <td>@item.NumeroHabitacion</td>

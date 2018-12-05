@@ -15,6 +15,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ObtenerHabitacionPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerHabitacionPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ObtenerHabitacionPorCodigoResult" nillable="true" type="q2:Habitacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="ObtenerPorHotelYNumeroHabitacion">
     <xs:complexType>
       <xs:sequence>
@@ -26,35 +40,35 @@
   <xs:element name="ObtenerPorHotelYNumeroHabitacionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ObtenerPorHotelYNumeroHabitacionResult" nillable="true" type="q2:Habitacion" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ObtenerPorHotelYNumeroHabitacionResult" nillable="true" type="q3:Habitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CrearHabitacion">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="habitacion" nillable="true" type="q3:Habitacion" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="habitacion" nillable="true" type="q4:Habitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="CrearHabitacionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="CrearHabitacionResult" nillable="true" type="q4:Habitacion" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="CrearHabitacionResult" nillable="true" type="q5:Habitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ModificarHabitacion">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="habitacion" nillable="true" type="q5:Habitacion" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="habitacion" nillable="true" type="q6:Habitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ModificarHabitacionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ModificarHabitacionResult" nillable="true" type="q6:Habitacion" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ModificarHabitacionResult" nillable="true" type="q7:Habitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -80,7 +94,7 @@
   <xs:element name="ListarHabitacionesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ListarHabitacionesResult" nillable="true" type="q7:ArrayOfHabitacion" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ListarHabitacionesResult" nillable="true" type="q8:ArrayOfHabitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -94,7 +108,7 @@
   <xs:element name="ListarHabitacionesPorHotelResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ListarHabitacionesPorHotelResult" nillable="true" type="q8:ArrayOfHabitacion" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/RoomService.Dominio" minOccurs="0" name="ListarHabitacionesPorHotelResult" nillable="true" type="q9:ArrayOfHabitacion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

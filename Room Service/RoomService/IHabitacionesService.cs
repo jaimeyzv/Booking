@@ -12,6 +12,9 @@ namespace RoomService
         Habitacion ObtenerHabitacion(int habitacionId);
 
         [OperationContract]
+        Habitacion ObtenerHabitacionPorCodigo(string codigo);
+
+        [OperationContract]
         Habitacion ObtenerPorHotelYNumeroHabitacion(string codigoHotel, int numeroHabitacion);
 
         [OperationContract]

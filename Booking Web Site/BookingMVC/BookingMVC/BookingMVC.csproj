@@ -160,6 +160,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\HabitacionDetalle.cs" />
+    <Compile Include="Models\ReservaHistorial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -424,7 +426,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -442,9 +443,9 @@
       <Project>{2f32820c-f4fb-4bf9-b42e-fd58cd2ce1b5}</Project>
       <Name>Booking.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BookingModels\BookingModels.csproj">
+    <ProjectReference Include="..\BookingModels\Booking.Models.csproj">
       <Project>{a0e476c5-4b70-40f3-bd08-12350864feed}</Project>
-      <Name>BookingModels</Name>
+      <Name>Booking.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

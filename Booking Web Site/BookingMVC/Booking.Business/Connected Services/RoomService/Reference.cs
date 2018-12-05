@@ -273,6 +273,12 @@ namespace Booking.Business.RoomService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacion", ReplyAction="http://tempuri.org/IHabitacionesService/ObtenerHabitacionResponse")]
         System.Threading.Tasks.Task<Booking.Business.RoomService.Habitacion> ObtenerHabitacionAsync(int habitacionId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigo", ReplyAction="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigoResponse")]
+        Booking.Business.RoomService.Habitacion ObtenerHabitacionPorCodigo(string codigo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigo", ReplyAction="http://tempuri.org/IHabitacionesService/ObtenerHabitacionPorCodigoResponse")]
+        System.Threading.Tasks.Task<Booking.Business.RoomService.Habitacion> ObtenerHabitacionPorCodigoAsync(string codigo);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHabitacionesService/ObtenerPorHotelYNumeroHabitacion", ReplyAction="http://tempuri.org/IHabitacionesService/ObtenerPorHotelYNumeroHabitacionResponse")]
         Booking.Business.RoomService.Habitacion ObtenerPorHotelYNumeroHabitacion(string codigoHotel, int numeroHabitacion);
         
@@ -344,6 +350,14 @@ namespace Booking.Business.RoomService {
         
         public System.Threading.Tasks.Task<Booking.Business.RoomService.Habitacion> ObtenerHabitacionAsync(int habitacionId) {
             return base.Channel.ObtenerHabitacionAsync(habitacionId);
+        }
+        
+        public Booking.Business.RoomService.Habitacion ObtenerHabitacionPorCodigo(string codigo) {
+            return base.Channel.ObtenerHabitacionPorCodigo(codigo);
+        }
+        
+        public System.Threading.Tasks.Task<Booking.Business.RoomService.Habitacion> ObtenerHabitacionPorCodigoAsync(string codigo) {
+            return base.Channel.ObtenerHabitacionPorCodigoAsync(codigo);
         }
         
         public Booking.Business.RoomService.Habitacion ObtenerPorHotelYNumeroHabitacion(string codigoHotel, int numeroHabitacion) {

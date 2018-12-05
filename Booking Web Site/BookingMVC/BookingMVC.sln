@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMVC", "BookingMVC\Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Business", "Booking.Business\Booking.Business.csproj", "{2F32820C-F4FB-4BF9-B42E-FD58CD2CE1B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingModels", "BookingModels\BookingModels.csproj", "{A0E476C5-4B70-40F3-BD08-12350864FEED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Models", "BookingModels\Booking.Models.csproj", "{A0E476C5-4B70-40F3-BD08-12350864FEED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.DataAccess", "Booking.DataAccess\Booking.DataAccess.csproj", "{82B47464-856D-4BC6-A627-73557A3439A4}"
 EndProject

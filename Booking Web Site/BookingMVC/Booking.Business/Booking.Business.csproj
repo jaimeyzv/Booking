@@ -215,9 +215,9 @@
       <Project>{82B47464-856D-4BC6-A627-73557A3439A4}</Project>
       <Name>Booking.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BookingModels\BookingModels.csproj">
+    <ProjectReference Include="..\BookingModels\Booking.Models.csproj">
       <Project>{a0e476c5-4b70-40f3-bd08-12350864feed}</Project>
-      <Name>BookingModels</Name>
+      <Name>Booking.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

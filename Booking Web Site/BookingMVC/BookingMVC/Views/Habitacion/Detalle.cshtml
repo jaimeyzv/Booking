@@ -1,4 +1,4 @@
-﻿@model Booking.Business.RoomService.Habitacion
+﻿@model BookingMVC.Models.HabitacionDetalle
 
 @{
     ViewBag.Title = "Room";
@@ -20,21 +20,55 @@
         <div class="row mb-5">
             <div class="col-md-12 mb-5">
 
-                <div class="block-3 d-md-flex">
-                    <!--<div class="image" style="background-image: url('http://localhost:61740/Images/@Model.Codigoimagen'); "></div>-->
-                    <div class="image" style="background-image: url('http://localhost:84/Images/@Model.Codigoimagen'); "></div>
-                    <div class="text">
+                @using (Html.BeginForm("Detalle", "Habitacion", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Habitacion.HabitacionId)
+                    @Html.HiddenFor(model => model.Habitacion.Codigoimagen)
+                    @Html.HiddenFor(model => model.Habitacion.CodigoHotel)
+                    @Html.HiddenFor(model => model.Habitacion.CodigoHabitacion)
+                    @Html.HiddenFor(model => model.Habitacion.Precio)
+                    @Html.HiddenFor(model => model.Habitacion.Numero)
+                    @Html.HiddenFor(model => model.Habitacion.CantidadCamas)
+                    @Html.HiddenFor(model => model.Habitacion.Descripcion)
 
-                        <div class="price"><sup>S/</sup><span class="number">@string.Format("{0:#,0.00}", Model.Precio)</span><sub>/ por día</sub></div>
-                        <ul class="specs mb-5">
-                            <li><strong>Número Cuarto:</strong> @Model.Numero</li>
-                            <li><strong>Cantidad Camas:</strong> @Model.CantidadCamas</li>
-                            <li><strong>Descripción:</strong> @Model.Descripcion</li>
-                        </ul>
+                    <div class="block-3 d-md-flex">
+                        <!--<div class="image" style="background-image: url('http://localhost:61740/Images/@Model.Habitacion.Codigoimagen'); "></div>-->
+                        <div class="image" style="background-image: url('http://localhost:84/Images/@Model.Habitacion.Codigoimagen'); "></div>
+                        <div class="text">
 
-                        <p><a href="@Url.Action("Pago", "Habitacion", new { habitacionId = Model.HabitacionId})" class="btn btn-primary btn-block">Reservar</a></p>
+                            <div class="col-md-12 mb-12 mb-lg-12 col-lg-8">
+                                @Html.LabelFor(model => model.CheckIn, htmlAttributes: new { @class = "checkin" })
+                                <div class="field-icon-wrap">
+                                    @Html.EditorFor(model => model.CheckIn, new { htmlAttributes = new { @class = "form-control", @id = "checkin_date" } })
+                                    @Html.ValidationMessageFor(model => model.CheckIn, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-12 mb-lg-12 col-lg-8">
+                                @Html.LabelFor(model => model.CheckOut, htmlAttributes: new { @class = "checkin" })
+                                <div class="field-icon-wrap">
+                                    @Html.EditorFor(model => model.CheckOut, new { htmlAttributes = new { @class = "form-control", @id = "checkin_date" } })
+                                    @Html.ValidationMessageFor(model => model.CheckOut, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="price"><sup>S/</sup><span class="number">@string.Format("{0:#,0.00}", Model.Habitacion.Precio)</span><sub>/ por día</sub></div>
+                            <ul class="specs mb-5">
+                                <li><strong>Número Cuarto:</strong> @Model.Habitacion.Numero</li>
+                                <li><strong>Cantidad Camas:</strong> @Model.Habitacion.CantidadCamas</li>
+                                <li><strong>Descripción:</strong> @Model.Habitacion.Descripcion</li>
+                            </ul>
+
+                            @*<p><a href="@Url.Action("Pago", "Habitacion", new { habitacionId = Model.Habitacion.HabitacionId})" class="btn btn-primary btn-block">Reservar</a></p>*@
+
+                            <input type="submit" value="Reservar" class="btn btn-primary btn-block" />
+                        </div>
                     </div>
-                </div>
+                }
+
+                
             </div>
         </div>
     </div>
