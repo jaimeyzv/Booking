@@ -37,6 +37,12 @@
                     }
                     else
                     {
+                        using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm"}))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li class="nav-item"><a class="nav-link" href="#"> @Session["Miembro"].ToString()</a></li>
+                            <li class="nav-item"><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a></li>
+                        }
                         <li class="nav-item @(ViewBag.Title == "Index" ? "active" : "")"><a href="@Url.Action("Index", "Home", null)" class="nav-link">Home</a></li>
                         <li class="nav-item @(ViewBag.Title == "Hoteles" ? "active" : "")"><a href="@Url.Action("Index", "Hotel", null)" class="nav-link">Hoteles</a></li>
                         <li class="nav-item @(ViewBag.Title == "Habitaciones" ? "active" : "")"><a href="@Url.Action("Index", "Habitacion", null)" class="nav-link">Habitaciones</a></li>
@@ -50,19 +56,6 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-md-6 col-lg-4">
-                    <h3 class="heading-section">Acerca de</h3>
-                    <p class="mb-5"></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="block-23">
-                        <h3 class="heading-section">Contacto</h3>
-                    </div>
-                </div>
-
-
-            </div>
             <div class="row pt-5">
                 <div class="col-md-12 text-left">
                     <p>
