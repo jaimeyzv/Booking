@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Booking.Business.BookService.Reserva>
+
+@{
+    ViewBag.Title = "Reservas";
+}
+
+<div class="block-30 block-30-sm item" style="background-image: url('Content/custom/images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-10">
+                <span class="subheading-sm">Reservas</span>
+                <h2 class="heading">Reservas Realizadas</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section block-13 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Hotel</th>
+                            <th scope="col">Habitación</th>
+                            <th scope="col">Check In</th>
+                            <th scope="col">Check Out</th>
+                            <th scope="col">Habitación</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Fecha Reserva</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if(Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@item.Codigo</th>
+                                    <td>@item.CodigoHotel</td>
+                                    <td>@item.CodigoHabitacion</td>
+                                    <td>@String.Format("{0:dd/MM/yyyy}", item.FechaCheckIn)</td>
+                                    <td>@String.Format("{0:dd/MM/yyyy}", item.FechaCheckOut)</td>
+                                    <td>@item.NumeroHabitacion</td>
+                                    <td>S/.@String.Format("{0:0.00}", item.PrecioHotel)</td>
+                                    <td>@item.CantidadPersonas</td>
+                                    <td>@String.Format("{0:dd/MM/yyyy}", item.FechaRegistro)</td>
+                                    <td>@item.Estado</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>No hay datos.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

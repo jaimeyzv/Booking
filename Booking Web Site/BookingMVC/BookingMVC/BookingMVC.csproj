@@ -420,6 +420,7 @@
     <Content Include="Views\Habitacion\Habitaciones.cshtml" />
     <Content Include="Views\Habitacion\Detalle.cshtml" />
     <Content Include="Views\Habitacion\Pago.cshtml" />
+    <Content Include="Views\Reserva\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

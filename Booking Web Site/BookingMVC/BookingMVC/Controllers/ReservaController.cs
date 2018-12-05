@@ -1,4 +1,6 @@
-﻿using BookingMVC.Filter;
+﻿using Booking.Business;
+using Booking.Business.MemberService;
+using BookingMVC.Filter;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
@@ -6,10 +8,13 @@ namespace BookingMVC.Controllers
     [AuthUserFilter]
     public class ReservaController : Controller
     {
-        // GET: Reserva
+        ReservaBusiness reservaBusiness = new ReservaBusiness();
+
         public ActionResult Index()
         {
-            return View();
+            var miembro = Session["Miembro"] as Miembro;
+            var reservas = reservaBusiness.ListarReservas(miembro.Dni);
+            return View(reservas);
         }
     }
 }

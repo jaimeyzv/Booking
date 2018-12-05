@@ -1,6 +1,5 @@
 ﻿using Booking.Business;
 using BookingModels;
-using BookingMVC.Filter;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
