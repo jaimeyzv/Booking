@@ -7,7 +7,8 @@ namespace Booking.DataAccess
     {
         public Transaccion Pagar(Purchase purchase)
         {
-            var client = new RestClient("http://localhost:91/");
+            var client = new RestClient("http://localhost:9609/");
+            //var client = new RestClient("http://localhost:91/");
             var request = new RestRequest("api/payment/pay", Method.POST);
             request.RequestFormat = DataFormat.Json;
             request.AddBody(new Purchase
