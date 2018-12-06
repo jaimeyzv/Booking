@@ -1,3 +1,6 @@
+use master
+go
+
 create database Miembros
 go
 
