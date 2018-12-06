@@ -40,7 +40,7 @@
                         using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm"}))
                         {
                             @Html.AntiForgeryToken()
-                            <li class="nav-item"><a class="nav-link" href="#"> @Session["Miembro"].ToString()</a></li>
+                            @*<li class="nav-item"><a class="nav-link" href="#"> @Session["Miembro"].ToString()</a></li>*@
                             <li class="nav-item"><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a></li>
                         }
                         <li class="nav-item @(ViewBag.Title == "Index" ? "active" : "")"><a href="@Url.Action("Index", "Home", null)" class="nav-link">Home</a></li>
