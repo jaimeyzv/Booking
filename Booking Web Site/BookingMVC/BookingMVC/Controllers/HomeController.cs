@@ -32,7 +32,7 @@ namespace BookingMVC.Controllers
         public ActionResult LogOff()
         {
             Session.Abandon();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "IniciarSesion");
         }
     }
 }

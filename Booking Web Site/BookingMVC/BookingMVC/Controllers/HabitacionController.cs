@@ -62,6 +62,7 @@ namespace BookingMVC.Controllers
         [HttpPost]
         public ActionResult Pago(Pago pago)
         {
+            TempData["MostrarPago"] = true;
             if (!ModelState.IsValid)
                 return View(pago);
             else {
