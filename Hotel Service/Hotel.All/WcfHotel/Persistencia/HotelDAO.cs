@@ -7,8 +7,8 @@ namespace WcfHotel.Persistencia
     public class HotelDAO
     {
 
-        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Hoteles;Integrated Security=True";
-        //private string connectionString = "Server=JAIME-PC;Database=Hoteles;User ID=JaimePC;pwd=face15PIER";
+        //private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Hoteles;Integrated Security=True";
+        private string connectionString = "Server=JAIME-PC;Database=Hoteles;User ID=JaimePC;pwd=face15PIER";
 
         public Hotels ObtenerPorCodigo(string codigo)
         {

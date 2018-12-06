@@ -14,6 +14,7 @@ C:\Users\Jaime Zamora\Desktop\Stamping.All\Payment.DataAccess.Dtos\obj\Debug\Pay
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\Payment.DataAccess.Dtos.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\Payment.DataAccess.Dtos.pdb
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\NPoco.dll
+D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csprojResolveAssemblyReference.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.pdb

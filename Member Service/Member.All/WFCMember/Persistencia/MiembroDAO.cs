@@ -6,8 +6,8 @@ namespace WCFMember.Persistencia
 {
     public class MiembroDAO
     {
-        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Miembros;Integrated Security=True";
-        //private string connectionString = "Server=JAIME-PC;Database=Miembros;User ID=JaimePC;pwd=face15PIER";
+        //private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Miembros;Integrated Security=True";
+        private string connectionString = "Server=JAIME-PC;Database=Miembros;User ID=JaimePC;pwd=face15PIER";
 
         public Miembro Obtener(string dni)
         {

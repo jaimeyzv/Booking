@@ -12,7 +12,7 @@ namespace NotificacionProject
             try
             {
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress("Eduardo Rojas", "u201625648@upc.edu.pe"));
+                message.From.Add(new MailboxAddress("Booking", "u201625648@upc.edu.pe"));
                 message.To.Add(new MailboxAddress(nombre, correo));
                 message.Subject = "¡Bienvenido a Booking DSD!";
 
