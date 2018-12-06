@@ -13,9 +13,3 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.pdb
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.dll
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\bin\Debug\Payment.Business.Entities.pdb
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csprojAssemblyReference.cache
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.csproj.CoreCompileInputs.cache
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.dll
-E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Business.Entities\obj\Debug\Payment.Business.Entities.pdb
