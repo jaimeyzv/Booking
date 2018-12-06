@@ -10,6 +10,8 @@ namespace Booking.Business
 {
     public class HabitacionesBusiness
     {
+        ReservaBusiness reservaBusiness = new ReservaBusiness();
+
         public List<Habitacion> ListarHabitaciones()
         {
             var habitaciones = new List<Habitacion>();
@@ -31,6 +33,34 @@ namespace Booking.Business
                 habitacioneIds = colasService.ListarHabitacionesEnLimpieza().ToList();
                 hotelIds = colasService.ListarHotelesNoValidados().ToList();
             }
+
+            var habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
+            habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
+            return habitacionesHabilitadas;
+        }
+
+        public List<Habitacion> ListarHabitacionesPorRangoFecha(DateTime inicio, DateTime fin)
+        {
+            var habitacionesReservada = new List<Reserva>();
+            var habitaciones = new List<Habitacion>();
+            var habitacioneIds = new List<string>();
+            var hotelIds = new List<string>();
+            var habitacionesServiceRemoteAddress = new EndpointAddress("http://localhost:84/HabitacionesService.svc");
+            using (var habitacionesService = new HabitacionesServiceClient(new System.ServiceModel.BasicHttpBinding(), habitacionesServiceRemoteAddress))
+            {
+                habitacionesService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                habitaciones = habitacionesService.ListarHabitaciones().ToList().ToList();
+            }
+
+            var colasServiceRemoteAddress = new EndpointAddress("http://localhost:92/ColasService.svc");
+            using (var colasService = new ColasServiceClient(new System.ServiceModel.BasicHttpBinding(), colasServiceRemoteAddress))
+            {
+                colasService.Endpoint.Binding.SendTimeout = new TimeSpan(0, 0, 0, 20);
+                habitacioneIds = colasService.ListarHabitacionesEnLimpieza().ToList();
+                hotelIds = colasService.ListarHotelesNoValidados().ToList();
+            }
+
+            habitacionesReservada = reservaBusiness.ListarReservas();
 
             var habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
             habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
