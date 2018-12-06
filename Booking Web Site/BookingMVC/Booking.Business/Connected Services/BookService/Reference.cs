@@ -261,6 +261,12 @@ namespace Booking.Business.BookService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReservaService/ListarReservasPorMiembro", ReplyAction="http://tempuri.org/IReservaService/ListarReservasPorMiembroResponse")]
         System.Threading.Tasks.Task<Booking.Business.BookService.Reserva[]> ListarReservasPorMiembroAsync(string dni);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReservaService/ListarReservas", ReplyAction="http://tempuri.org/IReservaService/ListarReservasResponse")]
+        Booking.Business.BookService.Reserva[] ListarReservas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IReservaService/ListarReservas", ReplyAction="http://tempuri.org/IReservaService/ListarReservasResponse")]
+        System.Threading.Tasks.Task<Booking.Business.BookService.Reserva[]> ListarReservasAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -320,6 +326,14 @@ namespace Booking.Business.BookService {
         
         public System.Threading.Tasks.Task<Booking.Business.BookService.Reserva[]> ListarReservasPorMiembroAsync(string dni) {
             return base.Channel.ListarReservasPorMiembroAsync(dni);
+        }
+        
+        public Booking.Business.BookService.Reserva[] ListarReservas() {
+            return base.Channel.ListarReservas();
+        }
+        
+        public System.Threading.Tasks.Task<Booking.Business.BookService.Reserva[]> ListarReservasAsync() {
+            return base.Channel.ListarReservasAsync();
         }
     }
 }
