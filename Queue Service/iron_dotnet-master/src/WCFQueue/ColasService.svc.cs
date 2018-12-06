@@ -18,9 +18,9 @@ namespace WCFQueue
 
             while (!finished)
             {
-                var messageHotel = queueHabitacion.Reserve();
-                if (messageHotel != null)
-                    habitacionIds.Add(messageHotel.Body);
+                var messageHabitacion = queueHabitacion.Reserve(1, new TimeSpan(0, 0, 5));
+                if (messageHabitacion != null && messageHabitacion.Messages.Any())
+                    habitacionIds.Add(messageHabitacion.Messages[0].Body.ToString());
                 else
                     finished = true;
             }
@@ -38,9 +38,9 @@ namespace WCFQueue
 
             while (!finished)
             {
-                var messageHotel = queueHotel.Reserve();
-                if (messageHotel != null)
-                    hotelIds.Add(messageHotel.Body);
+                var messageHotel = queueHotel.Reserve(1, new TimeSpan(0, 0, 5));
+                if (messageHotel != null && messageHotel.Messages.Any())
+                    hotelIds.Add(messageHotel.Messages[0].Body.ToString());
                 else
                     finished = true;
             }
