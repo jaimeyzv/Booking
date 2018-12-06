@@ -17,3 +17,11 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\Payment.DataAccess.Dtos.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\Payment.DataAccess.Dtos.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\bin\Debug\NPoco.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csprojAssemblyReference.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csproj.CoreCompileInputs.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.csproj.CopyComplete
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Dtos\obj\Debug\Payment.DataAccess.Dtos.pdb

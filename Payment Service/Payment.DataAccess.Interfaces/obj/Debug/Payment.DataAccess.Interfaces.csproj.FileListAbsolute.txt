@@ -25,3 +25,13 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\bin\Debug\Payment.DataAccess.Interfaces.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\bin\Debug\Payment.DataAccess.Interfaces.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\bin\Debug\NPoco.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\bin\Debug\Payment.DataAccess.Dtos.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\bin\Debug\Payment.DataAccess.Dtos.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.csprojAssemblyReference.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.csproj.CoreCompileInputs.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.csproj.CopyComplete
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.DataAccess.Interfaces\obj\Debug\Payment.DataAccess.Interfaces.pdb

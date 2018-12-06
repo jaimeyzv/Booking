@@ -6,8 +6,8 @@ namespace RoomService.Persistencia
 {
     public class HabitacionDAO
     {
-        //private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Habitaciones;Integrated Security=True";
-        private string connectionString = "Server=JAIME-PC;Database=Habitaciones;User ID=JaimePC;pwd=face15PIER";
+        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Habitaciones;Integrated Security=True";
+        //private string connectionString = "Server=JAIME-PC;Database=Habitaciones;User ID=JaimePC;pwd=face15PIER";
 
         public Habitacion Obtener(int habitacionId)
         {

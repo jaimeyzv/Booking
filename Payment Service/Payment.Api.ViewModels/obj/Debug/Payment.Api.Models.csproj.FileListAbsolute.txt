@@ -14,3 +14,9 @@ D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Paym
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
 D:\UPC\Desarrollo de Sistemas Distribuidos\Proyecto\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\bin\Debug\Payment.Api.Models.pdb
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csprojAssemblyReference.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.csproj.CoreCompileInputs.cache
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.dll
+E:\Google Drive\UPC\Sistemas Distribuidos\WS\jaimeyzv\Booking\Payment Service\Payment.Api.ViewModels\obj\Debug\Payment.Api.Models.pdb
