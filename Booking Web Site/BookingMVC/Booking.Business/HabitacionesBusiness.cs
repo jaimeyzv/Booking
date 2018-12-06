@@ -39,8 +39,9 @@ namespace Booking.Business
             return habitacionesHabilitadas;
         }
 
-        public List<Habitacion> ListarHabitacionesPorRangoFecha(DateTime inicio, DateTime fin)
+        public List<Habitacion> ListarHabitacionesPorRangoFecha(DateTime inicio, DateTime fin, int camas)
         {
+            var habitacionesHabilitadas = new List<Habitacion>();
             var habitacionesReservada = new List<Reserva>();
             var habitaciones = new List<Habitacion>();
             var habitacioneIds = new List<string>();
@@ -59,10 +60,26 @@ namespace Booking.Business
                 habitacioneIds = colasService.ListarHabitacionesEnLimpieza().ToList();
                 hotelIds = colasService.ListarHotelesNoValidados().ToList();
             }
-
+            
             habitacionesReservada = reservaBusiness.ListarReservas();
+            habitacionesHabilitadas = habitaciones;
 
-            var habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
+            foreach (var reserva in habitacionesReservada)
+            {
+                if ((fin >= reserva.FechaCheckIn && fin <= reserva.FechaCheckOut)
+                    || (inicio >= reserva.FechaCheckIn && inicio <= reserva.FechaCheckOut)
+                    || (inicio <= reserva.FechaCheckIn && fin >= reserva.FechaCheckOut))
+                {
+                    var hab = habitacionesHabilitadas.Where(x => x.CodigoHabitacion == reserva.CodigoHabitacion).FirstOrDefault();
+                    if (hab != null)
+                    {
+                        habitacionesHabilitadas.Remove(hab);
+                    }
+                }
+            }
+
+            habitacionesHabilitadas = habitacionesHabilitadas.Where(x => x.CantidadCamas == camas).ToList();
+            habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
             habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
             return habitacionesHabilitadas;
         }
