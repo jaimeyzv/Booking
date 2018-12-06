@@ -46,6 +46,33 @@ namespace BookingMVC.Controllers
                 return View(detalle);
             }
             else {
+                DateTime checkin = DateTime.ParseExact(detalle.CheckIn, "dd/MM/yyyy", null);
+                DateTime checkOut = DateTime.ParseExact(detalle.CheckOut, "dd/MM/yyyy", null);
+                var hoy = DateTime.Today;
+
+                int result1 = DateTime.Compare(hoy, checkin);
+                int result2 = DateTime.Compare(hoy, checkOut);
+                if (result1 >= 0 || result2 >= 0)
+                {
+                    TempData["ErrorFecha"] = "Las fechas ingresadas mayor al día de hoy.";
+                    return View(detalle);
+                }
+                
+
+                int result = DateTime.Compare(checkin, checkOut);
+                if (result >= 0)
+                {
+                    TempData["ErrorFecha"] = "Checkout debe ser mayor al checkin.";
+                    return View(detalle);
+                }
+
+                var dias = (checkOut.Date - checkin.Date).Days;
+                if (dias <= 2)
+                {
+                    TempData["ErrorFecha"] = "La cantidad de días debe ser de 3 a más.";
+                    return View(detalle);
+                }
+
                 Session["Detalle"] = detalle;
                 return RedirectToAction("Pago", new { habitacionId = detalle.Habitacion.HabitacionId });
             }
@@ -62,6 +89,7 @@ namespace BookingMVC.Controllers
         [HttpPost]
         public ActionResult Pago(Pago pago)
         {
+            TempData["MostrarPago"] = true;
             if (!ModelState.IsValid)
                 return View(pago);
             else {

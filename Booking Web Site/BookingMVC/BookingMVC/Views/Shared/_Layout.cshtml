@@ -44,12 +44,16 @@
                         {
                             @Html.AntiForgeryToken()
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Usuario Logueado
-                                </a>
+                                @{
+                                    var miembro = Session["Miembro"] as Booking.Business.MemberService.Miembro;
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @miembro.Nombres
+                                    </a>
+                                }
+                                
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="@Url.Action("MisDatos", "Registro", null)">Mis Datos</a>
-                                    <a class="dropdown-item" href="@Url.Action("MisReservas", "Reserva", null)">Mis Reservas</a>
+                                    @*<a class="dropdown-item" href="@Url.Action("MisDatos", "Registro", null)">Mis Datos</a>*@
+                                    <a class="dropdown-item" href="@Url.Action("Index", "Reserva", null)">Mis Reservas</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
                                 </div>

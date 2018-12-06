@@ -64,6 +64,13 @@
                             @*<p><a href="@Url.Action("Pago", "Habitacion", new { habitacionId = Model.Habitacion.HabitacionId})" class="btn btn-primary btn-block">Reservar</a></p>*@
 
                             <input type="submit" value="Reservar" class="btn btn-primary btn-block" />
+
+                            @if (TempData["ErrorFecha"] != null)
+                            {
+                                <div class="validation-summary-errors" data-valmsg-summary="true">
+                                    <span style="color: red;">@TempData["ErrorFecha"]</span>
+                                </div>
+                            }
                         </div>
                     </div>
                 }

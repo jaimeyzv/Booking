@@ -63,7 +63,7 @@ INSERT [dbo].[Card] ([Name], [Number], [ExpireDate], [Cvv], [CardTypeId]) VALUES
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(15000.000000 AS Decimal(18, 6)), 1)
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(10000.000000 AS Decimal(18, 6)), 2)
 INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(5000.000000 AS Decimal(18, 6)), 3)
-INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(3500.000000 AS Decimal(18, 6)), 4)
+INSERT [dbo].[Balance] ([Balance], [CardId]) VALUES (CAST(200.000000 AS Decimal(18, 6)), 4)
 
 SELECT * FROM [dbo].[Card]
 SELECT * FROM [dbo].[Balance]
