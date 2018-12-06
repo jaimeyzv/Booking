@@ -423,6 +423,8 @@
     <Content Include="Views\Habitacion\Detalle.cshtml" />
     <Content Include="Views\Habitacion\Pago.cshtml" />
     <Content Include="Views\Reserva\Index.cshtml" />
+    <Content Include="Views\Registro\MisDatos.cshtml" />
+    <Content Include="Views\Reserva\MisReservas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -37,15 +37,24 @@
                     }
                     else
                     {
-                        using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm"}))
-                        {
-                            @Html.AntiForgeryToken()
-                            @*<li class="nav-item"><a class="nav-link" href="#"> @Session["Miembro"].ToString()</a></li>*@
-                            <li class="nav-item"><a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a></li>
-                        }
                         <li class="nav-item @(ViewBag.Title == "Index" ? "active" : "")"><a href="@Url.Action("Index", "Home", null)" class="nav-link">Home</a></li>
                         <li class="nav-item @(ViewBag.Title == "Hoteles" ? "active" : "")"><a href="@Url.Action("Index", "Hotel", null)" class="nav-link">Hoteles</a></li>
                         <li class="nav-item @(ViewBag.Title == "Habitaciones" ? "active" : "")"><a href="@Url.Action("Index", "Habitacion", null)" class="nav-link">Habitaciones</a></li>
+                        using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Usuario Logueado
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="@Url.Action("MisDatos", "Registro", null)">Mis Datos</a>
+                                    <a class="dropdown-item" href="@Url.Action("MisReservas", "Reserva", null)">Mis Reservas</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">Cerrar Sesión</a>
+                                </div>
+                            </li>
+                        }
                     }
                 </ul>
             </div>

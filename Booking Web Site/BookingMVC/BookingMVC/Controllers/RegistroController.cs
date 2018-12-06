@@ -39,5 +39,10 @@ namespace BookingMVC.Controllers
 
             return View(model);
         }
+
+        public ActionResult MisDatos()
+        {
+            return View();
+        }
     }
 }

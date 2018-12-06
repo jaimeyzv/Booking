@@ -26,5 +26,10 @@ namespace BookingMVC.Controllers
 
             return View(model);
         }
+
+        public ActionResult MisReservas()
+        {
+            return View();
+        }
     }
 }
