@@ -7,8 +7,8 @@ namespace BookService.Persistencia
 {
     public class ReservaDAO
     {
-        //private string connectionString = "Data Source=.;Initial Catalog=BookService;Integrated Security=True";
-        private string connectionString = "Server=JAIME-PC;Database=Reservas;User ID=JaimePC;pwd=face15PIER";
+        private string connectionString = @"Data Source=LTPVASS019\SQLEXPRESS;Initial Catalog=Reservas;Integrated Security=True";
+        //private string connectionString = "Server=JAIME-PC;Database=Reservas;User ID=JaimePC;pwd=face15PIER";
 
         public Reserva Obtener(int reservaId)
         {
