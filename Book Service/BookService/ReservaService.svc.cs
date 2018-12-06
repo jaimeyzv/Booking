@@ -42,6 +42,11 @@ namespace BookService
             return dao.ListarPorMiembro(dni);
         }
 
+        public List<Reserva> ListarReservas()
+        {
+            return dao.Listar();
+        }
+
         public Reserva ModificarReserva(Reserva reserva)
         {
             return dao.Modificar(reserva);

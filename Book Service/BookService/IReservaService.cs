@@ -18,5 +18,8 @@ namespace BookService
 
         [OperationContract]
         List<Reserva> ListarReservasPorMiembro(string dni);
+
+        [OperationContract]
+        List<Reserva> ListarReservas();
     }
 }

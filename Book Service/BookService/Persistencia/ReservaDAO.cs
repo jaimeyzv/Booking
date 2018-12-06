@@ -163,5 +163,43 @@ namespace BookService.Persistencia
 
             return reservas;
         }
+
+        public List<Reserva> Listar()
+        {
+            var reservas = new List<Reserva>();
+            var query = "SELECT * FROM Reserva";
+
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            reservas.Add(new Reserva()
+                            {
+                                ReservaId = (int)reader["ReservaId"],
+                                Codigo = reader["Codigo"].ToString(),
+                                DniMiembro = reader["DniMiembro"].ToString(),
+                                CodigoHotel = reader["CodigoHotel"].ToString(),
+                                CodigoHabitacion = reader["CodigoHabitacion"].ToString(),
+                                NumeroHabitacion = (int)reader["NumeroHabitacion"],
+                                PrecioHotel = (decimal)reader["PrecioHotel"],
+                                CantidadPersonas = (int)reader["CantidadPersonas"],
+                                FechaCheckIn = (DateTime)reader["FechaCheckIn"],
+                                FechaCheckOut = (DateTime)reader["FechaCheckOut"],
+                                FechaRegistro = (DateTime)reader["FechaRegistro"],
+                                Estado = reader["Estado"].ToString()
+                            });
+                        }
+                    }
+
+                }
+            }
+
+            return reservas;
+        }
     }
 }
