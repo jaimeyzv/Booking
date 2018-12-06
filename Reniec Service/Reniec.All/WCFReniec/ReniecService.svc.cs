@@ -6,7 +6,10 @@ namespace WCFReniec
 {
     public class ReniecService : IReniecService
     {
-        private const string token = "hldnOG3wL7IwPoXjQ6Xw9kzLOF92Rq35IygndbqX";
+        //private const string token = "hldnOG3wL7IwPoXjQ6Xw9kzLOF92Rq35IygndbqX";
+        //private const string token = "oVz0iUHBaAV4prXuqahVBTN4znt81udOZW2vNZiZ";
+        private const string token = "RRilN9PHopYnJMNVXyNLA9ED5tY3gZTZovMdVGaC";
+
 
         public bool EsDniValido(string dni)
         {
