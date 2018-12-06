@@ -35,26 +35,27 @@ namespace BookingMVC.Controllers
             if (!string.IsNullOrWhiteSpace(hotelCodigo))
             {
                 var habitaciones = new List<Habitacion>();
-                habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
+                //habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
                 habitaciones = habitaciones.Where(x => x.CodigoHotel == hotelCodigo).ToList();
                 return View(habitaciones);
             }
             else
             {
-                Session["FechaIni"] = "10/12/2018";
-                Session["FechaFin"] = "15/12/2018";
-                Session["Camas"] = "1";
+                //Session["FechaIni"] = "10/12/2018";
+                //Session["FechaFin"] = "15/12/2018";
+                //Session["Camas"] = "1";
 
                 if (Session["FechaIni"] == null || Session["FechaIni"].ToString() == "")
                 {
                     var habitaciones = new List<Habitacion>();
-                    habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
+                    //habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
+                    habitaciones = habitacionesBusiness.ListarHabitaciones().ToList();
                     return View(habitaciones);
                 }
                 else {
-                    Session["FechaIni"] = "10/12/2018";
-                    Session["FechaFin"] = "15/12/2018";
-                    Session["Camas"] = "1";
+                    //Session["FechaIni"] = "10/12/2018";
+                    //Session["FechaFin"] = "15/12/2018";
+                    //Session["Camas"] = "1";
 
                     DateTime checkin = DateTime.ParseExact(Session["FechaIni"].ToString(), "dd/MM/yyyy", null);
                     DateTime checkOut = DateTime.ParseExact(Session["FechaFin"].ToString(), "dd/MM/yyyy", null);
@@ -62,16 +63,12 @@ namespace BookingMVC.Controllers
                     var camas = Convert.ToInt32(Session["Camas"].ToString());
 
                     var habitaciones = new List<Habitacion>();
-                    habitaciones = habitacionesBusiness.ListarHabitacionesPorRangoFecha(checkin, checkOut, camas).Where(x => x.Activo).ToList();
+                    //habitaciones = habitacionesBusiness.ListarHabitacionesPorRangoFecha(checkin, checkOut, camas).Where(x => x.Activo).ToList();
+                    habitaciones = habitacionesBusiness.ListarHabitacionesPorRangoFecha(checkin, checkOut, camas).ToList();
 
                     return View(habitaciones);
                 }
-
-                
             }
-                
-
-            
         }
 
         public ActionResult Detalle(int id)

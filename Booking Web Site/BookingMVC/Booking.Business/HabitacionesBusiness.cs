@@ -79,7 +79,7 @@ namespace Booking.Business
             }
 
             habitacionesHabilitadas = habitacionesHabilitadas.Where(x => x.CantidadCamas == camas).ToList();
-            habitacionesHabilitadas = habitaciones.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
+            habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !habitacioneIds.Any(z => z == x.CodigoHabitacion)).ToList();
             habitacionesHabilitadas = habitacionesHabilitadas.Where(x => !hotelIds.Any(z => z == x.CodigoHotel)).ToList();
             return habitacionesHabilitadas;
         }
