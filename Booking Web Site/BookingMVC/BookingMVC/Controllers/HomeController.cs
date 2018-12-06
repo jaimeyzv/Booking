@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BookingModels;
 using System.Web.Mvc;
 
 namespace BookingMVC.Controllers
@@ -11,6 +8,20 @@ namespace BookingMVC.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Index(BusquedaHome busqueda)
+        {
+            if (ModelState.IsValid)
+            {
+                Session["Busqueda"] = busqueda;
+                return RedirectToAction("Index", "Habitacion");
+            }
+            else
+            {
+                return View(busqueda);
+            }
         }
 
         public ActionResult About()
