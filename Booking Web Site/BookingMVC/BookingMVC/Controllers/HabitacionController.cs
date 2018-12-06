@@ -18,15 +18,60 @@ namespace BookingMVC.Controllers
 
         public ActionResult Index(string hotelCodigo)
         {
-            var habitaciones = new List<Habitacion>();
-            habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
+            //var habitaciones = new List<Habitacion>();
+            //habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
 
-            if (string.IsNullOrWhiteSpace(hotelCodigo))
-                return View(habitaciones);
-            else
+            //if (string.IsNullOrWhiteSpace(hotelCodigo))
+            //    return View(habitaciones);
+            //else
+            //    habitaciones = habitaciones.Where(x => x.CodigoHotel == hotelCodigo).ToList();
+
+            //return View(habitaciones);
+
+            //DateTime checkin = DateTime.ParseExact(Session["FechaIni"].ToString(), "dd/MM/yyyy", null);
+            //DateTime checkOut = DateTime.ParseExact(Session["FechaFin"].ToString(), "dd/MM/yyyy", null);
+
+
+            if (!string.IsNullOrWhiteSpace(hotelCodigo))
+            {
+                var habitaciones = new List<Habitacion>();
+                habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
                 habitaciones = habitaciones.Where(x => x.CodigoHotel == hotelCodigo).ToList();
+                return View(habitaciones);
+            }
+            else
+            {
+                Session["FechaIni"] = "10/12/2018";
+                Session["FechaFin"] = "15/12/2018";
+                Session["Camas"] = "1";
 
-            return View(habitaciones);
+                if (Session["FechaIni"] == null || Session["FechaIni"].ToString() == "")
+                {
+                    var habitaciones = new List<Habitacion>();
+                    habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
+                    return View(habitaciones);
+                }
+                else {
+                    Session["FechaIni"] = "10/12/2018";
+                    Session["FechaFin"] = "15/12/2018";
+                    Session["Camas"] = "1";
+
+                    DateTime checkin = DateTime.ParseExact(Session["FechaIni"].ToString(), "dd/MM/yyyy", null);
+                    DateTime checkOut = DateTime.ParseExact(Session["FechaFin"].ToString(), "dd/MM/yyyy", null);
+
+                    var camas = Convert.ToInt32(Session["Camas"].ToString());
+
+                    var habitaciones = new List<Habitacion>();
+                    habitaciones = habitacionesBusiness.ListarHabitacionesPorRangoFecha(checkin, checkOut, camas).Where(x => x.Activo).ToList();
+
+                    return View(habitaciones);
+                }
+
+                
+            }
+                
+
+            
         }
 
         public ActionResult Detalle(int id)
@@ -34,6 +79,8 @@ namespace BookingMVC.Controllers
             var habitacion = habitacionesBusiness.ObtenerHabitacion(id);
             var detalle = new HabitacionDetalle();
             detalle.Habitacion = habitacion;
+            detalle.CheckIn = Session["FechaIni"] != null ? Session["FechaIni"].ToString() : string.Empty;
+            detalle.CheckOut = Session["FechaFin"] != null ? Session["FechaFin"].ToString() : string.Empty;
 
             return View(detalle);
         }

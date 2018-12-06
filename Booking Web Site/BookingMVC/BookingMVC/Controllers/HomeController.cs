@@ -15,7 +15,9 @@ namespace BookingMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                Session["Busqueda"] = busqueda;
+                Session["FechaIni"] = busqueda.CheckIn;
+                Session["FechaFin"] = busqueda.CheckOut;
+                Session["Camas"] = busqueda.Camas;
                 return RedirectToAction("Index", "Habitacion");
             }
             else
