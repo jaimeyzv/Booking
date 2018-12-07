@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="16956b91-ecc2-40a9-93e0-ce9ff7390420" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3f4cbbe-ccf7-4658-8292-6f94974197b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:40641/ColasService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ColasService.xsd" MetadataType="Schema" ID="9e402e64-9a7a-451c-9587-3641837f3dba" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ColasService.disco" MetadataType="Disco" ID="739debdb-0c1c-4e59-821e-4b1cf0fe23f3" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?disco" />
-    <MetadataFile FileName="ColasService1.xsd" MetadataType="Schema" ID="e0bbd5a7-745a-4115-891b-5f4fa60506ca" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ColasService.wsdl" MetadataType="Wsdl" ID="0c25d03e-ea91-42c1-b312-4ab0f5e77581" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?wsdl" />
-    <MetadataFile FileName="ColasService2.xsd" MetadataType="Schema" ID="efad2b4f-5d2b-48d9-8694-f5f24f12fb3c" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ColasService.xsd" MetadataType="Schema" ID="eb136692-adc8-4b0a-b974-2e3b48169e5f" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ColasService.disco" MetadataType="Disco" ID="8ab47c63-742b-445c-9476-fcaef98d203a" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?disco" />
+    <MetadataFile FileName="ColasService1.xsd" MetadataType="Schema" ID="847954f8-1187-435a-a0a4-4c9521507a94" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ColasService.wsdl" MetadataType="Wsdl" ID="2ba46fb0-7ab4-4727-9149-5991b226025a" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?wsdl" />
+    <MetadataFile FileName="ColasService2.xsd" MetadataType="Schema" ID="23159502-1d0a-426d-9efe-5355cab3cb55" SourceId="1" SourceUrl="http://localhost:40641/ColasService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

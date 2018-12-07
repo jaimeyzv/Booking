@@ -51,12 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColasTests.cs" />
     <Compile Include="Connected Services\ColasWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ColasTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +77,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IronSharp.Core\IronSharp.Core.csproj">
+      <Project>{1a6cc922-40a5-440a-868d-757fcdb08622}</Project>
+      <Name>IronSharp.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IronSharp.IronMQ\IronSharp.IronMQ.csproj">
+      <Project>{d891a220-aa6f-4d0c-b012-b25875787ba0}</Project>
+      <Name>IronSharp.IronMQ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ColasWS\" />
   </ItemGroup>
   <ItemGroup>
@@ -93,16 +103,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IronSharp.Core\IronSharp.Core.csproj">
-      <Project>{1a6cc922-40a5-440a-868d-757fcdb08622}</Project>
-      <Name>IronSharp.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IronSharp.IronMQ\IronSharp.IronMQ.csproj">
-      <Project>{d891a220-aa6f-4d0c-b012-b25875787ba0}</Project>
-      <Name>IronSharp.IronMQ</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

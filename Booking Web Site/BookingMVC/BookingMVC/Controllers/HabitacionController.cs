@@ -36,7 +36,8 @@ namespace BookingMVC.Controllers
             {
                 var habitaciones = new List<Habitacion>();
                 //habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.Activo).ToList();
-                habitaciones = habitaciones.Where(x => x.CodigoHotel == hotelCodigo).ToList();
+                habitaciones = habitacionesBusiness.ListarHabitaciones().Where(x => x.CodigoHotel == hotelCodigo).ToList();
+                //habitaciones = habitaciones.ToList();
                 return View(habitaciones);
             }
             else

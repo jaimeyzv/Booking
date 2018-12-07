@@ -22,6 +22,9 @@ namespace BookingMVC.Controllers
             }
             else
             {
+                Session["FechaIni"] = null;
+                Session["FechaFin"] = null;
+                Session["Camas"] = null;
                 return View(busqueda);
             }
         }
